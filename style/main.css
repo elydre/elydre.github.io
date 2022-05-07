@@ -23,17 +23,6 @@ a {
     text-decoration: none;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #888;
-}
-
 .big_logo {
     max-width: 800px;
     margin: 0 auto;
