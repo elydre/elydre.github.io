@@ -13,7 +13,7 @@ Maintenant, vous pouvez lançer le jeu.<br>
 
 ### Configuration
 
-Une fois le jeu lancé, vous pouvez accéder au option et choisir le `Français (Canada)` comme langue. Dans Paramètres graphiques, vous pouvez bais*s*er la qualité, la distance de rendu, etc de pour de meilleure performance.<br>
+Une fois le jeu lancé, vous pouvez accéder au option et choisir le `Français (Canada)` comme langue. Dans Paramètres graphiques, vous pouvez bais*s*er la qualité, la distance de rendu, etc de pour de meilleures performances.<br>
 Sur l'accueil de minecraft, cliquez `Partie multijoueur` puis `Connexion directe` et rentrez l'ip du serveur.<br>
 
 ### Construction d'un ordinateur
