@@ -6,7 +6,7 @@
 
 Telechargez et installez [java](https://download.oracle.com/java/18/latest/jdk-18_windows-x64_bin.exe), puis telechargez et extrayez le [zip](https://pf4.ddns.net/dl/McNsi.zip)
 Une fois le zip extrait, executez **TLauncher-MC.exe** (*ou le lanceur de Minecraft officiel si vous avez un compte ^^*).<br>
-Cliquez `Créer au moins un compte` puis `+` et `Gratuit`, entré le pseudo de votre choix et `Add account`.<br>
+Cliquez `Créer au moins un compte` puis `+` et `Gratuit`, entrez le pseudo de votre choix et `Add account`.<br>
 Retournez sur l'accueil du lançeur et sélectionnez `Forge 1.18.2` dans la liste des versions. (*si forge n'est pas dans la liste, vous pouvez l'ajouter en cliquant sur préférences puis en cochant Modifiée*)<br>
 Enfin, cliquez sur l'icône du dossier creez un dossier `mods` et copiez le contenu du dossier `mods` du zip dans ce dossier (*dossier*).<br>
 Maintenant, vous pouvez lançer le jeu.<br>
