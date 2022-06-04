@@ -21,6 +21,7 @@ Sur l'accueil de minecraft, cliquez `Partie multijoueur` puis `Connexion directe
 Placez au sol un `Infinite Energy Cube` puis un `computer`.
 Ovrez l'ordinateur et cliquez sur `Open Inventory`. Vous pouvez ajouter des composants comme de la ram, des disques, des cartes d'extension, etc.<br>
 Pour la suite, nous aurons besoin d'un disque dur avec Sedna Linux, 24Mo de ram, une carte internet ainsi qu'une carte redstone.<br>
+![]()
 Une fois les composants ajoutés, cliquez sur le bouton power, vous aurrez accès à la console.<br>
 Entrez `root` comme nom d'utilisateur. BIENVENUE SUR LINUX!<br>
 
