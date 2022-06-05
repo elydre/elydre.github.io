@@ -36,7 +36,6 @@ Testez le classique `print("Hello World")`!<br>
 
 A l'arrière de l'ordinateur, un `Bus Interface` suivi de quelques `Bus Cable` puis a nouveau un `Bus Interface`.<br>
 Ajoutez un `Redstone Interface` à l'extrémité de l'interface bus.<br>
-
 <br>![shell](https://elydre.github.io/img/redstone.png)<br>
 
 ## 2.3 • Interaction avec la lampe
@@ -59,3 +58,64 @@ Vous pouvez voir la lampe s'allumer.<br>
 
 Indice1: *un courant de 0 fait éteindre la lampe.*<br>
 Indice2: *utilisez la fonction* `time.sleep(2)` *pour attendre 2 secondes.*<br>
+
+# 3 • Ethernet
+
+## 3.1 • Configuration
+
+Placez 2 ordinateurs avec sedna linux et une carte ethernet. (*cf 1.3*)<br>
+Sur chaque ordinateur, placez un `Network Connection` et relier les 2 connecteurs avec un `Network Cable`.<br>
+<br>![network](https://elydre.github.io/img/eth_setup.png.png)<br>
+
+## 3.2 • Ip & Password
+
+Sur l'ordinateur 1, changer l'ip de la carte ethernet en `10.0.0.2`
+
+```shell
+ifconfig eth0 10.0.0.2
+```
+
+Sur l'ordinateur 2, changer l'ip de la carte ethernet en `10.0.0.3` et modifier le mot de passe root.<br>
+
+```shell
+ifconfig eth0 10.0.0.3
+passwd
+```
+
+*tapez votre mot de passe*<br>
+![](https://elydre.github.io/img/eth_pass.png)<br>
+
+## 3.3 • Ping
+
+Depuis l'ordinateur 1 tester la connexion avec l'ordinateur 2.<br>
+
+```shell
+ping 10.0.0.3
+```
+
+Vous devriez voir un message comme:<br>
+
+```
+PING 10.0.0.3 (10.0.0.3) 56 data bytes
+64 bytes from 10.0.0.3: seq=0 ttl=64 time=201.577 ms
+64 bytes from 10.0.0.3: seq=0 ttl=64 time=93.141 ms
+```
+
+## 3.4 • Envoi de fichier
+
+Toujours depuis l'ordinateur 1, creer un fichier `test.txt` avec nano.<br>
+
+```shell
+nano test.txt
+```
+
+Taper du texte puis sauvegarder avec **Ctrl+x**, **y** et **Enter**.<br>
+Utilisez `scp` pour envoyer le fichier.<br>
+
+```shell
+scp test.txt 10.0.0.3:/root/test.txt
+```
+
+*Si un message d'erreur apparait, relancer l'envoi du fichier.*<br>
+Saississez le mot de passe de l'ordinateur 2.<br>
+Quittez la console puis taper `cat test.txt` sur l'ordinateur 2, vous devriez voir le texte du fichier.<br>
