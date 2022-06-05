@@ -37,7 +37,9 @@ Testez le classique `print("Hello World")`!<br>
 ## 2.2 • setup de la lampe
 
 A l'arrière de l'ordinateur, un `Bus Interface` suivi de quelques `Bus Cable` puis a nouveau un `Bus Interface`.<br>
-Ajoutez un `Redstone Interface` à l'extrémité de l'interface bus.<br>
+Ajoutez un `Redstone Interface` à l'extrémité de l'interface bus,
+ainsi qu'une lampe de redstone sur la face haute.<br>
+
 <br>![shell](https://elydre.github.io/img/redstone.png)<br>
 
 ## 2.3 • Interaction avec la lampe
