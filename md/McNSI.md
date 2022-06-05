@@ -53,7 +53,7 @@ r.setRedstoneOutput("up", 15)   # met un courant de 15 vers le haut
 
 Vous pouvez voir la lampe s'allumer.<br>
 
-## 2.4 • Activité:
+## 2.4 • Activité
 
 **Faites clignoter la lampe toutes les 2 secondes**.<br>
 
