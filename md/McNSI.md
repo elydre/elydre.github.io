@@ -70,7 +70,7 @@ Indice2: *utilisez la fonction* `time.sleep(2)` *pour attendre 2 secondes.*<br><
 ## 3.1 • Configuration
 
 Placez 2 ordinateurs avec sedna linux et une carte ethernet. (*cf 1.3*)<br>
-Sur chaque ordinateur, placez un `Network Connection` et relier les 2 connecteurs avec un `Network Cable`.<br>
+Sur chaque ordinateur, placez un `Network Connection` et reliez les 2 connecteurs avec un `Network Cable`.<br>
 <br>![network](https://elydre.github.io/img/eth_pass.png)<br>
 
 ## 3.2 • Ip & Password
@@ -115,7 +115,7 @@ Toujours depuis l'ordinateur 1, creer un fichier `test.txt` avec nano.<br>
 nano test.txt
 ```
 
-Taper du texte puis sauvegarder avec **Ctrl+x**, **y** et **Enter**.<br>
+Tapez du texte puis sauvegardez avec **Ctrl+x**, **y** et **Enter**.<br>
 Utilisez `scp` pour envoyer le fichier.<br>
 
 ```shell
@@ -124,4 +124,4 @@ scp test.txt 10.0.0.3:/root/test.txt
 
 *Si un message d'erreur apparait, relancer l'envoi du fichier.*<br>
 Saississez le mot de passe de l'ordinateur 2.<br>
-Quittez la console puis taper `cat test.txt` sur l'ordinateur 2, vous devriez voir le texte du fichier.<br>
+Quittez la console puis tapez `cat test.txt` sur l'ordinateur 2, vous devriez voir le comptenu du fichier.<br>
