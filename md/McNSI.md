@@ -2,7 +2,7 @@
 
 ## 1.1 • Telechargement du client
 
-Telechargez et installez [java](https://java.com/fr/download/), puis telechargez et extrayez le [zip](https://pf4.ddns.net/dl/mc.zip)
+Telechargez et installez [java](https://adoptium.net), puis telechargez et extrayez le [zip](https://pf4.ddns.net/dl/mc.zip)
 Une fois le zip extrait, executez **TLauncher-MC.exe** (*ou le lanceur de Minecraft officiel si vous avez un compte ^^*).<br>
 Cliquez `Créer au moins un compte` puis `+` et `Gratuit`, entrez le pseudo de votre choix et `Add account`.<br>
 Retournez sur l'accueil du lançeur et sélectionnez `Forge 1.18.2` dans la liste des versions. (*si forge n'est pas dans la liste, vous pouvez l'ajouter en cliquant sur préférences puis en cochant Modifiée*)<br>
