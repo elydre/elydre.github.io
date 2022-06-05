@@ -69,7 +69,7 @@ Indice2: *utilisez la fonction* `time.sleep(2)` *pour attendre 2 secondes.*<br><
 
 Placez 2 ordinateurs avec sedna linux et une carte ethernet. (*cf 1.3*)<br>
 Sur chaque ordinateur, placez un `Network Connection` et relier les 2 connecteurs avec un `Network Cable`.<br>
-<br>![network](https://elydre.github.io/img/eth_setup.png.png)<br>
+<br>![network](https://elydre.github.io/img/eth_pass.png)<br>
 
 ## 3.2 • Ip & Password
 
@@ -87,7 +87,7 @@ passwd
 ```
 
 *tapez votre mot de passe*<br>
-![](https://elydre.github.io/img/eth_pass.png)<br>
+<br>![config](https://elydre.github.io/img/ip_conf.png)<br>
 
 ## 3.3 • Ping
 
