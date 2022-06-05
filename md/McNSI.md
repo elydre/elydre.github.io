@@ -58,4 +58,4 @@ Vous pouvez voir la lampe s'allumer.<br>
 **Faites clignoter la lampe toutes les 2 secondes**.<br>
 
 Indice1: *un courant de 0 fait éteindre la lampe.*<br>
-Indice2: *utilisez la fonction `time.sleep(2)` pour attendre 2 secondes.*<br>
+Indice2: *utilisez la fonction* `time.sleep(2)` *pour attendre 2 secondes.*<br>
