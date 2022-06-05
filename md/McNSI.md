@@ -26,3 +26,36 @@ Entrez `root` comme nom d'utilisateur. BIENVENUE SUR LINUX!<br>
 <br>![shell](https://elydre.github.io/img/shell.png)<br>
 
 # MicroPython
+
+## Test de python
+
+Dans la console, taper `micropython` pour lancer la console Python.<br>
+Testez le classique `print("Hello World")`!<br>
+
+## setup de la lampe
+
+A l'arrière de l'ordinateur, un `Bus Interface` suivi de quelques `Bus Cable` puis a nouveau un `Bus Interface`.<br>
+Ajoutez un `Redstone Interface` à l'extrémité de l'interface bus.<br>
+
+<br>![shell](https://elydre.github.io/img/redstone.png)<br>
+
+## Interaction avec la lampe
+
+Redemarrez l'ordinateur et accédez à la console python.<br>
+Ecrivez le code suivant:<br>
+
+```py
+import devices                  # importe la librairie de devices
+bus = devices.bus()             # crée un bus
+r = bus.find("redstone")        # cherche un bus redstone
+r.setRedstoneOutput("up", 15)   # met un courant de 15 vers le haut
+```
+
+Vous pouvez voir la lampe s'allumer.<br>
+
+### Activité 1:
+
+**Faites clignoter la lampe toutes les 2 secondes**.<br>
+
+Indice1: *un courant de 0 fait éteindre la lampe.*<br>
+Indice2: *utilisez la fonction `time.sleep(2)` pour attendre 2 secondes.*<br>
