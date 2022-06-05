@@ -1,14 +1,14 @@
 # 1 • Get started
 
-## 1.1 • Telechargement du client
+## 1.1 • Téléchargement du client
 
-Telechargez et installez [java](https://adoptium.net), puis telechargez et extrayez le [zip](https://pf4.ddns.net/dl/mc.zip)
-Une fois le zip extrait, executez **TLauncher-MC.exe** (*ou le lanceur de Minecraft officiel si vous avez un compte ^^*).<br>
+Téléchargez et installez [java](https://adoptium.net), puis téléchargez et extrayez le [zip](https://pf4.ddns.net/dl/mc.zip)
+Une fois le zip extrait, exécutez **TLauncher-MC.exe** (*ou le lanceur de Minecraft officiel si vous avez un compte ^^*).<br>
 Cliquez `Créer au moins un compte` puis `+` et `Gratuit`, entrez le pseudo de votre choix et `Add account`.<br>
-Retournez sur l'accueil du lançeur et sélectionnez `Forge 1.18.2` dans la liste des versions. (*si forge n'est pas dans la liste, vous pouvez l'ajouter en cliquant sur préférences puis en cochant Modifiée*)<br>
+Retournez sur l'accueil du lanceur et sélectionnez `Forge 1.18.2` dans la liste des versions. (*si forge n'est pas dans la liste, vous pouvez l'ajouter en cliquant sur préférences puis en cochant Modifiée*)<br>
 <br>![launcher](https://elydre.github.io/img/launcher.png)<br>
-Enfin, cliquez sur l'icône du dossier creez un dossier `mods` et copiez le contenu du dossier `mods` du zip dans ce dossier (*dossier*).<br>
-Maintenant, vous pouvez lançer le jeu.<br>
+Enfin, cliquez sur l'icône du dossier créez un dossier `mods` et copiez le contenu du dossier `mods` du zip dans ce dossier (*dossier*).<br>
+Maintenant, vous pouvez lancer le jeu.<br>
 
 ## 1.2 • Configuration
 
@@ -18,10 +18,10 @@ Sur l'accueil de minecraft, cliquez `Partie multijoueur` puis `Connexion directe
 ## 1.3 • Construction d'un ordinateur
 
 Placez au sol un `Infinite Energy Cube` puis un `computer`.
-Ovrez l'ordinateur et cliquez sur `Open Inventory`. Vous pouvez ajouter des composants comme de la ram, des disques, des cartes d'extension, etc.<br>
+Ouvrez l'ordinateur et cliquez sur `Open Inventory`. Vous pouvez ajouter des composants comme de la ram, des disques, des cartes d'extension, etc.<br>
 Pour la suite, nous aurons besoin d'un disque dur avec Sedna Linux, 24Mo de ram, une carte internet ainsi qu'une carte redstone.<br>
 <br>![inventory](https://elydre.github.io/img/inventory.png)<br>
-Une fois les composants ajoutés, cliquez sur le bouton power, vous aurrez accès à la console.<br>
+Une fois les composants ajoutés, cliquez sur le bouton power, vous aurez accès à la console.<br>
 Entrez `root` comme nom d'utilisateur. BIENVENUE SUR LINUX!<br>
 <br>![shell](https://elydre.github.io/img/shell.png)<br><br><br>
 
@@ -44,8 +44,8 @@ ainsi qu'une lampe de redstone sur la face haute.<br>
 
 ## 2.3 • Interaction avec la lampe
 
-Redemarrez l'ordinateur et accédez à la console python.<br>
-Ecrivez le code suivant:<br>
+Redémarrez l'ordinateur et accédez à la console python.<br>
+Écrivez le code suivant:<br>
 
 ```py
 import devices                  # importe la librairie de devices
@@ -69,19 +69,19 @@ Indice2: *utilisez la fonction* `time.sleep(2)` *pour attendre 2 secondes.*<br><
 
 ## 3.1 • Configuration
 
-Placez 2 ordinateurs avec sedna linux et une carte ethernet. (*cf 1.3*)<br>
+Placez 2 ordinateurs avec Sedna linux et une carte Ethernet. (*cf 1.3*)<br>
 Sur chaque ordinateur, placez un `Network Connection` et reliez les 2 connecteurs avec un `Network Cable`.<br>
 <br>![network](https://elydre.github.io/img/eth_pass.png)<br>
 
 ## 3.2 • Ip & Password
 
-Sur l'ordinateur 1, changer l'ip de la carte ethernet en `10.0.0.2`
+Sur l'ordinateur 1, changer l'ip de la carte Ethernet en `10.0.0.2`
 
 ```shell
 ifconfig eth0 10.0.0.2
 ```
 
-Sur l'ordinateur 2, changer l'ip de la carte ethernet en `10.0.0.3` et modifier le mot de passe root.<br>
+Sur l'ordinateur 2, changer l'ip de la carte Ethernet en `10.0.0.3` et modifier le mot de passe root.<br>
 
 ```shell
 ifconfig eth0 10.0.0.3
@@ -109,7 +109,7 @@ PING 10.0.0.3 (10.0.0.3) 56 data bytes
 
 ## 3.4 • Envoi de fichier
 
-Toujours depuis l'ordinateur 1, creer un fichier `test.txt` avec nano.<br>
+Toujours depuis l'ordinateur 1, créer un fichier `test.txt` avec nano.<br>
 
 ```shell
 nano test.txt
@@ -122,6 +122,6 @@ Utilisez `scp` pour envoyer le fichier.<br>
 scp test.txt 10.0.0.3:/root/test.txt
 ```
 
-*Si un message d'erreur apparait, relancer l'envoi du fichier.*<br>
-Saississez le mot de passe de l'ordinateur 2.<br>
-Quittez la console puis tapez `cat test.txt` sur l'ordinateur 2, vous devriez voir le comptenu du fichier.<br>
+*Si un message d'erreur apparaît, relancer l'envoi du fichier.*<br>
+Saisissez le mot de passe de l'ordinateur 2.<br>
+Quittez la console puis tapez `cat test.txt` sur l'ordinateur 2, vous devriez voir le contenu du fichier.<br>
