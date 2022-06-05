@@ -23,7 +23,9 @@ Pour la suite, nous aurons besoin d'un disque dur avec Sedna Linux, 24Mo de ram,
 <br>![inventory](https://elydre.github.io/img/inventory.png)<br>
 Une fois les composants ajoutés, cliquez sur le bouton power, vous aurrez accès à la console.<br>
 Entrez `root` comme nom d'utilisateur. BIENVENUE SUR LINUX!<br>
-<br>![shell](https://elydre.github.io/img/shell.png)<br>
+<br>![shell](https://elydre.github.io/img/shell.png)<br><br><br>
+
+
 
 # 2 • MicroPython
 
@@ -57,7 +59,9 @@ Vous pouvez voir la lampe s'allumer.<br>
 **Faites clignoter la lampe toutes les 2 secondes**.<br>
 
 Indice1: *un courant de 0 fait éteindre la lampe.*<br>
-Indice2: *utilisez la fonction* `time.sleep(2)` *pour attendre 2 secondes.*<br>
+Indice2: *utilisez la fonction* `time.sleep(2)` *pour attendre 2 secondes.*<br><br><br>
+
+
 
 # 3 • Ethernet
 
