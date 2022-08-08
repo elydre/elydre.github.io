@@ -1,7 +1,7 @@
 <!doctype html>
 <title>profanOS</title>
 
-<script src="/build/libv86.js"></script>
+<script src="/profan/build/libv86.js"></script>
 <link rel="stylesheet" href="v86.css">
 <script>
 "use strict";
@@ -9,18 +9,18 @@
 window.onload = function()
 {
     var emulator = window.emulator = new V86Starter({
-        wasm_path: "build/v86.wasm",
+        wasm_path: "/profan/build/v86.wasm",
         memory_size: 32 * 1024 * 1024,
         vga_memory_size: 2 * 1024 * 1024,
         screen_container: document.getElementById("screen_container"),
         bios: {
-            url: "bios/seabios.bin",
+            url: "/profan/bios/seabios.bin",
         },
         vga_bios: {
-            url: "bios/vgabios.bin",
+            url: "/profan/bios/vgabios.bin",
         },
         cdrom: {
-            url: "img/profan.iso",
+            url: "/profan/img/profan.iso",
         },
         autostart: true,
     });
