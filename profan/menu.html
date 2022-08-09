@@ -1,0 +1,36 @@
+<!doctype html>
+<title>profanOS</title>
+
+<link rel="stylesheet" href="/profan/v86.css">
+<script>
+"use strict";
+
+window.onload = function()
+{
+    // get all the files il the release repo
+    var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/release";
+    // get the files in the release repo
+    var request = new XMLHttpRequest();
+    var paragraph = document.getElementById("files");
+    request.open("GET", api_url, true);
+    request.onload = function()
+    {
+        if (request.status >= 200 && request.status < 400)
+        {
+            var data = JSON.parse(request.responseText);
+            for (var i = 0; i < data.length; i++)
+            {
+                var link = document.createElement("a");
+                link.href = "/profan/release.html?" + data[i].name;
+                link.innerHTML = data[i].name;
+                paragraph.appendChild(link);
+                paragraph.appendChild(document.createElement("br"));
+                console.log(data[i].name);
+            }
+        }
+    }
+    request.send();
+}
+</script>
+
+<p id="files"></p>

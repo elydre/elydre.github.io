@@ -1,0 +1,41 @@
+<!doctype html>
+<title>profanOS</title>
+
+<script src="/profan/build/libv86.js"></script>
+<link rel="stylesheet" href="/profan/v86.css">
+<script>
+"use strict";
+
+window.onload = function()
+{
+    // get first page get parameters
+    var version = window.location.search.substring(1);
+    console.log(version);
+    var iso_url = "https://esolangs.github.io/profanOS-build/release/" + version;
+    var emulator = window.emulator = new V86Starter({
+        wasm_path: "/profan/build/v86.wasm",
+        memory_size: 32 * 1024 * 1024,
+        vga_memory_size: 2 * 1024 * 1024,
+        screen_container: document.getElementById("screen_container"),
+        bios: {
+            url: "/profan/bios/seabios.bin",
+        },
+        vga_bios: {
+            url: "/profan/bios/vgabios.bin",
+        },
+        cdrom: {
+            url: iso_url,
+        },
+        hda: {
+            url: "/profan/img/HDD.bin",
+        },
+        autostart: true,
+    });
+}
+</script>
+
+<!-- A minimal structure for the ScreenAdapter defined in browser/screen.js -->
+<div id="screen_container">
+    <div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
+    <canvas style="display: none"></canvas>
+</div>
