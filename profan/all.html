@@ -1,0 +1,51 @@
+<!doctype html>
+<title>profanOS</title>
+
+<link rel="stylesheet" href="/profan/venu.css">
+<script>
+"use strict";
+
+window.onload = function()
+{
+    // get all the files il the release repo
+    var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/release";
+    // get the files in the release repo
+    var request = new XMLHttpRequest();
+    var liste = document.getElementById("files");
+    request.open("GET", api_url, true);
+    request.onload = function()
+    {
+        if (request.status >= 200 && request.status < 400)
+        {
+            var data = JSON.parse(request.responseText);
+            for (var i = 0; i < data.length; i++)
+            {
+                var link = document.createElement("div");
+                var a = document.createElement("a");
+                a.href = "/profan/release.html?" + data[i].name;
+                a.innerHTML = data[i].name.replace(".iso", "").replace("-", " ");
+                link.appendChild(a);
+                // add the link at the top of the list
+                liste.insertBefore(link, liste.childNodes[0]);
+            }
+        }
+    }
+    request.send();
+}
+</script>
+<body>
+    <div class="div_center">
+        <h1>all features for all releases</h1>
+        <p class = "sat">A pre-compiled iso library to test profanOS with the power of your browser</p>
+        <br>
+        <section>
+            <a href="https://github.com/elydre/profanOS" class="btn"><b>Github</b><div class="arrow"></div></a>
+        </section>
+        <br><br>
+        <div id="files" class="menu">
+            <div>
+                <a href="/profan">main page</a>
+            </div>
+        </div>
+    </div>
+</body>
