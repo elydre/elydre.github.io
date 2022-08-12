@@ -108,8 +108,8 @@ td {
     
     padding: 0.5rem 0;                /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
     text-align: center;               /* Centrage du texte */   
-    background-color: #151b23;      /* ArriÃ¨re-plan */
-    color: #FFF;                    /* Couleur du texte */
+    background-color: #151b23;        /* ArriÃ¨re-plan */
+    color: #FFF;                      /* Couleur du texte */
     text-decoration: none;            /* Suppression du soulignement */
     border-radius: 5px;               /* Ajout d'un rond */
     box-shadow: -1px 2px 1px -1px rgba(116, 116, 116, 0.3) inset;
@@ -192,6 +192,16 @@ td {
     -webkit-text-fill-color: transparent;
 }
 
-.browser {
-    width: 50%;
+.shell {
+    outline: 1px solid rgb(0, 0, 0);
+    white-space: pre;
+    font: 15px Cascadia Mono, monospace;
+    line-height: 17px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    box-shadow: -1px 2px 1px -1px rgba(116, 116, 116, 0.3) inset;
+    background-color: #000000;
+    border-radius: 5px;
 }
