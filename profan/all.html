@@ -8,7 +8,7 @@
 window.onload = function()
 {
     // get all the files il the release repo
-    var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/release";
+    var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/img";
     // get the files in the release repo
     var request = new XMLHttpRequest();
     var liste = document.getElementById("files");
@@ -23,7 +23,7 @@ window.onload = function()
                 var link = document.createElement("div");
                 var a = document.createElement("a");
                 a.href = "/profan/release.html?" + data[i].name;
-                a.innerHTML = data[i].name.replace(".iso", "").replace("-", " ");
+                a.innerHTML = data[i].name.replace(".img", "").replace("-", " ");
                 link.appendChild(a);
                 // add the link at the top of the list
                 liste.insertBefore(link, liste.childNodes[0]);

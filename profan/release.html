@@ -11,7 +11,7 @@ window.onload = function()
     // get first page get parameters
     var version = window.location.search.substring(1);
     console.log(version);
-    var iso_url = "https://esolangs.github.io/profanOS-build/release/" + version;
+    var img_url = "https://esolangs.github.io/profanOS-build/img/" + version;
     var emulator = window.emulator = new V86Starter({
         wasm_path: "/profan/build/v86.wasm",
         memory_size: 32 * 1024 * 1024,
@@ -23,8 +23,8 @@ window.onload = function()
         vga_bios: {
             url: "/profan/bios/vgabios.bin",
         },
-        cdrom: {
-            url: iso_url,
+        fda: {
+            url: img_url,
         },
         hda: {
             url: "/profan/img/HDD.bin",
