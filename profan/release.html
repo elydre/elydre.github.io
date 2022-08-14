@@ -11,7 +11,7 @@ window.onload = function()
     // get first page get parameters
     var version = window.location.search.substring(1);
     console.log(version);
-    var img_url = "https://esolangs.github.io/profanOS-build/img/" + version;
+    var img_url = "https://esolangs.github.io/profanOS-build/img/profanOS-" + version + ".img";
     var emulator = window.emulator = new V86Starter({
         wasm_path: "/profan/build/v86.wasm",
         memory_size: 32 * 1024 * 1024,
