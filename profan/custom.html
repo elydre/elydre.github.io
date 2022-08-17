@@ -10,7 +10,7 @@ window.onload = function()
 {
     // get first page get parameters
     var img_url = window.location.search.substring(1);
-    console.log(version);
+    console.log(img_url);
     var emulator = window.emulator = new V86Starter({
         wasm_path: "/profan/build/v86.wasm",
         memory_size: 32 * 1024 * 1024,
