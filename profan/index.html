@@ -3,36 +3,48 @@
 
 <link rel="stylesheet" href="/profan/venu.css">
 <script>
-"use strict";
-
-window.onload = function()
-{
-    // get all the files il the release repo
-    var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/img";
-    // get the files in the release repo
-    var request = new XMLHttpRequest();
-    var liste = document.getElementById("release");
-    request.open("GET", api_url, true);
-    request.onload = function()
-    {
-        if (request.status >= 200 && request.status < 400)
-        {
-            var data = JSON.parse(request.responseText);
-            for (var i = data.length - 8; i < data.length; i++)
-            {
-                var link = document.createElement("div");
-                var a = document.createElement("a");
-                a.href = "/profan/release.html?" + data[i].name.substr(9, data[i].name.length - 13);
-                a.innerHTML = data[i].name.replace(".img", "").replace("-", " ");
-                link.appendChild(a);
-                // add the link at the top of the list
-                liste.insertBefore(link, liste.childNodes[0]);
+    "use strict";
+    
+    // it is known that OS devs like js x)
+    window.onload = function() {
+        var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/img";
+        var release_url = "https://esolangs.github.io/profanOS-build/main-releases.json";
+        var request1 = new XMLHttpRequest();
+        var request2 = new XMLHttpRequest();
+        var liste = document.getElementById("release");
+        request2.open("GET", release_url, true);
+        request2.onload = function() {
+            if (request2.status >= 200 && request2.status < 400) {
+                var data = JSON.parse(request2.responseText);
+                for (var i = 0; i < data.length && i < 2; i++) {
+                    var link = document.createElement("div");
+                    var a = document.createElement("a");
+                    a.href = "/profan/release.html?" + data[i].release;
+                    a.innerHTML = data[i].name;
+                    link.appendChild(a);
+                    liste.insertBefore(link, liste.childNodes[0]);
+                }
             }
         }
+        request1.open("GET", api_url, true);
+        request1.onload = function() {
+            if (request1.status >= 200 && request1.status < 400) {
+                var data = JSON.parse(request1.responseText);
+                for (var i = data.length - 7; i < data.length; i++) {
+                    var link = document.createElement("div");
+                    var a = document.createElement("a");
+                    a.href = "/profan/release.html?" + data[i].name.substr(9, data[i].name.length - 13);
+                    a.innerHTML = data[i].name.replace(".img", "").replace("-", " ");
+                    link.appendChild(a);
+                    liste.insertBefore(link, liste.childNodes[0]);
+                }
+                request2.send();
+            }
+        }
+        request1.send();
     }
-    request.send();
-}
 </script>
+
 <body>
     <div class="div_center">
         <h1>all features for all releases</h1>

@@ -13,13 +13,10 @@ window.onload = function()
     var request = new XMLHttpRequest();
     var liste = document.getElementById("files");
     request.open("GET", api_url, true);
-    request.onload = function()
-    {
-        if (request.status >= 200 && request.status < 400)
-        {
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
             var data = JSON.parse(request.responseText);
-            for (var i = 0; i < data.length; i++)
-            {
+            for (var i = 0; i < data.length; i++) {
                 var link = document.createElement("div");
                 var a = document.createElement("a");
                 a.href = "/profan/release.html?" + data[i].name.substr(9, data[i].name.length - 13);
