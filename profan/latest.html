@@ -17,7 +17,7 @@ window.onload = function()
     request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
             var data = JSON.parse(request.responseText);
-            var version = data[data.length - 1].name.substr(9, data[i].name.length - 13);
+            var version = data[data.length - 1].name.substr(9, data[data.length - 1].name.length - 13);
             console.log(version);
             window.location.href = "/profan/release.html?" + version;
         }
