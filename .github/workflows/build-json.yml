@@ -28,12 +28,12 @@ jobs:
     
     - name: Push Json
       uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.GIT_TOKEN }}
-        with:
-          source_file: count.json
-          destination_repo: 'elydre/elydre.github.io'
-          destination_folder: 'build'
-          user_email: 'pf4_@gmail.com'
-          user_name: 'pf4 [bot]'
-          commit_message: 'update count'
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.GIT_TOKEN }}
+      with:
+        source_file: count.json
+        destination_repo: 'elydre/elydre.github.io'
+        destination_folder: 'build'
+        user_email: 'pf4_@gmail.com'
+        user_name: 'pf4 [bot]'
+        commit_message: 'update count'
