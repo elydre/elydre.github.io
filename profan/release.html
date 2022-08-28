@@ -6,12 +6,7 @@
 <script>
 "use strict";
 
-window.onload = function()
-{   
-    // increment counter
-    var xhr = new XMLHttpRequest(); 
-    xhr.open('GET', "https://pf4.ddns.net/count", true);
-    xhr.send();
+window.onload = function() {
     // get first page get parameters
     var version = window.location.search.substring(1);
     console.log(version);
