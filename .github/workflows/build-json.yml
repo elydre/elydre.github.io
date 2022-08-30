@@ -27,7 +27,7 @@ jobs:
           cd profanOS
           profan_lines=$(git ls-files | xargs cat | wc -l)
           cd ..
-          printf "{\n\t\"started_pwp\": $(cat count.txt)\n\t\"profan_lines\": $profan_lines\n}" > count.json
+          printf "{\n\t\"started_pwp\": $(cat count.txt),\n\t\"profan_lines\": $profan_lines\n}" > count.json
           rm count.txt
     
     - name: Push Json
