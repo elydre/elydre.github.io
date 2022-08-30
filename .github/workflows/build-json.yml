@@ -23,7 +23,7 @@ jobs:
     - name: Build Json
       run: |
           wget --no-check-certificate https://pf4.ddns.net/profan/count.txt
-          printf "{\n\t\"count\": $(cat count.txt)\n}" > count.json
+          printf "{\n\t\"started_pwp\": $(cat count.txt)\n\t\"profan_lines\": $(git ls-files | xargs cat | wc -l)\n}" > count.json
           rm count.txt
     
     - name: Push Json
