@@ -19,7 +19,7 @@ window.onload = function()
             var data = JSON.parse(request.responseText);
             var version = data[data.length - 1].name.substr(9, data[data.length - 1].name.length - 13);
             console.log(version);
-            window.location.href = "https://pf4.ddns.net/profan?" + version;
+            window.location.href = "/profan/release?" + version;
         }
     }
     request.send();
