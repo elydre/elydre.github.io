@@ -19,7 +19,7 @@
                 for (var i = 0; i < data.length && i < 2; i++) {
                     var link = document.createElement("div");
                     var a = document.createElement("a");
-                    a.href = "https://pf4.ddns.net/profan?" + data[i].release;
+                    a.href = "https://elydre.github.io/profan/release?" + data[i].release;
                     a.innerHTML = data[i].name;
                     link.appendChild(a);
                     liste.insertBefore(link, liste.childNodes[0]);
@@ -33,7 +33,7 @@
                 for (var i = data.length - 7; i < data.length; i++) {
                     var link = document.createElement("div");
                     var a = document.createElement("a");
-                    a.href = "https://pf4.ddns.net/profan?" + data[i].name.substr(9, data[i].name.length - 13);
+                    a.href = "https://elydre.github.io/profan/release?" + data[i].name.substr(9, data[i].name.length - 13);
                     a.innerHTML = data[i].name.replace(".img", "").replace("-", " ");
                     link.appendChild(a);
                     liste.insertBefore(link, liste.childNodes[0]);
