@@ -19,7 +19,7 @@ window.onload = function()
             for (var i = 0; i < data.length; i++) {
                 var link = document.createElement("div");
                 var a = document.createElement("a");
-                a.href = "https://elydre.github.io/profan/release?" + data[i].name.substr(9, data[i].name.length - 13);
+                a.href = "/profan/release?" + data[i].name.substr(9, data[i].name.length - 13);
                 a.innerHTML = data[i].name.replace(".img", "").replace("-", " ");
                 link.appendChild(a);
                 // add the link at the top of the list
