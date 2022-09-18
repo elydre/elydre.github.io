@@ -9,7 +9,7 @@
 window.onload = function()
 {   
     // get all the files il the release repo
-    var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/img";
+    var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/post55-iso";
     // get the files in the release repo
     var request = new XMLHttpRequest();
     var liste = document.getElementById("files");
@@ -19,7 +19,7 @@ window.onload = function()
             var data = JSON.parse(request.responseText);
             var version = data[data.length - 1].name.substr(9, data[data.length - 1].name.length - 13);
             console.log(version);
-            window.location.href = "/profan/release?" + version;
+            window.location.href = "/profan/release.html?" + version;
         }
     }
     request.send();

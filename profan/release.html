@@ -9,27 +9,48 @@
 window.onload = function() {
     // get first page get parameters
     var version = window.location.search.substring(1);
-    console.log(version);
-    var img_url = "https://esolangs.github.io/profanOS-build/img/profanOS-" + version + ".img";
-    var emulator = window.emulator = new V86Starter({
-        wasm_path: "/profan/build/v86.wasm",
-        memory_size: 32 * 1024 * 1024,
-        vga_memory_size: 2 * 1024 * 1024,
-        screen_container: document.getElementById("screen_container"),
-        bios: {
-            url: "/profan/bios/seabios.bin",
-        },
-        vga_bios: {
-            url: "/profan/bios/vgabios.bin",
-        },
-        fda: {
-            url: img_url,
-        },
-        hda: {
-            url: "/profan/img/HDD.bin",
-        },
-        autostart: true,
-    });
+    var img_url = "/profanOS-" + version.replace(version.substring(0, 1), "");
+    if (version.substring(0, 1) == "i") {
+        var emulator = window.emulator = new V86Starter({
+            wasm_path: "/profan/build/v86.wasm",
+            memory_size: 32 * 1024 * 1024,
+            vga_memory_size: 2 * 1024 * 1024,
+            screen_container: document.getElementById("screen_container"),
+            bios: {
+                url: "/profan/bios/seabios.bin",
+            },
+            vga_bios: {
+                url: "/profan/bios/vgabios.bin",
+            },
+            cdrom: {
+                url: "https://esolangs.github.io/profanOS-build/post55-iso" + img_url + ".iso",
+            },
+            hda: {
+                url: "/profan/img/HDD.bin",
+            },
+            autostart: true,
+        });
+    } else {
+        var emulator = window.emulator = new V86Starter({
+            wasm_path: "/profan/build/v86.wasm",
+            memory_size: 32 * 1024 * 1024,
+            vga_memory_size: 2 * 1024 * 1024,
+            screen_container: document.getElementById("screen_container"),
+            bios: {
+                url: "/profan/bios/seabios.bin",
+            },
+            vga_bios: {
+                url: "/profan/bios/vgabios.bin",
+            },
+            fda: {
+                url: "https://esolangs.github.io/profanOS-build/img" + img_url + ".img",
+            },
+            hda: {
+                url: "/profan/img/HDD.bin",
+            },
+            autostart: true,
+        });
+    }
 }
 </script>
 

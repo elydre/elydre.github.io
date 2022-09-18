@@ -5,30 +5,48 @@
 <script>
 "use strict";
 
-window.onload = function()
-{
+window.onload = function() {
     // get all the files il the release repo
-    var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/img";
+    var iso_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/post55-iso";
+    var bin_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/img";
     // get the files in the release repo
-    var request = new XMLHttpRequest();
+    var request1 = new XMLHttpRequest();
+    var request2 = new XMLHttpRequest();
     var liste = document.getElementById("files");
-    request.open("GET", api_url, true);
-    request.onload = function() {
-        if (request.status >= 200 && request.status < 400) {
-            var data = JSON.parse(request.responseText);
+    request2.open("GET", iso_url, true);
+    request2.onload = function() {
+        if (request2.status >= 200 && request2.status < 400) {
+            var data = JSON.parse(request2.responseText);
             for (var i = 0; i < data.length; i++) {
                 var link = document.createElement("div");
                 var a = document.createElement("a");
-                a.href = "/profan/release?" + data[i].name.substr(9, data[i].name.length - 13);
-                a.innerHTML = data[i].name.replace(".img", "").replace("-", " ");
+                a.href = "/profan/release.html?i" + data[i].name.substr(9, data[i].name.length - 13);
+                a.innerHTML = data[i].name.replace(".iso", "").replace("-", " ");
                 link.appendChild(a);
                 // add the link at the top of the list
                 liste.insertBefore(link, liste.childNodes[0]);
             }
         }
     }
-    request.send();
+    request1.open("GET", bin_url, true);
+    request1.onload = function() {
+        if (request1.status >= 200 && request1.status < 400) {
+            var data = JSON.parse(request1.responseText);
+            for (var i = 0; i < data.length; i++) {
+                var link = document.createElement("div");
+                var a = document.createElement("a");
+                a.href = "/profan/release.html?f" + data[i].name.substr(9, data[i].name.length - 13);
+                a.innerHTML = data[i].name.replace(".img", "").replace("-", " ");
+                link.appendChild(a);
+                // add the link at the top of the list
+                liste.insertBefore(link, liste.childNodes[0]);
+            }
+            request2.send();
+        }
+    }
+    request1.send();
 }
+
 </script>
 <body>
     <div class="div_center">
