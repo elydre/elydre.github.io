@@ -9,7 +9,7 @@
 window.onload = function() {
     // get first page get parameters
     var version = window.location.search.substring(1);
-    var img_url = "/profanOS-" + version.replace(version.substring(0, 1), "");
+    var img_url = version.replace(version.substring(0, 1), "");
     if (version.substring(0, 1) == "i") {
         var emulator = window.emulator = new V86Starter({
             wasm_path: "/profan/build/v86.wasm",
@@ -23,10 +23,10 @@ window.onload = function() {
                 url: "/profan/bios/vgabios.bin",
             },
             cdrom: {
-                url: "https://esolangs.github.io/profanOS-build/post55-iso" + img_url + ".iso",
+                url: "https://esolangs.github.io/profanOS-build/post55-iso/profanOS-" + img_url + ".iso",
             },
             hda: {
-                url: "/profan/img/HDD.bin",
+                url: "https://esolangs.github.io/profanOS-build/disk-build/disk" + img_url + ".bin",
             },
             autostart: true,
         });
@@ -43,7 +43,7 @@ window.onload = function() {
                 url: "/profan/bios/vgabios.bin",
             },
             fda: {
-                url: "https://esolangs.github.io/profanOS-build/img" + img_url + ".img",
+                url: "https://esolangs.github.io/profanOS-build/img/profanOS-" + img_url + ".img",
             },
             hda: {
                 url: "/profan/img/HDD.bin",
