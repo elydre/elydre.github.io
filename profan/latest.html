@@ -1,0 +1,31 @@
+<!doctype html>
+<title>profanOS</title>
+
+<script src="/profan/build/libv86.js"></script>
+<link rel="stylesheet" href="/profan/venu.css">
+<script>
+"use strict";
+
+window.onload = function()
+{   
+    // get all the files il the release repo
+    var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/post55-iso";
+    // get the files in the release repo
+    var request = new XMLHttpRequest();
+    var liste = document.getElementById("files");
+    request.open("GET", api_url, true);
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+            var data = JSON.parse(request.responseText);
+            var version = data[data.length - 1].name.substr(9, data[data.length - 1].name.length - 13);
+            console.log(version);
+            window.location.href = "/profan/release.html?i" + version;
+        }
+    }
+    request.send();
+}
+</script>
+
+<p>
+    redirect to latest version
+</p>

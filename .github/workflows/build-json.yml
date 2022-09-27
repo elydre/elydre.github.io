@@ -1,0 +1,41 @@
+# This is a basic workflow to help you get started with Actions
+
+name: generate-json
+
+# Controls when the action will run. Triggers the workflow on push events
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    # Run using Python 3.8 for consistency and aiohttp
+    - name: Build Json
+      run: |
+          git clone https://github.com/elydre/profanOS.git
+          cd profanOS
+          profan_lines=$(git ls-files | xargs cat | wc -l)
+          cd ..
+          printf "{\n\t\"profan_lines\": $profan_lines\n}" > count.json
+    
+    - name: Push Json
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.GIT_TOKEN }}
+      with:
+        source_file: count.json
+        destination_repo: 'elydre/elydre.github.io'
+        destination_folder: 'build'
+        user_email: 'pf4_@gmail.com'
+        user_name: 'pf4 [bot]'
+        commit_message: 'update count'
