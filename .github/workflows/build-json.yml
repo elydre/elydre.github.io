@@ -24,7 +24,7 @@ jobs:
       run: |
           git clone https://github.com/elydre/profanOS.git
           cd profanOS
-          rm -Rf user_dir LICENSE
+          rm -Rf user_dir LICENSE zapps/*/*.txt
           profan_lines=$(git ls-files | xargs cat | wc -l)
           cd ..
           printf "{\n\t\"profan_lines\": $profan_lines\n}" > count.json
