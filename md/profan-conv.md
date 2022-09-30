@@ -51,7 +51,7 @@ strcpy(copy, str);
 sys_fatal("out of memory");
 
 // bad code
-fskprintf("$3fatal: out of memory\n");
+fskprint("$3fatal: out of memory\n");
 asm volatile("cli");
 asm volatile("hlt");
 ```
