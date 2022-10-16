@@ -16,14 +16,12 @@
         request2.onload = function() {
             if (request2.status >= 200 && request2.status < 400) {
                 var data = JSON.parse(request2.responseText);
-                for (var i = 0; i < data.length && i < 2; i++) {
-                    var link = document.createElement("div");
-                    var a = document.createElement("a");
-                    a.href = "/profan/release.html?" + data[i].release;
-                    a.innerHTML = data[i].name;
-                    link.appendChild(a);
-                    liste.insertBefore(link, liste.childNodes[0]);
-                }
+                var link = document.createElement("div");
+                var a = document.createElement("a");
+                a.href = "/profan/release.html?" + data[0].release;
+                a.innerHTML = data[0].name;
+                link.appendChild(a);
+                liste.insertBefore(link, liste.childNodes[0]);
             }
         }
         request1.open("GET", api_url, true);
