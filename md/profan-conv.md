@@ -165,7 +165,9 @@ if (new_pos >= 3998)
 // good one line comment
 //bad one line comment
 /* bad one line comment */
+```
 
+```c
 /* good long multi
  * line comment */
 
@@ -175,6 +177,12 @@ line comment */
 /* bad long multi
 line comment
 */
+```
+
+```c
+/***********************
+ * GOOD TITLE COMMENT *
+***********************/
 ```
 
 ### 13 - pointer initialization
