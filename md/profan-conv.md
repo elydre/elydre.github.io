@@ -1,3 +1,8 @@
+# profanOS main-line convention
+
+The latest profanOS kernel must respect all of the following conventions.
+Why conventions? It allows to have regular and harmonious code as well as to prevent some bugs
+
 ### 1 - skip a line after a semicolon
 
 ```c
