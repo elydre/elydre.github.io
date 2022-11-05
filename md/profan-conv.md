@@ -159,3 +159,43 @@ if (new_pos >= 3998)    // (row * col + (col - 1)) * 2
 if (new_pos >= 3998)
     old_cursor -= 160;
 ```
+
+### 11 - commentary conventions
+```c
+// good one line comment
+//bad one line comment
+/* bad one line comment */
+
+/* good long multi
+ * line comment */
+
+/* bad long multi
+line comment */
+
+/* bad long multi
+line comment
+*/
+```
+
+### 13 - pointer initialization
+```c
+// good code
+void *ptr = malloc(10);
+
+// bad code
+void * ptr = malloc(10);
+void* ptr = malloc(10);
+```
+
+### 14 - don't use pointer after free
+```c
+// good code
+void *ptr = malloc(10);
+USING(ptr);
+free(ptr);
+
+// bad code
+void *ptr = malloc(10);
+free(ptr);
+USING(ptr);
+```
