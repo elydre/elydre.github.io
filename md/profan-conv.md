@@ -172,7 +172,7 @@ if (new_pos >= 3998)
 ***********************/
 ```
 
-### 13 - pointer initialization
+### 12 - pointer initialization
 ```c
 // good code
 void *ptr = malloc(10);
@@ -182,7 +182,7 @@ void * ptr = malloc(10);
 void* ptr = malloc(10);
 ```
 
-### 14 - don't use pointer after free
+### 13 - don't use pointer after free
 ```c
 // good code
 void *ptr = malloc(10);
