@@ -163,23 +163,10 @@ if (new_pos >= 3998)
 ### 11 - commentary conventions
 ```c
 // good one line comment
-//bad one line comment
-/* bad one line comment */
-```
 
-```c
 /* good long multi
  * line comment */
 
-/* bad long multi
-line comment */
-
-/* bad long multi
-line comment
-*/
-```
-
-```c
 /***********************
  * GOOD TITLE COMMENT *
 ***********************/
