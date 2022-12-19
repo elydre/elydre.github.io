@@ -17,6 +17,13 @@ h2 {
     margin-bottom: 0px;
 }
 
+.div_center {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
 .sat {
     text-align: center;
 }
