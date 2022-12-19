@@ -17,13 +17,6 @@ h2 {
     margin-bottom: 0px;
 }
 
-.div_center {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    padding: 0 20px;
-}
-
 .sat {
     text-align: center;
 }
@@ -197,11 +190,15 @@ td {
     white-space: pre;
     font: 15px Cascadia Mono, monospace;
     line-height: 17px;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
     padding: 10px;
     box-shadow: -1px 2px 1px -1px rgba(116, 116, 116, 0.3) inset;
     background-color: #000000;
     border-radius: 5px;
+}
+
+#screen_container {
+    /* center vertically and horizontally */
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
 }
