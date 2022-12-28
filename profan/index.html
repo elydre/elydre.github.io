@@ -28,15 +28,31 @@
         request1.onload = function() {
             if (request1.status >= 200 && request1.status < 400) {
                 var data = JSON.parse(request1.responseText);
-                for (var i = data.length - 7; i < data.length; i++) {
+                let elements = data.map((x, idx) => [x.name.substr(9, x.name.length - 13), idx]);
+
+                elements.sort(
+                    function(a, b) {
+                        a = a[0];
+                        b = b[0];
+
+                        if (a.startsWith(b + "-")) return -1
+                        if (b.startsWith(a + "-")) return  1
+                        return a.localeCompare(b, undefined, { numeric: true, sensitivity: "case", caseFirst: "upper" })
+                    }
+                )
+
+                elements = elements.map(x => x[1]);
+
+                for (let i = elements.length - 7; i < elements.length; i++) {
                     if (i < 0) continue;
-                    var link = document.createElement("div");
-                    var a = document.createElement("a");
-                    a.href = "/profan/release.html?i" + data[i].name.substr(9, data[i].name.length - 13);
-                    a.innerHTML = data[i].name.replace(".iso", "").replace("-", " ");
+                    const link = document.createElement("div");
+                    const a = document.createElement("a");
+                    a.href = "/profan/release.html?i" + data[elements[i]].name.substr(9, data[elements[i]].name.length - 13);
+                    a.innerHTML = data[elements[i]].name.replace(".iso", "").replace("-", " ");
                     link.appendChild(a);
                     liste.insertBefore(link, liste.childNodes[0]);
                 }
+
                 request2.send();
             }
         }
