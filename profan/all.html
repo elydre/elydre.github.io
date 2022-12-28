@@ -7,34 +7,50 @@
 
 window.onload = function() {
     // get all the files il the release repo
-    var iso_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/post55-iso";
-    var bin_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/img";
+    const iso_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/post55-iso";
+    const bin_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/img";
     // get the files in the release repo
-    var request1 = new XMLHttpRequest();
-    var request2 = new XMLHttpRequest();
-    var liste = document.getElementById("files");
+    const request1 = new XMLHttpRequest();
+    const request2 = new XMLHttpRequest();
+    const liste = document.getElementById("files");
     request2.open("GET", iso_url, true);
     request2.onload = function() {
         if (request2.status >= 200 && request2.status < 400) {
-            var data = JSON.parse(request2.responseText);
-            for (var i = 0; i < data.length; i++) {
-                var link = document.createElement("div");
-                var a = document.createElement("a");
-                a.href = "/profan/release.html?i" + data[i].name.substr(9, data[i].name.length - 13);
-                a.innerHTML = data[i].name.replace(".iso", "").replace("-", " ");
+            const data = JSON.parse(request2.responseText);
+
+            let elements = data.map((x, idx) => [x.name.substr(9, x.name.length - 13), idx]);
+
+            elements.sort(
+                function(a, b) {
+                    a = a[0];
+                    b = b[0];
+
+                    if (a.startsWith(b + "-")) return -1
+                    if (b.startsWith(a + "-")) return  1
+                    return a.localeCompare(b, undefined, { numeric: true, sensitivity: "case", caseFirst: "upper" })
+                }
+            )
+
+            elements = elements.map(x => x[1]);
+
+            for (let i = 0; i < elements.length; i++) {
+                const link = document.createElement("div");
+                const a = document.createElement("a");
+                a.href = "/profan/release.html?i" + data[elements[i]].name.substr(9, data[elements[i]].name.length - 13);
+                a.innerHTML = data[elements[i]].name.replace(".iso", "").replace("-", " ");
                 link.appendChild(a);
-                // add the link at the top of the list
                 liste.insertBefore(link, liste.childNodes[0]);
             }
         }
     }
+
     request1.open("GET", bin_url, true);
     request1.onload = function() {
         if (request1.status >= 200 && request1.status < 400) {
-            var data = JSON.parse(request1.responseText);
-            for (var i = 0; i < data.length; i++) {
-                var link = document.createElement("div");
-                var a = document.createElement("a");
+            const data = JSON.parse(request1.responseText);
+            for (let i = 0; i < data.length; i++) {
+                const link = document.createElement("div");
+                const a = document.createElement("a");
                 a.href = "/profan/release.html?f" + data[i].name.substr(9, data[i].name.length - 13);
                 a.innerHTML = data[i].name.replace(".img", "").replace("-", " ");
                 link.appendChild(a);
