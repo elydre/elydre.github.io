@@ -13,7 +13,7 @@ window.onload = function() {
     if (version.substring(0, 1) == "i") {
         var emulator = window.emulator = new V86Starter({
             wasm_path: "/profan/build/v86.wasm",
-            memory_size: 64 * 1024 * 1024,
+            memory_size: 128 * 1024 * 1024,
             vga_memory_size: 8 * 1024 * 1024,
             screen_container: document.getElementById("screen_container"),
             bios: {
@@ -33,7 +33,7 @@ window.onload = function() {
     } else {
         var emulator = window.emulator = new V86Starter({
             wasm_path: "/profan/build/v86.wasm",
-            memory_size: 64 * 1024 * 1024,
+            memory_size: 128 * 1024 * 1024,
             vga_memory_size: 8 * 1024 * 1024,
             screen_container: document.getElementById("screen_container"),
             bios: {
