@@ -6,26 +6,32 @@
 <script>
 "use strict";
 
-window.onload = function()
-{   
-    // get all the files il the release repo
-    var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/post55-iso";
-    // get the files in the release repo
-    var request = new XMLHttpRequest();
-    var liste = document.getElementById("files");
-    request.open("GET", api_url, true);
-    request.onload = function() {
-        if (request.status >= 200 && request.status < 400) {
-            var data = JSON.parse(request.responseText);
-            var version = data[data.length - 1].name.substr(9, data[data.length - 1].name.length - 13);
-            console.log(version);
-            window.location.href = "/profan/release.html?i" + version;
-        }
-    }
-    request.send();
+window.onload = function() {
+    // get first page get parameters
+    var emulator = window.emulator = new V86Starter({
+        wasm_path: "/profan/build/v86.wasm",
+        memory_size: 128 * 1024 * 1024,
+        vga_memory_size: 8 * 1024 * 1024,
+        screen_container: document.getElementById("screen_container"),
+        bios: {
+            url: "/profan/bios/seabios.bin",
+        },
+        vga_bios: {
+            url: "/profan/bios/vgabios.bin",
+        },
+        cdrom: {
+            url: "https://github.com/elydre/profanOS/releases/download/latest/profanOS-0.12.2c.iso",
+        },
+        hda: {
+            url: "https://github.com/elydre/profanOS/releases/download/latest/profanOS-disk.bin",
+        },
+        autostart: true,
+    });
 }
 </script>
 
-<p>
-    redirect to latest version
-</p>
+<!-- A minimal structure for the ScreenAdapter defined in browser/screen.js -->
+<div id="screen_container">
+    <div class = "shell"></div>
+    <canvas style="display: none"></canvas>
+</div>
