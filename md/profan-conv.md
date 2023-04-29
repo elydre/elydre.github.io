@@ -16,7 +16,19 @@ task->regs.eflags = flags; task->regs.eip = (uint32_t) main; task->regs.cr3 = (u
 ```
 
 
-### 2 - your code must tab with 4 spaces (except Makefile)
+### 2 - use snake_case for variables and functions
+```c
+// good code
+int my_var = 0;
+
+// bad code
+int myVar = 0;
+int myvar = 0;
+int My_Var = 0;
+```
+
+
+### 3 - your code must tab with 4 spaces (except Makefile)
 ```c
 // good code
 void sys_reboot() {
@@ -38,7 +50,7 @@ void sys_reboot() {
 ```
 
 
-### 3 - use dynamic memory for variable size
+### 4 - use dynamic memory for variable size
 ```c
 // good code
 char *copy = malloc(strlen(str) + 1);
@@ -50,7 +62,7 @@ strcpy(copy, str);
 ```
 
 
-### 4 - use kernel functions for management
+### 5 - use kernel functions for management
 ```c
 // good code
 sys_fatal("out of memory");
@@ -62,7 +74,7 @@ asm volatile("hlt");
 ```
 
 
-### 5 - use light syntax
+### 6 - use compact syntax
 ```c
 // good code
 val = (k == debut) ? 1 : debut;
@@ -76,7 +88,52 @@ if (k == debut) {
 ```
 
 
-### 6 - your code must not exceed 4 indentation tabs
+### 7 - put spaces between operators
+```c
+// good code
+for (int i = 0; i < index + 1; i++) {
+    last = (last != -1) ? (last - last % 3) / 3 : imm;
+}
+
+// bad code
+for (int i=0;i<index+1;i++) {
+    last=(last!=-1)?(last-last%3)/3:imm;
+}
+```
+
+
+### 8 - use the library and not the driver
+```c
+// good code
+int temps = 10;
+ms_sleep(temps * 1000);
+
+// bad code
+int temps = 10;
+uint32_t start_time = timer_get_tick();
+while (timer_get_tick() < start_tick + (uint32_t) temps * 100) {
+    do_nothing();
+}
+```
+
+
+### 9 - follow the nomenclature of public functions
+```c
+// good code
+int mem_alloc(int size);
+int mem_get_usage();
+int mem_get_usable();
+int mem_get_alloc_count();
+
+// bad code
+int alloc_mem(int size);
+int usage_of_memory();
+int usable_memory();
+int count_of_alloc();
+```
+
+
+### 10 - your code must not exceed 4 indentation tabs
 ```c
 // good code
 int start(int addr, int arg) {
@@ -109,52 +166,10 @@ int start(int addr, int arg) {
         }
     }
 }
-
 ```
 
-### 7 - put spaces between operators
-```c
-// good code
-for (int i = 0; i < index + 1; i++) {
-    last = (last != -1) ? (last - last % 3) / 3 : imm;
-}
 
-// bad code
-for (int i=0;i<index+1;i++) {
-    last=(last!=-1)?(last-last%3)/3:imm;
-}
-```
-
-### 8 - use the library and not the driver
-```c
-// good code
-int temps = 10;
-ms_sleep(temps * 1000);
-
-// bad code
-int temps = 10;
-uint32_t start_time = timer_get_tick();
-while (timer_get_tick() < start_tick + (uint32_t) temps * 100) {
-    do_nothing();
-}
-```
-
-### 9 - follow the nomenclature of public functions
-```c
-// good code
-int mem_alloc(int size);
-int mem_get_usage();
-int mem_get_usable();
-int mem_get_alloc_count();
-
-// bad code
-int alloc_mem(int size);
-int usage_of_memory();
-int usable_memory();
-int count_of_alloc();
-```
-
-### 10 - comment magic numbers
+### 11 - comment magic numbers
 ```c
 // good code
 if (new_pos >= 3998)    // (row * col + (col - 1)) * 2
@@ -165,7 +180,8 @@ if (new_pos >= 3998)
     old_cursor -= 160;
 ```
 
-### 11 - commentary conventions
+
+### 12 - commentary conventions
 ```c
 // good one line comment
 
@@ -177,7 +193,8 @@ if (new_pos >= 3998)
 ***********************/
 ```
 
-### 12 - pointer initialization
+
+### 13 - pointer initialization
 ```c
 // good code
 void *ptr = malloc(10);
@@ -187,7 +204,8 @@ void * ptr = malloc(10);
 void* ptr = malloc(10);
 ```
 
-### 13 - don't use pointer after free
+
+### 14 - don't use memory after free
 ```c
 // good code
 void *ptr = malloc(10);
