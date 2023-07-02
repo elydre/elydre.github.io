@@ -55,22 +55,32 @@ Variables are set using the `set` internal function which takes two arguments,
 the first one being the name of the variable (without the `!` prefix) and the
 second one being the value of the variable.
 
-```c
+```
 set var 42
 ```
 
 Variables can be accessed using the `!` prefix.
 
-```c
+```
 echo !var
 ```
 
 Variables can be deleted using the `del` internal function which takes one
 argument, the name of the variable to delete.
 
-```c
+```
 del var
 ```
+
+Recurcive variables substitution is supported like in PHP.
+
+```
+set a 42
+set b a
+
+echo !!b
+```
+
 
 ### Subfunctions Calls
 
