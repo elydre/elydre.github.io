@@ -53,6 +53,13 @@ Variables can be accessed using the `!` prefix.
 echo !var
 ```
 
+Variables can be deleted using the `del` internal function which takes one
+argument, the name of the variable to delete.
+
+```
+del var
+```
+
 ### Subfunctions Calls
 
 Subfunctions are functions that are called inside a line of code. They are
@@ -61,4 +68,87 @@ as classic function calls
 
 ```
 echo !(subfunction arg1 arg2)
+```
+
+### Pseudos
+
+Pseudos are replaced between all the substitution steps and the final call of
+the function. They have been created in order to simplify the function calls.
+
+Pseudos are defined with the internal function `pseudo` which takes two
+arguments, the first one being the name of the pseudo and the second one
+being the value of the pseudo.
+
+```
+pseudo pseudo_name value
+pseudo tcc 'go /bin/fatpath/tcc'
+```
+
+Nicknames are accessible without a prefix like a function call.
+
+```c
+tcc -c main.c
+
+// Will be automatically replaced by
+go /bin/fatpath/tcc -c main.c
+```
+
+### Classic Functions
+
+Classic functions are functions that are coded in olivine. They are defined
+using the `FUNC` keyword followed by the name of the function.
+
+A variable named `!#` is automatically set to the number of arguments passed
+to the function, and the arguments are accessible using the `!<number>` syntax.
+
+```
+FUNC my_function
+    echo !# arguments passed
+    echo first argument:  !0
+    echo second argument: !1
+END
+```
+
+The function can return a value using the `RETURN` keyword.
+
+```
+FUNC double
+    RETURN !(eval !0 * 2)
+END
+```
+
+All the created variables to save the arguments are automatically deleted
+after the function call, but the variables created inside the function are
+not deleted.
+
+### Internal Functions
+
+> **Note:** This section is of no importance if you only use Olivine as your
+> shell language.
+
+Internal functions are functions that are coded in C and are compiled with the
+olivine binary.
+
+```c
+char *if_demo(char **input) {
+    // input[0] is the first argument
+    // input[1] is the second...
+
+    // The function must return a string. If
+    // the function returns NULL, the output
+    // will be replaced by an empty string
+
+    return "Hello World";
+}
+
+// The function must be registered using the
+// internal_functions array:
+
+internal_function_t internal_functions[] = {
+    ...
+    {"demo", if_demo},
+    ...
+    {NULL, NULL}
+};
+
 ```
