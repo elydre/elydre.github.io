@@ -161,7 +161,7 @@ END
 
 The `BREAK` keyword can be used to exit a loop.
 
-```c
+```
 // Will print 1 2
 
 FOR i 1 2 3 4 5
@@ -174,7 +174,7 @@ END
 
 The `CONTINUE` keyword can be used to skip the current iteration of a loop.
 
-```c
+```
 // Will print 1 2 4 5
 
 FOR i 1 2 3 4 5
