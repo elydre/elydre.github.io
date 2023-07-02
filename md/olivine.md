@@ -98,7 +98,7 @@ pseudo tcc 'go /bin/fatpath/tcc'
 
 Nicknames are accessible without a prefix like a function call.
 
-```c
+```
 tcc -c main.c
 
 // Will be automatically replaced by
