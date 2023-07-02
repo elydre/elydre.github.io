@@ -22,6 +22,18 @@ can contain spaces and will not be split into multiple arguments.
 > **Note:** Even words are quoted, variables and subfunctions will still
 > be substituted
 
+### Indentation and Line Breaks
+
+Indentation will be ignored by olivine. Each line of code must be separated
+by a line break or a semicolon `;`.
+
+```
+echo first line
+echo second line
+
+echo first line; echo second line
+```
+
 ### Functions Calls
 
 If a line does not start with a keyword, it is considered as a function call.
