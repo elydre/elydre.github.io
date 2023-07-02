@@ -105,6 +105,27 @@ tcc -c main.c
 go /bin/fatpath/tcc -c main.c
 ```
 
+### Eval Function
+
+The `eval` internal function can be used to evaluate an expression.
+The number of arguments and spaces will be ignored.
+
+operators:
+- `+` addition
+- `-` subtraction
+- `*` multiplication
+- `/` division
+- `^` modulo
+- `=` equal (comparison)
+- `>` greater than
+- `<` less than
+- `~` different
+
+```
+eval 1+2*(3-1)
+eval 42 = 41 + 1
+```
+
 ### Conditionals
 
 Conditionals are defined using the `IF` keyword followed by the condition.
@@ -244,3 +265,33 @@ internal_function_t internal_functions[] = {
 };
 
 ```
+
+## Built-in Elements
+
+### Internal Functions
+
+| Name    | Arguments   | Description                                 |
+| ------- | ----------- | ------------------------------------------- |
+| `echo`  | `...`       | Prints the arguments separated by a space   |
+| `upper` | `string`    | Returns the uppercase version of the string |
+| `join`  | `...`       | Joins the arguments                         |
+| `split` | `string`    | Splits the string                           |
+| `set`   | `name var`  | Sets the variable `!name` to `var`          |
+| `del`   | `name`      | Deletes the variable `!name`                |
+| `debug` |             | Prints all variables, pseudos and functions |
+| `eval`  | `expr`      | Evaluates the expression                    |
+| `go`    | `binfile`   | Executes the binary file                    |
+| `exec`  | `file`      | Executes the file as Olivine code           |
+| `cd`    | `dir`       | Changes the current directory               |
+| `pseudo`| `name val`  | Creates a pseudo                            |
+| `range` | `start end` | Returns a list of numbers                   |
+| `find`  | `dir`       | Returns a list of files in the directory    |
+| `name`  | `path`      | Returns the name of the file                |
+
+### Default Variables
+
+| Name    | Description                            |
+| ------- | -------------------------------------- |
+| version | The version of Olivine                 |
+| profan  | `1` if build for profan, `0` otherwise |
+| path    | The current directory                  |
