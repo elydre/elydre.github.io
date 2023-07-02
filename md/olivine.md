@@ -149,7 +149,7 @@ END
 While loops are defined using the `WHILE` keyword followed by the condition.
 The `END` keyword must be used to close the loop.
 
-```c
+```
 set i 0
 WHILE !(eval !i < 5)
     echo !i
