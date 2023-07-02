@@ -55,20 +55,20 @@ Variables are set using the `set` internal function which takes two arguments,
 the first one being the name of the variable (without the `!` prefix) and the
 second one being the value of the variable.
 
-```
+```c
 set var 42
 ```
 
 Variables can be accessed using the `!` prefix.
 
-```
+```c
 echo !var
 ```
 
 Variables can be deleted using the `del` internal function which takes one
 argument, the name of the variable to delete.
 
-```
+```c
 del var
 ```
 
@@ -129,6 +129,61 @@ END
 
 > **Note:** The `ELSE` keyword does not have to follow the END of the
 > condition but can be separated by code 🫠
+
+### For Loops
+
+For loops are defined using the `FOR` keyword followed by the variable name
+and the list of values. The `END` keyword must be used to close the loop.
+
+```
+FOR i hi hello hey
+    echo !i
+END
+```
+
+> **Note:** For loops can be slow if the list of values is too long. In this
+> case, it is recommended to use a while loop.
+
+### While Loops
+
+While loops are defined using the `WHILE` keyword followed by the condition.
+The `END` keyword must be used to close the loop.
+
+```c
+set i 0
+WHILE !(eval !i < 5)
+    echo !i
+    set i !(eval !i + 1)
+END
+```
+
+### Break and Continue
+
+The `BREAK` keyword can be used to exit a loop.
+
+```c
+// Will print 1 2
+
+FOR i 1 2 3 4 5
+    IF !(eval !i = 3)
+        BREAK
+    END
+    echo !i
+END
+```
+
+The `CONTINUE` keyword can be used to skip the current iteration of a loop.
+
+```c
+// Will print 1 2 4 5
+
+FOR i 1 2 3 4 5
+    IF !(eval !i = 3)
+        CONTINUE
+    END
+    echo !i
+END
+```
 
 ### Classic Functions
 
