@@ -119,7 +119,7 @@ END
 
 All the created variables to save the arguments are automatically deleted
 after the function call, but the variables created inside the function are
-not deleted.
+not deleted (see [Variables](#variables)).
 
 ### Internal Functions
 
