@@ -93,6 +93,31 @@ tcc -c main.c
 go /bin/fatpath/tcc -c main.c
 ```
 
+### Conditionals
+
+Conditionals are defined using the `IF` keyword followed by the condition.
+The `END` keyword must be used to close the conditional.
+
+```
+IF !(eval 1 = 1)
+    echo 1 is equal to 1
+END
+```
+
+The `ELSE` keyword can be used after the `IF .. END` block and will be executed
+if the condition is false.
+
+```
+IF !(eval 1 = 2)
+    echo 1 is equal to 2
+END; ELSE
+    echo 1 is not equal to 2
+END
+```
+
+> **Note:** The `ELSE` keyword does not have to follow the END of the
+> condition but can be separated by code 🫠
+
 ### Classic Functions
 
 Classic functions are functions that are coded in olivine. They are defined
