@@ -94,8 +94,9 @@ echo !(subfunction arg1 arg2)
 
 ### Pseudos
 
-Pseudos are replaced between all the substitution steps and the final call of
-the function. They have been created in order to simplify the function calls.
+Pseudos (aka Nicknames) are replaced between all the substitution steps and
+the final call of the function. They have been created in order to simplify
+the function calls.
 
 Pseudos are defined with the internal function `pseudo` which takes two
 arguments, the first one being the name of the pseudo and the second one
@@ -106,7 +107,7 @@ pseudo pseudo_name value
 pseudo tcc 'go /bin/fatpath/tcc'
 ```
 
-Nicknames are accessible without a prefix like a function call.
+Pseudos are accessible without a prefix like a function call.
 
 ```
 tcc -c main.c
@@ -280,23 +281,23 @@ internal_function_t internal_functions[] = {
 
 ### Internal Functions
 
-| Name    | Arguments   | Description                                 |
-| ------- | ----------- | ------------------------------------------- |
-| `echo`  | `...`       | Prints the arguments separated by a space   |
-| `upper` | `string`    | Returns the uppercase version of the string |
-| `join`  | `...`       | Joins the arguments                         |
-| `split` | `string`    | Splits the string                           |
-| `set`   | `name var`  | Sets the variable `!name` to `var`          |
-| `del`   | `name`      | Deletes the variable `!name`                |
-| `debug` |             | Prints all variables, pseudos and functions |
-| `eval`  | `expr`      | Evaluates the expression                    |
-| `go`    | `binfile`   | Executes the binary file                    |
-| `exec`  | `file`      | Executes the file as Olivine code           |
-| `cd`    | `dir`       | Changes the current directory               |
-| `pseudo`| `name val`  | Creates a pseudo                            |
-| `range` | `start end` | Returns a list of numbers                   |
-| `find`  | `dir`       | Returns a list of files in the directory    |
-| `name`  | `path`      | Returns the name of the file                |
+| Name    | Arguments     | Description                                 |
+| ------- | ------------- | ------------------------------------------- |
+| `echo`  | `...`         | Prints the arguments separated by a space   |
+| `upper` | `string`      | Returns the uppercase version of the string |
+| `join`  | `...`         | Joins the arguments                         |
+| `split` | `string`      | Splits the string                           |
+| `set`   | `name var`    | Sets the variable `!name` to `var`          |
+| `del`   | `name`        | Deletes the variable `!name`                |
+| `debug` |               | Prints all variables, pseudos and functions |
+| `eval`  | `expr`        | Evaluates the expression                    |
+| `go`    | `binfile`     | Executes the binary file                    |
+| `exec`  | `file`        | Executes the file as Olivine code           |
+| `cd`    | `dir`         | Changes the current directory               |
+| `pseudo`| `name val`    | Creates a pseudo                            |
+| `range` | `start end`   | Returns a list of numbers                   |
+| `find`  | `-f|-d [dir]` | Returns the content of a directory          |
+| `name`  | `path`        | Returns the name of the file                |
 
 ### Default Variables
 
