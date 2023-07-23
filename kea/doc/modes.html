@@ -1,0 +1,238 @@
+<head>
+    <meta charset="utf-8">
+    <title>🦅 • KEA - erreurs</title>
+    <link rel="stylesheet" href="../css/kea.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="https://elydre.github.io/kea">KEA</a></li>
+                <li><a href="https://elydre.github.io/kea/stream">KEA-stream</a></li>
+            </ul>
+        </nav>
+        <a href="https://github.com/elydre/KEA">
+            <img src="../img/github.png" alt="github" class="head_logo">
+        </a>
+    </header>
+
+    <div class="div_center">
+        <br><br>
+        <br><h1> 🤩 • Mode et args du kea </h1>
+        
+        <table>
+            <tr>
+                <th>mod</th>
+                <th>description</th>
+                <th>arg1</th>
+                <th>arg2</th>
+                <th>arg3</th>
+                <th>arg4</th>
+            </tr>
+            <tr>
+                <td>#</td>
+                <td>merge de modules</td>
+                <td>add</td>
+                <td>chemin du mod</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>afficher une variable</td>
+                <td>var</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>comparaison logique</td>
+                <td>var de sortie</td>
+                <td>var1</td>
+                <td>comparateur</td>
+                <td>var2</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>calcul</td>
+                <td>var de sortie</td>
+                <td>var1</td>
+                <td>opération</td>
+                <td>var2</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>debug</td>
+                <td>on/off/print</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>sortie de boucle</td>
+                <td>nom de boucle</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>déclaration de fonction</td>
+                <td>nom de boucle</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>H</td>
+                <td>copier une variable</td>
+                <td>var de sortie</td>
+                <td>var modelle</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>I</td>
+                <td>input</td>
+                <td>var</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>L</td>
+                <td>boucle a tours</td>
+                <td>nom de boucle</td>
+                <td>nb de tours</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>R</td>
+                <td>variable aleatoire</td>
+                <td>var de sortie</td>
+                <td>max (V)</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>afficher du texte</td>
+                <td>texte</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>T</td>
+                <td>téléphoner a une fonction</td>
+                <td>nom de la fonction</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>assignation de variable</td>
+                <td>var</td>
+                <td>valeur</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>X</td>
+                <td>execution si condition</td>
+                <td>nom de boucle</td>
+                <td>var (B)</td>
+                <td>comparateur</td>
+                <td>var2</td>
+            </tr>
+            <tr>
+                <td>Z</td>
+                <td>break (récusif)</td>
+                <td>nombre bcl a break</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <p>
+            Les fonctionalités du kea ne sont pas garanties dans toutes les versions.<br>
+            <a href="https://elydre.github.io/kea/doc/implemented.html">
+                → info sur l'implémentation
+            </a>
+        </p>
+
+        <h1> 🐬 • Comparateur </h1>
+
+        <table>
+
+            <tr>
+                <th>comparateur</th>
+                <th>description</th>
+            </tr>
+            <tr>
+                <td>= (ou ==)</td>
+                <td>égal à</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>différent de</td>
+            </tr>
+            <tr>
+                <td><</td>
+                <td>inférieur à</td>
+            </tr>
+            <tr>
+                <td>></td>
+                <td>supérieur à</td>
+            </tr>
+            <tr>
+                <td><=</td>
+                <td>inférieur ou égal à</td>
+            </tr>
+            <tr>
+                <td>>=</td>
+                <td>supérieur ou égal à</td>
+            </tr>
+        </table>
+
+        <h1> 🦚 • Opérateur </h1>
+
+        <table>
+
+            <tr>
+                <th>opérateur</th>
+                <th>description</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>addition</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>soustraction</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>multiplication</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>division</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>reste de la division</td>
+            </tr>
+            <tr>
+                <td>^ (ou **)</td>
+                <td>puissance</td>
+            </tr>
+        </table>
+    </div>
+</body>

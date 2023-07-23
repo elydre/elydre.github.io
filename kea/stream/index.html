@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>🦅 • KEA - doc</title>
+    <link rel="stylesheet" href="../css/stream.css">
+</head>
+
+<body>
+    <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="https://elydre.github.io/kea">KEA</a></li>
+                    <li><a href="https://elydre.github.io/kea/stream">KEA-stream</a></li>
+                </ul>
+            </nav>
+            <a href="https://github.com/elydre/KEA">
+                <img src="../img/github.png" alt="github" class="head_logo">
+            </a>
+    </header>
+
+    <div class="div_center">
+        <br><br>
+        <p align="center">
+            <img src="https://elydre.github.io/kea/logo/kea_stream.png" class="big_logo">
+        </p>
+
+        <h1>🍀 • FAQ </h1>
+        
+        <ul>
+            <li>Quelle est la différance entre KEA et KEA-stream ?</li>
+            Le KEA est donc un langage bassé sue les instructions, KEA-stream
+            est parsé (ou compiler) vers la KEA mais avec une syntaxe
+            plus moderne.<br>
+            KEA-stream -> PARSEUR -> KEA -> INTERPRETEUR<br><br>
+
+            <li>Pourquoi utiliser KEA-stream ?</li>
+            Il permet de combiner les aventages du KEA avec son interpréteur rapide
+            avec une syntaxe plus moderne.<br>
+        </ul>
+
+        <a href="http://pf4.ddns.net/discord">
+            ↗ discord
+        </a>
+
+        <h1> ☔ • Principe du langage </h1>
+        
+        <p>
+            Le KEA-stream utilise un principe de flux qui a chaque étapes peuvent être
+            stocké, passé dans une fonction...
+        </p>
+
+        <a href="https://esolangs.org/wiki/KS">
+            ↗ wiki
+        </a>
+
+        <h1> 🥤 • Premier programme </h1>
+        
+        <p>
+            Dans cette exemple nous allons faire passer le chiffre 3 dans la fonction
+            pow2 qui retourne le carré de ce chiffre.
+        </p>
+        <div class="code">
+            3 > pow2
+        </div>
+        <p>
+            Pas mal non? Et si on affiche ce résultat ?
+        </p>
+        <div class="code">
+            3 > pow2 > print
+        </div>
+        <p>
+            Maintenant que nous avons un résultat, on peut le stocker dans une variable.
+        </p>
+        <div class="code">
+            3 > pow2 > $result
+        </div>
+        <p>
+            Exemples divers: 
+        </p>
+        <div class="code">
+<pre>
+// multistream
+1, 0 >> and > print
+
+# boucle
+10 > LOOP
+    "coucou" > print
+    END
+
+// condition
+2 - 1 == 1 > IF
+    "ok" > print
+    END
+
+// fonction
+FUNC sum arg1&arg2
+    arg1 + arg2 > RETURN
+
+// appel de fonction
+1, 4 >> sum > print</pre>
+        </div><br>
+        <a href = "https://elydre.github.io/kea/stream/commande.html">
+            → lancement du programme
+        </a>
+    </div>
+</body>

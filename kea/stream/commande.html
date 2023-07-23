@@ -1,0 +1,80 @@
+<head>
+    <meta charset="utf-8">
+    <title>🦅 • KEA - doc </title>
+    <link rel="stylesheet" href="../css/stream.css">
+</head>
+
+<body>
+    <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="https://elydre.github.io/kea">KEA</a></li>
+                    <li><a href="https://elydre.github.io/kea/stream">KEA-stream</a></li>
+                </ul>
+            </nav>
+            <a href="https://github.com/elydre/KEA">
+                <img src="../img/github.png" alt="github" class="head_logo">
+            </a>
+    </header>
+
+    <div class="div_center">
+        <br><br>
+
+        <h1> 🎅 • lancement </h1>
+        <div class="code">
+            python3 main.py
+        </div>
+        <p>
+            la commande peut prendre les agruments suviants:
+        </p>
+        <div class="code">
+            -f [fichier] ~ le fichier d'entré<br>
+            -o [fichier] ~ le fichier de sortie<br>
+            -d           ~ activer le debug<br>
+        </div>
+
+        <h1> 🧶 • All-in-one </h1>
+        <p>
+            pour parser le ks plus l'executer en une seule commande vous pouvez créé votre propre one-commande:
+        </p>
+        <div class="code">
+            python [chemin du parser.py] -f [fichier a parser] -o [fichier de sortie];
+            php [chemin de l'interpreteur.php] [fichier de sortie]
+        </div>
+        <p>
+            par exemple avec l'arborescence suivante:
+        </p>
+        
+        <div class="code"><pre>
+<b>~/KEA ></b> tree /f
+
+KEA
+|
+├───KEA-php
+│       inter.php
+│
+│
+├───KS-dep
+│   │
+│   ├───DEP
+│   │       bool.kea
+│   │       math.kea
+│   │       uf.kea
+│   │
+│   └───work
+│           main.ks
+│           output.kea
+│
+└───parser
+    │   main.py
+    │
+    └───mod
+            decoupeur.py
+            parse.py
+
+<b>~/KEA/KS-dep ></b>  python ..\parser\main.py -f .\work\main.ks -o
+                .\work\output.kea;php ..\KEA-php\inter.php
+                .\work\output.kea
+</pre></div>
+    </div>
+</body>
