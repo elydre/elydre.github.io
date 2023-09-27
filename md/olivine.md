@@ -131,7 +131,7 @@ go /bin/fatpath/tcc -c main.c
 The `eval` internal function can be used to evaluate an expression.
 The number of arguments and spaces will be ignored.
 
-operators:
+Operators:
 - `+` addition
 - `-` subtraction
 - `*` multiplication
@@ -141,10 +141,20 @@ operators:
 - `>` greater than
 - `<` less than
 - `~` different
+- `@` character at index
+- `.` concatenation
+
+Parenthesis can be used to change the order of the operations.
+
+The evaluator will attempt to convert the arguments into integers,
+if the operation fails or the operator is only available for
+strings, they will be treated as strings.
 
 ```
 eval 1+2*(3-1)
 eval 42 = 41 + 1
+eval Hi * 3
+eval Hello @ 1 = e
 ```
 
 ### Conditionals
