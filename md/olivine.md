@@ -337,12 +337,12 @@ internal_function_t internal_functions[] = {
 | `debug`  | `[arg]`        | Prints all variables, pseudos and functions |
 | `del`    | `name`         | Deletes the variable `name`                 |
 | `delfunc`| `name`         | Deletes the function `name`                 |
-| `eval`   | `expr`         | Evaluates the expression                    |
+| `eval`   | `...`          | Evaluates an expression                     |
 | `exec`   | `file`         | Executes the file as Olivine code           |
 | `export` | `name var`     | Sets the env variable `name` to `var`       |
 | `find`   |`[-f|-d] [dir]` | Returns the content of a directory          |
 | `global` | `name var`     | Sets the variable `!name` to `var` globally |
-| `go`     | `binfile`      | Executes the binary file                    |
+| `go`     |`binfile [args]`| Executes the binary file                    |
 | `pseudo` | `name val`     | Creates a pseudo                            |
 | `print`  | `...`          | Prints the arguments withouth separators    |
 | `range`  | `[start] end`  | Returns a list of numbers                   |
