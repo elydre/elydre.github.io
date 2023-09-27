@@ -72,7 +72,7 @@ argument, the name of the variable to delete.
 del var
 ```
 
-Recurcive variables substitution is supported like in PHP.
+Variables on several layers are supported like in php.
 
 ```
 set a 42
@@ -81,6 +81,16 @@ set b a
 echo !!b
 ```
 
+If the variable was not found among the local variables, Olivine will also
+search in the enviroment (can be deactivated during build).
+
+A environment variable can be set using the `export` internal function which
+takes two arguments, the first one being the name of the variable and the
+second one being the value of the variable.
+
+```
+export var 42
+```
 
 ### Subfunctions Calls
 
@@ -281,23 +291,26 @@ internal_function_t internal_functions[] = {
 
 ### Internal Functions
 
-| Name    | Arguments     | Description                                 |
-| ------- | ------------- | ------------------------------------------- |
-| `echo`  | `...`         | Prints the arguments separated by a space   |
-| `upper` | `string`      | Returns the uppercase version of the string |
-| `join`  | `...`         | Joins the arguments                         |
-| `split` | `string`      | Splits the string                           |
-| `set`   | `name var`    | Sets the variable `!name` to `var`          |
-| `del`   | `name`        | Deletes the variable `!name`                |
-| `debug` |               | Prints all variables, pseudos and functions |
-| `eval`  | `expr`        | Evaluates the expression                    |
-| `go`    | `binfile`     | Executes the binary file                    |
-| `exec`  | `file`        | Executes the file as Olivine code           |
-| `cd`    | `dir`         | Changes the current directory               |
-| `pseudo`| `name val`    | Creates a pseudo                            |
-| `range` | `start end`   | Returns a list of numbers                   |
-| `find`  | `-f|-d [dir]` | Returns the content of a directory          |
-| `name`  | `path`        | Returns the name of the file                |
+| Name     | Arguments      | Description                                 |
+| -------- | -------------- | ------------------------------------------- |
+| `cd`     | `dir`          | Changes the current directory               |
+| `debug`  | `[arg]`        | Prints all variables, pseudos and functions |
+| `del`    | `name`         | Deletes the variable `name`                 |
+| `delfunc`| `name`         | Deletes the function `name`                 |
+| `eval`   | `expr`         | Evaluates the expression                    |
+| `exec`   | `file`         | Executes the file as Olivine code           |
+| `export` | `name var`     | Sets the env variable `name` to `var`       |
+| `find`   |`[-f|-d] [dir]` | Returns the content of a directory          |
+| `go`     | `binfile`      | Executes the binary file                    |
+| `name`   | `path`         | Returns the name of the file                |
+| `pseudo` | `name val`     | Creates a pseudo                            |
+| `print`  | `...`          | Prints the arguments withouth separators    |
+| `range`  | `[start] end`  | Returns a list of numbers                   |
+| `rep`    | `str ic oc`    | Replaces characters in a string             |
+| `set`    | `name var`     | Sets the variable `!name` to `var`          |
+| `sprintf`| `fmt ...`      | Returns a formatted string                  |
+| `strlen` | `str`          | Returns the length of a string              |
+| `ticks`  |                | Returns the ms since the OS boot            |
 
 ### Default Variables
 
@@ -306,3 +319,5 @@ internal_function_t internal_functions[] = {
 | version | The version of Olivine                 |
 | profan  | `1` if build for profan, `0` otherwise |
 | path    | The current directory                  |
+| exit    | The exit code of the last command      |
+| spi     | The PID of the the last `go` command   |
