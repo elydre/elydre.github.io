@@ -92,6 +92,9 @@ second one being the value of the variable.
 export var 42
 ```
 
+A variable defined outside of a function or declared using the `global` / `export`
+keyword will be accessible from all the functions (see [Classic Functions](#classic-functions)).
+
 ### Subfunctions Calls
 
 Subfunctions are functions that are called inside a line of code. They are
@@ -261,9 +264,36 @@ FUNC double
 END
 ```
 
-All the created variables to save the arguments are automatically deleted
-after the function call, but the variables created inside the function are
-not deleted (see [Variables](#variables)).
+All the variables defined inside a function are local to the function and
+cannot be accessed from outside.
+
+```
+FUNC func1
+    set var 42
+END
+
+FUNC func2
+    set var 21
+    func1
+    RETURN !var
+END
+
+// Will print 21
+echo !(func2)
+```
+
+The `global` keyword can be used to declare a variable as global.
+
+```
+FUNC func
+    global var 42
+END
+
+func
+
+// Will print 42
+echo !var
+```
 
 ### Internal Functions
 
@@ -311,8 +341,8 @@ internal_function_t internal_functions[] = {
 | `exec`   | `file`         | Executes the file as Olivine code           |
 | `export` | `name var`     | Sets the env variable `name` to `var`       |
 | `find`   |`[-f|-d] [dir]` | Returns the content of a directory          |
+| `global` | `name var`     | Sets the variable `!name` to `var` globally |
 | `go`     | `binfile`      | Executes the binary file                    |
-| `name`   | `path`         | Returns the name of the file                |
 | `pseudo` | `name val`     | Creates a pseudo                            |
 | `print`  | `...`          | Prints the arguments withouth separators    |
 | `range`  | `[start] end`  | Returns a list of numbers                   |
