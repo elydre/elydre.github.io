@@ -23,6 +23,7 @@
                 link.appendChild(a);
                 liste.insertBefore(link, liste.childNodes[0]);
             }
+            request1.send();
         }
         request1.open("GET", api_url, true);
         request1.onload = function() {
@@ -52,11 +53,9 @@
                     link.appendChild(a);
                     liste.insertBefore(link, liste.childNodes[0]);
                 }
-
-                request2.send();
             }
         }
-        request1.send();
+        request2.send();
     }
 </script>
 
