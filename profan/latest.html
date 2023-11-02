@@ -1,0 +1,45 @@
+<!doctype html>
+<title>profanOS</title>
+
+<link rel="stylesheet" href="/profan/venu.css">
+<script>
+    "use strict";
+    
+    // it is known that OS devs like js x)
+    window.onload = function() {
+        var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/post55-iso";
+        var request1 = new XMLHttpRequest();
+
+        request1.open("GET", api_url, true);
+        request1.onload = function() {
+            if (request1.status >= 200 && request1.status < 400) {
+                var data = JSON.parse(request1.responseText);
+                let elements = data.map((x, idx) => [x.name.substr(9, x.name.length - 13), idx]);
+
+                elements.sort(
+                    function(a, b) {
+                        a = a[0];
+                        b = b[0];
+
+                        if (a.startsWith(b + "-")) return -1
+                        if (b.startsWith(a + "-")) return  1
+                        return a.localeCompare(b, undefined, { numeric: true, sensitivity: "case", caseFirst: "upper" })
+                    }
+                )
+
+                elements = elements.map(x => x[1]);
+
+                window.location = "/profan/release.html?i" + data[elements[elements.length - 1]].name.substr(9, data[elements[elements.length - 1]].name.length - 13);
+            }
+        }
+        request1.send();
+    }
+</script>
+
+<body>
+    <div class="div_center">
+        <p>
+            You will be redirected to the latest release in a few seconds.
+        </p>
+    </div>
+</body>
