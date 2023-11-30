@@ -341,14 +341,16 @@ internal_function_t internal_functions[] = {
 | `exec`   | `file`         | Executes the file as Olivine code           |
 | `export` | `name var`     | Sets the env variable `name` to `var`       |
 | `find`   |`[-f|-d] [dir]` | Returns the content of a directory          |
+| `fsize`  | `file`         | Returns the size or `null` if not found     |
 | `global` | `name var`     | Sets the variable `!name` to `var` globally |
 | `go`     |`binfile [args]`| Executes the binary file                    |
-| `pseudo` | `name val`     | Creates a pseudo                            |
 | `print`  | `...`          | Prints the arguments withouth separators    |
+| `pseudo` | `name val`     | Creates a pseudo                            |
+| `name`   | `path`         | Returns the name of a file / directory      |
 | `range`  | `[start] end`  | Returns a list of numbers                   |
-| `rep`    | `str ic oc`    | Replaces characters in a string             |
+| `rep`    | `str ic [oc]`  | Replaces characters in a string             |
 | `set`    | `name var`     | Sets the variable `!name` to `var`          |
-| `sprintf`| `fmt ...`      | Returns a formatted string                  |
+| `sprintf`| `fmt [...]`    | Returns a formatted string                  |
 | `strlen` | `str`          | Returns the length of a string              |
 | `ticks`  |                | Returns the ms since the OS boot            |
 
