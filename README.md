@@ -15,7 +15,7 @@
 [![build lua](https://github.com/elydre/lua-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/lua-profan)
 [![build vlink](https://github.com/elydre/vlink-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/vlink-profan)
 
-### maybe you are looking for it?
+## maybe you are looking for it?
 - [profanOS pwp](https://elydre.github.io/profan)
 - [profan convs](https://elydre.github.io/md/profan-conv)
 - [KEA doc](https://elydre.github.io/kea)
