@@ -11,7 +11,6 @@ on:
 permissions:
   contents: write
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,17 +25,18 @@ jobs:
           cd profanOS
           rm -Rf LICENSE
           profan_lines=$(git ls-files | xargs cat | wc -l)
+          kernel_version=$(python3 tools/maketool.py kver)
           cd ..
-          printf "{\n\t\"profan_lines\": $profan_lines\n}" > count.json
+          printf "{\n\t\"profan_lines\": $profan_lines\n\t\"kernel_version\": \"$kernel_version\"\n}" > profan_data.json
     
     - name: Push Json
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.GIT_TOKEN }}
       with:
-        source_file: count.json
+        source_file: profan_data.json
         destination_repo: 'elydre/elydre.github.io'
         destination_folder: 'build'
         user_email: 'pf4_@gmail.com'
         user_name: 'pf4 [bot]'
-        commit_message: 'update count'
+        commit_message: 'update profan_data'
