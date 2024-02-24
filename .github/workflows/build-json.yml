@@ -27,7 +27,7 @@ jobs:
           profan_lines=$(git ls-files | xargs cat | wc -l)
           kernel_version=$(python3 tools/maketool.py kver)
           cd ..
-          printf "{\n\t\"profan_lines\": $profan_lines\n\t\"kernel_version\": \"$kernel_version\"\n}" > profan_data.json
+          printf "{\n\t\"profan_lines\": $profan_lines,\n\t\"kernel_version\": \"$kernel_version\"\n}" > profan_data.json
     
     - name: Push Json
       uses: dmnemec/copy_file_to_another_repo_action@main
