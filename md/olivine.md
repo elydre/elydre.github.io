@@ -2,15 +2,31 @@
 
 ## Quick Presentation
 
-Olivine is a command line programming language inspired by bash and developed
-for profanOS.
+[Olivine](https://github.com/elydre/profanOS/blob/main/zapps/fatpath/olivine.c)
+is a command line programming language inspired by bash and developed for profanOS.
 
 Although olivine is developed for the profan environment, it can be used on linux
-by setting `PROFANBUILD` to 0, which will disable all profanOS features.
+by setting `PROFANBUILD` to `0` or with `-DNoProfan` during the build, which will
+disable all profanOS features.
 
 Olivine uses substitution to execute lines of code, for example in the code
 `echo Hello !user`, `!user` will be literally replaced by the value of the
 variable !user. And the process is the same for function calls and pseudos.
+
+## Synopsis
+
+Without any arguments, olivine will start in interactive mode.
+
+- `-c` Execute the code passed as an argument
+- `-h` Display the help message
+- `-v` Display the version of olivine
+- `-p` Print olivine file with syntax highlighting
+- `-i` Start a shell after the execution of the code
+- `-n` don't execute the init program file
+
+```
+olivine [options] [file]
+```
 
 ## Main Features
 
@@ -32,6 +48,16 @@ echo first line
 echo second line
 
 echo first line; echo second line
+```
+
+### Comments
+
+Comments are defined using the `//` syntax. Everything after the `//` will be
+ignored by olivine.
+
+```
+// This is a comment
+echo Hello // This is also a comment
 ```
 
 ### Functions Calls
@@ -117,16 +143,42 @@ being the value of the pseudo.
 
 ```
 pseudo pseudo_name value
-pseudo tcc 'go /bin/fatpath/tcc'
+pseudo ll 'ls -l'
 ```
 
 Pseudos are accessible without a prefix like a function call.
 
 ```
-tcc -c main.c
+ll user
 
 // Will be automatically replaced by
-go /bin/fatpath/tcc -c main.c
+ls -l user
+```
+
+### Binary Execution
+
+The `go` internal function can be used to execute a binary file. The first
+argument is the path to the binary file and the following arguments are the
+arguments passed to the binary.
+
+If `BIN_AS_PSEUDO` is set to 1 and the binary exists in a directory listed
+in the `PATH` environment variable, the binary can be executed without `go`.
+
+```
+// Using go
+go /bin/ls -l
+
+// Without go
+ls -l
+```
+
+### Features Priority
+
+olivine will always execute in the following order even if two elements
+have exactly the same name.
+
+```
+KEYWORD > PSEUDO > FUNCTION > INTERNAL FUNCTION > BINARY
 ```
 
 ### Eval Function
@@ -134,18 +186,26 @@ go /bin/fatpath/tcc -c main.c
 The `eval` internal function can be used to evaluate an expression.
 The number of arguments and spaces will be ignored.
 
-Operators:
-- `+` addition
-- `-` subtraction
-- `*` multiplication
-- `/` division
-- `^` modulo
-- `=` equal (comparison)
-- `>` greater than
-- `<` less than
-- `~` different
-- `@` character at index
-- `.` concatenation
+Number operators:
+- `+` Addition
+- `-` Substraction
+- `*` Multiplication
+- `/` Division
+- `^` Modulo
+- `<` Less than
+- `>` Greater than
+- `=` Equal
+- `~` Not equal
+
+String operators:
+- `+` Concatenation
+- `.` Concatenation (with number)
+- `*` Repeat
+- `@` Get character
+- `=` Equal
+- `~` Not equal
+
+Operators priority (from lowest to highest): `= ~ < > @ . + - * / ^`
 
 Parenthesis can be used to change the order of the operations.
 
@@ -159,6 +219,12 @@ eval 42 = 41 + 1
 eval Hi * 3
 eval Hello @ 1 = e
 ```
+
+## Keywords
+
+Keywords allow you to create conditions, loops and functions to extend the
+possibilities of olivine.
+Capital letters don't matter, `ELSE`, `else` and `eLsE` are the same.
 
 ### Conditionals
 
@@ -295,7 +361,7 @@ func
 echo !var
 ```
 
-### Internal Functions
+## Internal Functions
 
 > **Note:** This section is of no importance if you only use Olivine as your
 > shell language.
@@ -308,11 +374,14 @@ char *if_demo(char **input) {
     // input[0] is the first argument
     // input[1] is the second...
 
-    // The function must return a string. If
-    // the function returns NULL, the output
-    // will be replaced by an empty string
+    // The function must return a freeable string.
+    // if the function returns NULL, the output
+    // will be treated as an empty string.
 
-    return "Hello World";
+    // return ERROR_CODE; can be used to raise an
+    // error and stop the execution of the line.
+
+    return strdup("Hello World");
 }
 
 // The function must be registered using the
@@ -339,6 +408,7 @@ internal_function_t internal_functions[] = {
 | `delfunc`| `name`         | Deletes the function `name`                 |
 | `eval`   | `...`          | Evaluates an expression                     |
 | `exec`   | `file`         | Executes the file as Olivine code           |
+| `exit`   | `[code]`       | Exits the program with the code             |
 | `export` | `name var`     | Sets the env variable `name` to `var`       |
 | `find`   |`[-f|-d] [dir]` | Returns the content of a directory          |
 | `fsize`  | `file`         | Returns the size or `null` if not found     |
@@ -363,3 +433,6 @@ internal_function_t internal_functions[] = {
 | path    | The current directory                  |
 | exit    | The exit code of the last command      |
 | spi     | The PID of the the last `go` command   |
+| prompt  | The prompt of the shell                |
+
+*Updated for olivine 0.11 rev 1*
