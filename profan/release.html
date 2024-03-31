@@ -25,9 +25,10 @@ window.onload = function() {
             cdrom: {
                 url: "https://esolangs.github.io/profanOS-build/post55-iso/profanOS-" + img_url + ".iso",
             },
-            // hda: {
-            //     url: "https://esolangs.github.io/profanOS-build/disk-build/disk-" + img_url + ".bin",
-            // },
+            hda: {
+                url: "https://esolangs.github.io/profanOS-build/disk-build/disk-" + img_url + ".bin",
+            },
+            boot_order: 0x123,
             autostart: true,
         });
     } else {
@@ -54,5 +55,5 @@ window.onload = function() {
 <!-- A minimal structure for the ScreenAdapter defined in browser/screen.js -->
 <div id="screen_container">
     <div class = "shell"></div>
-    <canvas style="display: none"></canvas>
+    <canvas class = "shell" style="display: none"></canvas>
 </div>
