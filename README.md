@@ -23,4 +23,3 @@
 - [KEA doc](https://elydre.github.io/kea)
 - [profanOS wiki](https://github.com/elydre/profanOS/wiki)
 - [computer man](https://www.youtube.com/watch?v=jeg_TJvkSjg)
-
