@@ -14,11 +14,13 @@
 [![build tcc](https://github.com/elydre/tinycc-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/tinycc-profan)
 [![build lua](https://github.com/elydre/lua-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/lua-profan)
 [![build vlink](https://github.com/elydre/vlink-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/vlink-profan)
+[![build libs](https://github.com/elydre/libs-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/libs-profan)
 
 ## maybe you are looking for it?
+- [main github](https://github.com/elydre)
 - [profanOS pwp](https://elydre.github.io/profan)
 - [profan convs](https://elydre.github.io/md/profan-conv)
 - [KEA doc](https://elydre.github.io/kea)
-- [olivine doc](https://elydre.github.io/md/olivine)
+- [profanOS wiki](https://github.com/elydre/profanOS/wiki)
 - [computer man](https://www.youtube.com/watch?v=jeg_TJvkSjg)
 
