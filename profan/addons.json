@@ -16,8 +16,13 @@
             },
             {
                 "name": "vlink",
-                "description": "multi-target linker [deprecated]",
+                "description": "Multi-Target linker [deprecated]",
                 "files": ["vlink.elf"]
+            },
+            {
+                "name": "act",
+                "description": "Make-like command generator",
+                "files": ["act.elf"]
             }
         ],
         "libraries": [
