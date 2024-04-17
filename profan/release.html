@@ -1,8 +1,8 @@
 <!doctype html>
 <title>profanOS</title>
 
-<script src="/profan/build/libv86.js"></script>
-<link rel="stylesheet" href="/profan/venu.css">
+<script src="/pwp/build/libv86.js"></script>
+<link rel="stylesheet" href="/pwp/venu.css">
 <script>
 "use strict";
 
@@ -12,15 +12,15 @@ window.onload = function() {
     var img_url = version.replace(version.substring(0, 1), "");
     if (version.substring(0, 1) == "i") {
         var emulator = window.emulator = new V86Starter({
-            wasm_path: "/profan/build/v86.wasm",
+            wasm_path: "/pwp/build/v86.wasm",
             memory_size: 128 * 1024 * 1024,
             vga_memory_size: 8 * 1024 * 1024,
             screen_container: document.getElementById("screen_container"),
             bios: {
-                url: "/profan/bios/seabios.bin",
+                url: "/pwp/bios/seabios.bin",
             },
             vga_bios: {
-                url: "/profan/bios/vgabios.bin",
+                url: "/pwp/bios/vgabios.bin",
             },
             cdrom: {
                 url: "https://esolangs.github.io/profanOS-build/post55-iso/profanOS-" + img_url + ".iso",
@@ -33,15 +33,15 @@ window.onload = function() {
         });
     } else {
         var emulator = window.emulator = new V86Starter({
-            wasm_path: "/profan/build/v86.wasm",
+            wasm_path: "/pwp/build/v86.wasm",
             memory_size: 128 * 1024 * 1024,
             vga_memory_size: 8 * 1024 * 1024,
             screen_container: document.getElementById("screen_container"),
             bios: {
-                url: "/profan/bios/seabios.bin",
+                url: "/pwp/bios/seabios.bin",
             },
             vga_bios: {
-                url: "/profan/bios/vgabios.bin",
+                url: "/pwp/bios/vgabios.bin",
             },
             fda: {
                 url: "https://esolangs.github.io/profanOS-build/img/profanOS-" + img_url + ".img",
