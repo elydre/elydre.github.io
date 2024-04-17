@@ -22,7 +22,7 @@
             {
                 "name": "act",
                 "description": "Make-like command generator",
-                "files": ["act.elf"]
+                "files": ["act.elf", "tcc.elf", "libtcc.a", "libm.so"]
             }
         ],
         "libraries": [
