@@ -15,6 +15,7 @@
 [![build lua](https://github.com/elydre/lua-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/lua-profan)
 [![build vlink](https://github.com/elydre/vlink-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/vlink-profan)
 [![build libs](https://github.com/elydre/libs-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/libs-profan)
+[![build dash](https://github.com/elydre/dash-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/dash-profan)
 
 ## maybe you are looking for it?
 - [main github](https://github.com/elydre)
