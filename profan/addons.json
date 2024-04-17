@@ -95,6 +95,12 @@
             "profan_path": ["bin", "fatpath", "vlink.elf"]
         },
         {
+            "name": "act.elf",
+            "url": "https://github.com/elydre/libs-profan/releases/download/latest/act.elf",
+            "make_path": ["out", "zapps", "cmd", "act.elf"],
+            "profan_path": ["bin", "cmd", "act.elf"]
+        },
+        {
             "name": "libm.so",
             "url": "https://github.com/elydre/libs-profan/releases/download/latest/libm.so",
             "make_path": ["out", "zlibs", "libm.so"],
