@@ -28,7 +28,7 @@
         "libraries": [
             {
                 "name": "libm",
-                "description": "Math library",
+                "description": "Standard math library",
                 "files": ["libm.so", "libm.h", "math.h", "complex.h", "fenv.h"]
             },
             {
@@ -38,7 +38,7 @@
             },
             {
                 "name": "libupng",
-                "description": "Small PNG Decoding Library",
+                "description": "Small PNG decoding library",
                 "files": ["libupng.so", "upng.h"]
             },
             {
