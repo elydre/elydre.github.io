@@ -177,10 +177,10 @@
             "profan_path": ["lib", "libcjson.so"]
         },
         {
-            "name": "cjson.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/cjson.h",
-            "make_path": ["include", "addons", "cjson.h"],
-            "profan_path": ["sys", "include", "cjson.h"]
+            "name": "cJSON.h",
+            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/cJSON.h",
+            "make_path": ["include", "addons", "cJSON.h"],
+            "profan_path": ["sys", "include", "cJSON.h"]
         },
         {
             "name": "dash.elf",
