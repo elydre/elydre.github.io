@@ -44,7 +44,7 @@
             {
                 "name": "libcjson",
                 "description": "JSON parsing library",
-                "files": ["libcjson.so", "cjson.h", "libm.so"]
+                "files": ["libcjson.so", "cJSON.h", "libm.so"]
             }
         ],
         "extra shells": [
