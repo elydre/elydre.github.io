@@ -8,7 +8,8 @@
 
 ### profanOS builds
 
-[![profan iso](https://github.com/elydre/profanOS/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/profanOS)
+[![profan publish](https://github.com/elydre/profanOS/actions/workflows/publish.yml/badge.svg)](https://github.com/elydre/profanOS)
+[![profan checks](https://github.com/elydre/profanOS/actions/workflows/checks.yml/badge.svg)](https://github.com/elydre/profanOS)
 [![build halfix](https://github.com/elydre/halfix-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/halfix-profan)
 [![build doom](https://github.com/elydre/doom-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/doom-profan)
 [![build tcc](https://github.com/elydre/tinycc-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/tinycc-profan)
