@@ -10,13 +10,13 @@
 
 - [![Publish](https://github.com/elydre/profanOS/actions/workflows/publish.yml/badge.svg)](https://github.com/elydre/profanOS)
 - [![Checks](https://github.com/elydre/profanOS/actions/workflows/checks.yml/badge.svg)](https://github.com/elydre/profanOS)
+- [![Libs](https://github.com/elydre/libs-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/libs-profan) 
 
 ### profan addons
 
 - [![Dash](https://github.com/elydre/dash-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/dash-profan)
 - [![Doom](https://github.com/elydre/doom-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/doom-profan)
 - [![Halfix](https://github.com/elydre/halfix-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/halfix-profan)
-- [![Libs](https://github.com/elydre/libs-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/libs-profan)
 - [![Lua](https://github.com/elydre/lua-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/lua-profan)
 - [![Tcc](https://github.com/elydre/tinycc-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/tinycc-profan)
 - [![vlink](https://github.com/elydre/vlink-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/vlink-profan)
