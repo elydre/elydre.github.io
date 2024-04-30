@@ -2,9 +2,9 @@
     "RECOMMENDED": [
         "tcc",
         "lua",
-        "zlib",
         "dash",
-        "doom"
+        "doom",
+        "sulfur"
     ],
 
     "ADDONS": {
