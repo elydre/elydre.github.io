@@ -15,11 +15,6 @@
                 "files": ["tcc.elf", "libtcc.a", "libm.so"]
             },
             {
-                "name": "vlink",
-                "description": "Multi-Target linker [deprecated]",
-                "files": ["vlink.elf"]
-            },
-            {
                 "name": "act",
                 "description": "Make-like command generator",
                 "files": ["act.elf", "tcc.elf", "libtcc.a", "libm.so"]
@@ -97,12 +92,6 @@
             "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/libtcc.a",
             "make_path": ["out", "zlibs", "libtcc.a"],
             "profan_path": ["lib", "libtcc.a"]
-        },
-        {
-            "name": "vlink.elf",
-            "url": "https://github.com/elydre/vlink-profan/releases/download/latest/vlink.elf",
-            "make_path": ["out", "zapps", "fatpath", "vlink.elf"],
-            "profan_path": ["bin", "fatpath", "vlink.elf"]
         },
         {
             "name": "act.elf",
