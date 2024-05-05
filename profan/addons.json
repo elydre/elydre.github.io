@@ -37,6 +37,11 @@
                 "files": ["libupng.so", "upng.h"]
             },
             {
+                "name": "liboe",
+                "description": "Compilation of additional functions",
+                "files": ["liboe.so", "liboe.h"]
+            },
+            {
                 "name": "libcjson",
                 "description": "JSON parsing library",
                 "files": ["libcjson.so", "cJSON.h", "libm.so"]
@@ -152,6 +157,18 @@
             "url": "https://github.com/elydre/libs-profan/releases/download/latest/libupng.so",
             "make_path": ["out", "zlibs", "libupng.so"],
             "profan_path": ["lib", "libupng.so"]
+        },
+        {
+            "name": "liboe.so",
+            "url": "https://github.com/elydre/libs-profan/releases/download/latest/liboe.so",
+            "make_path": ["out", "zlibs", "liboe.so"],
+            "profan_path": ["lib", "liboe.so"]
+        },
+        {
+            "name": "liboe.h",
+            "url": "https://raw.githubusercontent.com/asqel/oeuf/main/oeuf.h",
+            "make_path": ["include", "addons", "liboe.h"],
+            "profan_path": ["sys", "include", "liboe.h"]
         },
         {
             "name": "upng.h",
