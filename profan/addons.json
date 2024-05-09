@@ -20,33 +20,6 @@
                 "files": ["act.elf", "tcc.elf", "libtcc.a", "libm.so"]
             }
         ],
-        "libraries": [
-            {
-                "name": "libm",
-                "description": "Standard math library",
-                "files": ["libm.so", "libm.h", "math.h", "complex.h", "fenv.h"]
-            },
-            {
-                "name": "zlib",
-                "description": "Compression library + gzip command",
-                "files": ["libz.so", "zlib.h", "gzip.elf"]
-            },
-            {
-                "name": "libupng",
-                "description": "Small PNG decoding library",
-                "files": ["libupng.so", "upng.h"]
-            },
-            {
-                "name": "liboe",
-                "description": "Compilation of additional functions",
-                "files": ["liboe.so", "liboe.h"]
-            },
-            {
-                "name": "libcjson",
-                "description": "JSON parsing library",
-                "files": ["libcjson.so", "cJSON.h", "libm.so"]
-            }
-        ],
         "extra shells": [
             {
                 "name": "dash",
@@ -82,6 +55,38 @@
                 "description": "Bytecode high-performance language",
                 "files": ["sulfur.elf", "libm.so"]
             }
+        ],
+        "libraries": [
+            {
+                "name": "libm",
+                "description": "Standard math library",
+                "files": ["libm.so", "libm.h", "math.h", "complex.h", "fenv.h"]
+            },
+            {
+                "name": "zlib",
+                "description": "Compression library + gzip command",
+                "files": ["libz.so", "zlib.h", "gzip.elf"]
+            },
+            {
+                "name": "libupng",
+                "description": "Small PNG decoding library",
+                "files": ["libupng.so", "upng.h"]
+            },
+            {
+                "name": "libschrift",
+                "description": "Font rendering library",
+                "files": ["libschrift.so", "schrift.h", "libm.so"]
+            },
+            {
+                "name": "liboe",
+                "description": "Compilation of additional functions",
+                "files": ["liboe.so", "liboe.h"]
+            },
+            {
+                "name": "libcjson",
+                "description": "JSON parsing library",
+                "files": ["libcjson.so", "cJSON.h", "libm.so"]
+            }
         ]
     },
 
@@ -100,73 +105,85 @@
         },
         {
             "name": "act.elf",
-            "url": "https://github.com/elydre/libs-profan/releases/download/latest/act.elf",
+            "url": "https://github.com/elydre/libratron/releases/download/latest/act.elf",
             "make_path": ["out", "zapps", "cmd", "act.elf"],
             "profan_path": ["bin", "cmd", "act.elf"]
         },
         {
             "name": "libm.so",
-            "url": "https://github.com/elydre/libs-profan/releases/download/latest/libm.so",
+            "url": "https://github.com/elydre/libratron/releases/download/latest/libm.so",
             "make_path": ["out", "zlibs", "libm.so"],
             "profan_path": ["lib", "libm.so"]
         },
         {
             "name": "math.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/libm/math.h",
+            "url": "https://raw.githubusercontent.com/elydre/libratron/main/_headers/libm/math.h",
             "make_path": ["include", "addons", "math.h"],
             "profan_path": ["sys", "include", "math.h"]
         },
         {
             "name": "complex.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/libm/complex.h",
+            "url": "https://raw.githubusercontent.com/elydre/libratron/main/_headers/libm/complex.h",
             "make_path": ["include", "addons", "complex.h"],
             "profan_path": ["sys", "include", "complex.h"]
         },
         {
             "name": "fenv.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/libm/fenv.h",
+            "url": "https://raw.githubusercontent.com/elydre/libratron/main/_headers/libm/fenv.h",
             "make_path": ["include", "addons", "fenv.h"],
             "profan_path": ["sys", "include", "fenv.h"]
         },
         {
             "name": "libm.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/libm/libm.h",
+            "url": "https://raw.githubusercontent.com/elydre/libratron/main/_headers/libm/libm.h",
             "make_path": ["include", "addons", "libm.h"],
             "profan_path": ["sys", "include", "libm.h"]
         },
         {
             "name": "libz.so",
-            "url": "https://github.com/elydre/libs-profan/releases/download/latest/libz.so",
+            "url": "https://github.com/elydre/libratron/releases/download/latest/libz.so",
             "make_path": ["out", "zlibs", "libz.so"],
             "profan_path": ["lib", "libz.so"]
         },
         {
             "name": "zlib.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/libz/zlib.h",
+            "url": "https://raw.githubusercontent.com/elydre/libratron/main/_headers/libz/zlib.h",
             "make_path": ["include", "addons", "zlib.h"],
             "profan_path": ["sys", "include", "zlib.h"]
         },
         {
             "name": "gzip.elf",
-            "url": "https://github.com/elydre/libs-profan/releases/download/latest/gzip.elf",
+            "url": "https://github.com/elydre/libratron/releases/download/latest/gzip.elf",
             "make_path": ["out", "zapps", "cmd", "gzip.elf"],
             "profan_path": ["bin", "cmd", "gzip.elf"]
         },
         {
             "name": "libupng.so",
-            "url": "https://github.com/elydre/libs-profan/releases/download/latest/libupng.so",
+            "url": "https://github.com/elydre/libratron/releases/download/latest/libupng.so",
             "make_path": ["out", "zlibs", "libupng.so"],
             "profan_path": ["lib", "libupng.so"]
         },
         {
             "name": "upng.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/libupng/upng.h",
+            "url": "https://raw.githubusercontent.com/elydre/libratron/main/_headers/libupng/upng.h",
             "make_path": ["include", "addons", "upng.h"],
             "profan_path": ["sys", "include", "upng.h"]
         },
         {
+            "name": "libschrift.so",
+            "url": "https://github.com/elydre/libratron/releases/download/latest/libschrift.so",
+            "make_path": ["out", "zlibs", "libschrift.so"],
+            "profan_path": ["lib", "libschrift.so"]
+        },
+        {
+            "name": "schrift.h",
+            "url": "https://raw.githubusercontent.com/elydre/libratron/main/_headers/libschrift/schrift.h",
+            "make_path": ["include", "addons", "schrift.h"],
+            "profan_path": ["sys", "include", "schrift.h"]
+        },
+        {
             "name": "liboe.so",
-            "url": "https://github.com/elydre/libs-profan/releases/download/latest/liboe.so",
+            "url": "https://github.com/elydre/libratron/releases/download/latest/liboe.so",
             "make_path": ["out", "zlibs", "liboe.so"],
             "profan_path": ["lib", "liboe.so"]
         },
@@ -178,13 +195,13 @@
         },
         {
             "name": "libcjson.so",
-            "url": "https://github.com/elydre/libs-profan/releases/download/latest/libcjson.so",
+            "url": "https://github.com/elydre/libratron/releases/download/latest/libcjson.so",
             "make_path": ["out", "zlibs", "libcjson.so"],
             "profan_path": ["lib", "libcjson.so"]
         },
         {
             "name": "cJSON.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/libcjson/cJSON.h",
+            "url": "https://raw.githubusercontent.com/elydre/libratron/main/_headers/libcjson/cJSON.h",
             "make_path": ["include", "addons", "cJSON.h"],
             "profan_path": ["sys", "include", "cJSON.h"]
         },
@@ -196,7 +213,7 @@
         },
         {
             "name": "lish.elf",
-            "url": "https://github.com/elydre/libs-profan/releases/download/latest/lish.elf",
+            "url": "https://github.com/elydre/libratron/releases/download/latest/lish.elf",
             "make_path": ["out", "zapps", "fatpath", "lish.elf"],
             "profan_path": ["bin", "fatpath", "lish.elf"]
         },
