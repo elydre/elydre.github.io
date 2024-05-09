@@ -142,7 +142,7 @@
         },
         {
             "name": "zlib.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/zlib.h",
+            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/libz/zlib.h",
             "make_path": ["include", "addons", "zlib.h"],
             "profan_path": ["sys", "include", "zlib.h"]
         },
@@ -159,6 +159,12 @@
             "profan_path": ["lib", "libupng.so"]
         },
         {
+            "name": "upng.h",
+            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/libupng/upng.h",
+            "make_path": ["include", "addons", "upng.h"],
+            "profan_path": ["sys", "include", "upng.h"]
+        },
+        {
             "name": "liboe.so",
             "url": "https://github.com/elydre/libs-profan/releases/download/latest/liboe.so",
             "make_path": ["out", "zlibs", "liboe.so"],
@@ -171,12 +177,6 @@
             "profan_path": ["sys", "include", "liboe.h"]
         },
         {
-            "name": "upng.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/upng.h",
-            "make_path": ["include", "addons", "upng.h"],
-            "profan_path": ["sys", "include", "upng.h"]
-        },
-        {
             "name": "libcjson.so",
             "url": "https://github.com/elydre/libs-profan/releases/download/latest/libcjson.so",
             "make_path": ["out", "zlibs", "libcjson.so"],
@@ -184,7 +184,7 @@
         },
         {
             "name": "cJSON.h",
-            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/cJSON.h",
+            "url": "https://raw.githubusercontent.com/elydre/libs-profan/main/_headers/libcjson/cJSON.h",
             "make_path": ["include", "addons", "cJSON.h"],
             "profan_path": ["sys", "include", "cJSON.h"]
         },
