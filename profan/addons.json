@@ -54,6 +54,11 @@
                 "name": "sulfur",
                 "description": "Bytecode high-performance language",
                 "files": ["sulfur.elf", "libm.so"]
+            },
+            {
+                "name": "aledlang",
+                "description": "Stack-based programming language",
+                "files": ["aledlang.elf"]
             }
         ],
         "libraries": [
@@ -270,6 +275,12 @@
             "url": "https://github.com/elydre/sulfur_lang/releases/download/latest/sulfur-profanOS-i386.elf",
             "make_path": ["out", "zapps", "fatpath", "sulfur.elf"],
             "profan_path": ["bin", "fatpath", "sulfur.elf"]
+        },
+        {
+            "name": "aledlang.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/aledlang.elf",
+            "make_path": ["out", "zapps", "fatpath", "aledlang.elf"],
+            "profan_path": ["bin", "fatpath", "aledlang.elf"]
         }
-    ]    
+    ]
 }
