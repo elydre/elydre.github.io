@@ -199,8 +199,8 @@
         },
         {
             "name": "SDLheaders",
-            "github_dir": true,
-            "url": "https://api.github.com/repos/asqel/SDL/contents/include?ref=SDL2",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/raw/main/_headers/SDL2.tar.gz",
             "make_path": ["include", "addons", "SDL2"],
             "profan_path": ["sys", "include", "SDL2"]
         },
