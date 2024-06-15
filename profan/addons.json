@@ -83,6 +83,11 @@
                 "files": ["libschrift.so", "schrift.h", "libm.so"]
             },
             {
+                "name": "libSDL2",
+                "description": "Simple DirectMedia Layer",
+                "files": ["libSDL2.so", "SDLheaders"]
+            },
+            {
                 "name": "liboe",
                 "description": "Compilation of additional functions",
                 "files": ["liboe.so", "liboe.h"]
@@ -185,6 +190,19 @@
             "url": "https://raw.githubusercontent.com/elydre/libatron/main/_headers/libschrift/schrift.h",
             "make_path": ["include", "addons", "schrift.h"],
             "profan_path": ["sys", "include", "schrift.h"]
+        },
+        {
+            "name": "libSDL2.so",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libSDL2.so",
+            "make_path": ["out", "zlibs", "libSDL2.so"],
+            "profan_path": ["lib", "libSDL2.so"]
+        },
+        {
+            "name": "SDLheaders",
+            "github_dir": true,
+            "url": "https://api.github.com/repos/asqel/SDL/contents/include?ref=SDL2",
+            "make_path": ["include", "addons", "SDL2"],
+            "profan_path": ["sys", "include", "SDL2"]
         },
         {
             "name": "liboe.so",
