@@ -23,7 +23,6 @@ jobs:
       run: |
           git clone https://github.com/elydre/profanOS.git
           cd profanOS
-          rm -Rf LICENSE
           profan_lines=$(git ls-files | xargs cat | wc -l)
           kernel_version=$(python3 tools/maketool.py kver)
           cd ..
