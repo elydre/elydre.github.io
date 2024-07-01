@@ -19,7 +19,6 @@
 - [![Halfix](https://github.com/elydre/halfix-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/halfix-profan)
 - [![Lua](https://github.com/elydre/lua-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/lua-profan)
 - [![Tcc](https://github.com/elydre/tinycc-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/tinycc-profan)
-- [![vlink](https://github.com/elydre/vlink-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/vlink-profan)
 
 ## maybe you are looking for it?
 - [main github](https://github.com/elydre)
