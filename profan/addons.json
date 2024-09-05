@@ -12,12 +12,12 @@
             {
                 "name": "tcc",
                 "description": "Small and fast C compiler",
-                "files": ["tcc.elf", "libtcc.a", "libm.so"]
+                "files": ["tcc.elf", "libtcc1.a", "libm.so"]
             },
             {
                 "name": "act",
                 "description": "Make-like command generator",
-                "files": ["act.elf", "tcc.elf", "libtcc.a", "libm.so"]
+                "files": ["act.elf", "tcc.elf", "libtcc1.a", "libm.so"]
             }
         ],
         "extra shells": [
@@ -113,10 +113,10 @@
             "profan_path": ["bin", "fatpath", "tcc.elf"]
         },
         {
-            "name": "libtcc.a",
-            "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/libtcc.a",
-            "make_path": ["out", "zlibs", "libtcc.a"],
-            "profan_path": ["lib", "libtcc.a"]
+            "name": "libtcc1.a",
+            "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/libtcc1.a",
+            "make_path": ["out", "zlibs", "libtcc1.a"],
+            "profan_path": ["lib", "libtcc1.a"]
         },
         {
             "name": "act.elf",
