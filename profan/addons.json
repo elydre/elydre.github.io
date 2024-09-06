@@ -2,7 +2,6 @@
     "RECOMMENDED": [
         "tcc",
         "lua",
-        "dash",
         "doom",
         "sulfur"
     ],
