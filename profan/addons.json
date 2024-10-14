@@ -92,6 +92,11 @@
                 "files": ["libschrift.so", "schrift.h", "libm.so"]
             },
             {
+                "name": "libtcc",
+                "description": "Integrate TCC compiler everywhere",
+                "files": ["libtcc.so", "libtcc.h"]
+            },
+            {
                 "name": "liboe",
                 "description": "Compilation of additional functions",
                 "files": ["liboe.so", "liboe.h"]
@@ -116,6 +121,18 @@
             "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/libtcc1.a",
             "make_path": ["out", "zlibs", "libtcc1.a"],
             "profan_path": ["lib", "libtcc1.a"]
+        },
+        {
+            "name": "libtcc.so",
+            "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/libtcc.so",
+            "make_path": ["out", "zlibs", "libtcc.so"],
+            "profan_path": ["lib", "libtcc.so"]
+        },
+        {
+            "name": "libtcc.h",
+            "url": "https://raw.githubusercontent.com/elydre/tinycc-profan/refs/heads/mob/src/libtcc.h",
+            "make_path": ["include", "addons", "libtcc.h"],
+            "profan_path": ["sys", "include", "libtcc.h"]
         },
         {
             "name": "act.elf",
