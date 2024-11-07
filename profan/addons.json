@@ -12,11 +12,6 @@
                 "name": "tcc",
                 "description": "Small and fast C compiler",
                 "files": ["tcc.elf", "libtcc1.a", "libm.so"]
-            },
-            {
-                "name": "act",
-                "description": "Make-like command generator",
-                "files": ["act.elf", "tcc.elf", "libtcc1.a", "libm.so"]
             }
         ],
         "extra shells": [
@@ -40,7 +35,7 @@
             {
                 "name": "halfix",
                 "description": "x86 emulator with provided linux image",
-                "files": ["halfix", "bios.bin", "vgabios.bin", "halfix.cfg", "linux.iso"]
+                "files": ["halfix", "bios.bin", "vgabios.bin", "halfix.cfg", "linux.iso", "libm.so"]
             }
         ],
         "interpreters": [
@@ -133,12 +128,6 @@
             "url": "https://raw.githubusercontent.com/elydre/tinycc-profan/refs/heads/mob/src/libtcc.h",
             "make_path": ["include", "addons", "libtcc.h"],
             "profan_path": ["sys", "include", "libtcc.h"]
-        },
-        {
-            "name": "act.elf",
-            "url": "https://github.com/elydre/libatron/releases/download/latest/act.elf",
-            "make_path": ["out", "zapps", "cmd", "act.elf"],
-            "profan_path": ["bin", "cmd", "act.elf"]
         },
         {
             "name": "libm.so",
