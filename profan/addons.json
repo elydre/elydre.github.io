@@ -1,29 +1,24 @@
 {
     "RECOMMENDED": [
-        "tcc",
-        "lua",
+        "dash",
         "doom",
-        "sulfur"
+        "libm",
+        "lua",
+        "sulfur",
+        "tcc"
     ],
 
     "ADDONS": {
-        "compilation tools": [
+        "dev essential": [
             {
                 "name": "tcc",
                 "description": "Small and fast C compiler",
                 "files": ["tcc.elf", "libtcc1.a", "libm.so"]
-            }
-        ],
-        "extra shells": [
-            {
-                "name": "dash",
-                "description": "POSIX compliant shell [experimental]",
-                "files": ["dash.elf"]
             },
             {
-                "name": "lish",
-                "description": "Lightweight bash-like shell",
-                "files": ["lish.elf"]
+                "name": "dash",
+                "description": "POSIX compliant shell",
+                "files": ["dash.elf"]
             }
         ],
         "graphics": [
@@ -255,12 +250,6 @@
             "url": "https://github.com/elydre/dash-profan/releases/download/latest/dash.elf",
             "make_path": ["out", "zapps", "fatpath", "dash.elf"],
             "profan_path": ["bin", "fatpath", "dash.elf"]
-        },
-        {
-            "name": "lish.elf",
-            "url": "https://github.com/elydre/libatron/releases/download/latest/lish.elf",
-            "make_path": ["out", "zapps", "fatpath", "lish.elf"],
-            "profan_path": ["bin", "fatpath", "lish.elf"]
         },
         {
             "name": "doom.elf",
