@@ -9,7 +9,7 @@
     ],
 
     "ADDONS": {
-        "dev essential": [
+        "dev essentials": [
             {
                 "name": "tcc",
                 "description": "Small and fast C compiler",
