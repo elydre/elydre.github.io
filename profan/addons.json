@@ -253,7 +253,7 @@
         },
         {
             "name": "doom.elf",
-            "url": "https://github.com/elydre/doom-profan/releases/download/latest/doom.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/doom.elf",
             "make_path": ["out", "zapps", "fatpath", "doom.elf"],
             "profan_path": ["bin", "fatpath", "doom.elf"]
         },
