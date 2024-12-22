@@ -265,25 +265,25 @@
         },
         {
             "name": "halfix",
-            "url": "https://github.com/elydre/halfix-profan/releases/download/latest/halfix.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/halfix.elf",
             "make_path": ["out", "zapps", "fatpath", "halfix.elf"],
             "profan_path": ["bin", "fatpath", "halfix.elf"]
         },
         {
             "name": "bios.bin",
-            "url": "https://github.com/elydre/halfix-profan/raw/master/bios.bin",
+            "url": "https://github.com/elydre/libatron/raw/refs/heads/main/cmd/halfix/bios.bin",
             "make_path": ["out", "zada", "halfix", "bios.bin"],
             "profan_path": ["zada", "halfix", "bios.bin"]
         },
         {
             "name": "vgabios.bin",
-            "url": "https://github.com/elydre/halfix-profan/raw/master/vgabios.bin",
+            "url": "https://github.com/elydre/libatron/raw/refs/heads/main/cmd/halfix/vgabios.bin",
             "make_path": ["out", "zada", "halfix", "vgabios.bin"],
             "profan_path": ["zada", "halfix", "vgabios.bin"]
         },
         {
             "name": "halfix.cfg",
-            "url": "https://raw.githubusercontent.com/elydre/halfix-profan/master/default.conf",
+            "url": "https://github.com/elydre/libatron/raw/refs/heads/main/cmd/halfix/default.conf",
             "make_path": ["out", "zada", "halfix", "default.cfg"],
             "profan_path": ["zada", "halfix", "default.cfg"]
         },
@@ -295,7 +295,7 @@
         },
         {
             "name": "lua.elf",
-            "url": "https://github.com/elydre/lua-profan/releases/download/latest/lua.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/lua.elf",
             "make_path": ["out", "zapps", "fatpath", "lua.elf"],
             "profan_path": ["bin", "fatpath", "lua.elf"]
         },
