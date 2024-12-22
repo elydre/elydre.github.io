@@ -1,5 +1,4 @@
 {
 	"profan_lines": 40716,
-	"kernel_version": "-m32 -march=i686 -ffreestanding -fno-exceptions -fno-stack-protector -nostdinc -nostdlib -Wall -Wextra -D__profanOS__ -Werror
-1.2.4"
+	"kernel_version": "1.2.4"
 }
