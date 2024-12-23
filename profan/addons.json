@@ -13,7 +13,7 @@
             {
                 "name": "tcc",
                 "description": "Small and fast C compiler",
-                "files": ["tcc.elf", "libtcc1.a", "libm.so"]
+                "files": ["tcc.elf", "libtcc1.a", "bcheck.o", "bt-exe.o", "bt-log.o", "runmain.o", "libm.so"]
             },
             {
                 "name": "dash",
@@ -111,6 +111,30 @@
             "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/libtcc1.a",
             "make_path": ["out", "zlibs", "libtcc1.a"],
             "profan_path": ["lib", "libtcc1.a"]
+        },
+        {
+            "name": "bcheck.o",
+            "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/bcheck.o",
+            "make_path": ["out", "zlibs", "tcc", "bcheck.o"],
+            "profan_path": ["lib", "tcc", "bcheck.o"]
+        },
+        {
+            "name": "bt-exe.o",
+            "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/bt-exe.o",
+            "make_path": ["out", "zlibs", "tcc", "bt-exe.o"],
+            "profan_path": ["lib", "tcc", "bt-exe.o"]
+        },
+        {
+            "name": "bt-log.o",
+            "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/bt-log.o",
+            "make_path": ["out", "zlibs", "tcc", "bt-log.o"],
+            "profan_path": ["lib", "tcc", "bt-log.o"]
+        },
+        {
+            "name": "runmain.o",
+            "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/runmain.o",
+            "make_path": ["out", "zlibs", "tcc", "runmain.o"],
+            "profan_path": ["lib", "tcc", "runmain.o"]
         },
         {
             "name": "libtcc.so",
