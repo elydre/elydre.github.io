@@ -13,7 +13,7 @@
             {
                 "name": "tcc",
                 "description": "Small and fast C compiler",
-                "files": ["tcc.elf", "libtcc1.a", "bcheck.o", "bt-exe.o", "bt-log.o", "runmain.o", "libm.so"]
+                "files": ["tcc.elf", "libtcc1.a", "bcheck.o", "bt-exe.o", "bt-log.o", "runmain.o", "libm.so", "tccdefs.h"]
             },
             {
                 "name": "dash",
@@ -135,6 +135,12 @@
             "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/runmain.o",
             "make_path": ["out", "zlibs", "tcc", "runmain.o"],
             "profan_path": ["lib", "tcc", "runmain.o"]
+        },
+        {
+            "name": "tccdefs.h",
+            "url": "https://raw.githubusercontent.com/elydre/tinycc-profan/refs/heads/mob/include/tccdefs.h",
+            "make_path": ["include", "addons", "tccdefs.h"],
+            "profan_path": ["sys", "include", "tccdefs.h"]
         },
         {
             "name": "libtcc.so",
