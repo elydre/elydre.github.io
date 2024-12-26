@@ -19,6 +19,11 @@
                 "name": "dash",
                 "description": "POSIX compliant shell",
                 "files": ["dash.elf"]
+            },
+            {
+                "name": "nasm",
+                "description": "Netwide Assembler with Intel syntax",
+                "files": ["nasm.elf", "ndisasm.elf"]
             }
         ],
         "graphics": [
@@ -340,6 +345,18 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/aledlang.elf",
             "make_path": ["out", "zapps", "fatpath", "aledlang.elf"],
             "profan_path": ["bin", "fatpath", "aledlang.elf"]
+        },
+        {
+            "name": "nasm.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/nasm.elf",
+            "make_path": ["out", "zapps", "fatpath", "nasm.elf"],
+            "profan_path": ["bin", "fatpath", "nasm.elf"]
+        },
+        {
+            "name": "ndisasm.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/ndisasm.elf",
+            "make_path": ["out", "zapps", "fatpath", "ndisasm.elf"],
+            "profan_path": ["bin", "fatpath", "ndisasm.elf"]
         }
     ]
 }
