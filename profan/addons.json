@@ -77,11 +77,6 @@
                 "files": ["libSDL2.so", "SDLheaders"]
             },
             {
-                "name": "libgcc",
-                "description": "GCC runtime library",
-                "files": ["libgcc.so", "libgcc.a"]
-            },
-            {
                 "name": "libschrift",
                 "description": "Font rendering library",
                 "files": ["libschrift.so", "schrift.h", "libm.so"]
@@ -249,18 +244,6 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/liboe.so",
             "make_path": ["out", "zlibs", "liboe.so"],
             "profan_path": ["lib", "liboe.so"]
-        },
-        {
-            "name": "libgcc.so",
-            "url": "https://github.com/elydre/libatron/releases/download/latest/libgcc.so",
-            "make_path": ["out", "zlibs", "libgcc.so"],
-            "profan_path": ["lib", "libgcc.so"]
-        },
-        {
-            "name": "libgcc.a",
-            "url": "https://github.com/elydre/libatron/releases/download/latest/libgcc.a",
-            "make_path": ["out", "zlibs", "libgcc.a"],
-            "profan_path": ["lib", "libgcc.a"]
         },
         {
             "name": "liboe.h",
