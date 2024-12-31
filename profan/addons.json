@@ -18,11 +18,6 @@
                 "name": "dash",
                 "description": "POSIX compliant shell",
                 "files": ["dash.elf"]
-            },
-            {
-                "name": "nasm",
-                "description": "Netwide Assembler with Intel syntax",
-                "files": ["nasm.elf", "ndisasm.elf"]
             }
         ],
         "graphics": [
@@ -53,6 +48,23 @@
                 "description": "Stack-based programming language",
                 "files": ["aledlang.elf"]
             }
+        ],
+        "osdev": [
+            {
+                "name": "nasm",
+                "description": "Netwide Assembler with Intel syntax",
+                "files": ["nasm.elf", "ndisasm.elf"]
+            },
+            {
+                "name": "vlink",
+                "description": "Portable mutli-format linker",
+                "files": ["vlink.elf"]
+            },
+            {
+                "name": "mkisofs",
+                "description": "Create ISO 9660 filesystem images",
+                "files": ["mkisofs.elf"]
+            }                
         ],
         "libraries": [
             {
@@ -339,6 +351,18 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/ndisasm.elf",
             "make_path": ["out", "zapps", "fatpath", "ndisasm.elf"],
             "profan_path": ["bin", "fatpath", "ndisasm.elf"]
+        },
+        {
+            "name": "vlink.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/vlink.elf",
+            "make_path": ["out", "zapps", "fatpath", "vlink.elf"],
+            "profan_path": ["bin", "fatpath", "vlink.elf"]
+        },
+        {
+            "name": "mkisofs.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/mkisofs.elf",
+            "make_path": ["out", "zapps", "fatpath", "mkisofs.elf"],
+            "profan_path": ["bin", "fatpath", "mkisofs.elf"]
         }
     ]
 }
