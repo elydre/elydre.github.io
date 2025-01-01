@@ -64,7 +64,12 @@
                 "name": "mkisofs",
                 "description": "Create ISO 9660 filesystem images",
                 "files": ["mkisofs.elf"]
-            }                
+            },
+            {
+                "name": "limine",
+                "description": "Multiprotocol x86 bootloader",
+                "files": ["limine.elf, limine_files"]
+            }
         ],
         "libraries": [
             {
@@ -156,25 +161,25 @@
         },
         {
             "name": "math.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/_headers/libm/math.h",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libm/math.h",
             "make_path": ["include", "addons", "math.h"],
             "profan_path": ["sys", "include", "math.h"]
         },
         {
             "name": "complex.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/_headers/libm/complex.h",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libm/complex.h",
             "make_path": ["include", "addons", "complex.h"],
             "profan_path": ["sys", "include", "complex.h"]
         },
         {
             "name": "fenv.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/_headers/libm/fenv.h",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libm/fenv.h",
             "make_path": ["include", "addons", "fenv.h"],
             "profan_path": ["sys", "include", "fenv.h"]
         },
         {
             "name": "libm.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/_headers/libm/libm.h",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libm/libm.h",
             "make_path": ["include", "addons", "libm.h"],
             "profan_path": ["sys", "include", "libm.h"]
         },
@@ -186,7 +191,7 @@
         },
         {
             "name": "zlib.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/_headers/libz/zlib.h",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libz/zlib.h",
             "make_path": ["include", "addons", "zlib.h"],
             "profan_path": ["sys", "include", "zlib.h"]
         },
@@ -204,7 +209,7 @@
         },
         {
             "name": "upng.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/_headers/libupng/upng.h",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libupng/upng.h",
             "make_path": ["include", "addons", "upng.h"],
             "profan_path": ["sys", "include", "upng.h"]
         },
@@ -216,7 +221,7 @@
         },
         {
             "name": "schrift.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/_headers/libschrift/schrift.h",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libschrift/schrift.h",
             "make_path": ["include", "addons", "schrift.h"],
             "profan_path": ["sys", "include", "schrift.h"]
         },
@@ -229,7 +234,7 @@
         {
             "name": "SDLheaders",
             "is_targz": true,
-            "url": "https://github.com/elydre/libatron/raw/main/_headers/SDL2.tar.gz",
+            "url": "https://github.com/elydre/libatron/raw/main/rsc/SDL2.tar.gz",
             "make_path": ["include", "addons", "SDL2"],
             "profan_path": ["sys", "include", "SDL2"]
         },
@@ -253,7 +258,7 @@
         },
         {
             "name": "cJSON.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/_headers/libcjson/cJSON.h",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libcjson/cJSON.h",
             "make_path": ["include", "addons", "cJSON.h"],
             "profan_path": ["sys", "include", "cJSON.h"]
         },
@@ -346,6 +351,19 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/mkisofs.elf",
             "make_path": ["out", "zapps", "fatpath", "mkisofs.elf"],
             "profan_path": ["bin", "fatpath", "mkisofs.elf"]
+        },
+        {
+            "name": "limine.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/limine.elf",
+            "make_path": ["out", "zapps", "fatpath", "limine.elf"],
+            "profan_path": ["bin", "fatpath", "limine.elf"]
+        },
+        {
+            "name": "limine_files",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/limine.tar.gz",
+            "make_path": ["out", "zada", "limine"],
+            "profan_path": ["zada", "limine"]
         }
     ]
 }
