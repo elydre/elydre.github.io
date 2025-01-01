@@ -36,7 +36,7 @@
             {
                 "name": "lua",
                 "description": "Lightweight scripting language",
-                "files": ["lua.elf", "libm.so"]
+                "files": ["lua.elf", "libm.so", "lua_files"]
             },
             {
                 "name": "sulfur",
@@ -315,6 +315,13 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/lua.elf",
             "make_path": ["out", "zapps", "fatpath", "lua.elf"],
             "profan_path": ["bin", "fatpath", "lua.elf"]
+        },
+        {
+            "name": "lua_files",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/raw/main/rsc/lua.tar.gz",
+            "make_path": ["out", "zada", "lua"],
+            "profan_path": ["zada", "lua"]
         },
         {
             "name": "sulfur.elf",
