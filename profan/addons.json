@@ -68,7 +68,7 @@
             {
                 "name": "limine",
                 "description": "Multiprotocol x86 bootloader",
-                "files": ["limine.elf, limine_files"]
+                "files": ["limine.elf", "limine_files"]
             }
         ],
         "libraries": [
