@@ -318,7 +318,7 @@
         },
         {
             "name": "sulfur.elf",
-            "url": "https://github.com/elydre/sulfur_lang/releases/download/latest/sulfur-profanOS-i386.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/sulfur.elf",
             "make_path": ["out", "zapps", "fatpath", "sulfur.elf"],
             "profan_path": ["bin", "fatpath", "sulfur.elf"]
         },
