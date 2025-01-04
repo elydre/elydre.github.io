@@ -39,6 +39,11 @@
                 "files": ["lua.elf", "libm.so", "lua_files"]
             },
             {
+                "name": "perl",
+                "description": "Extensive scripting language",
+                "files": ["perl.elf", "libm.so"]
+            },
+            {
                 "name": "sulfur",
                 "description": "Bytecode high-performance language",
                 "files": ["sulfur.elf", "libm.so"]
@@ -371,6 +376,12 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/limine.tar.gz",
             "make_path": ["out", "zada", "limine"],
             "profan_path": ["zada", "limine"]
+        },
+        {
+            "name": "perl.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/perl.elf",
+            "make_path": ["out", "zapps", "fatpath", "perl.elf"],
+            "profan_path": ["bin", "fatpath", "perl.elf"]
         }
     ]
 }
