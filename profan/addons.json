@@ -34,6 +34,11 @@
         ],
         "interpreters": [
             {
+                "name": "python",
+                "description": "Python 3.11 interpreter and modules",
+                "files": ["python.elf", "libm.so", "python_libs"]
+            },
+            {
                 "name": "lua",
                 "description": "Lightweight scripting language",
                 "files": ["lua.elf", "libm.so", "lua_files"]
@@ -382,6 +387,19 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/perl.elf",
             "make_path": ["out", "zapps", "fatpath", "perl.elf"],
             "profan_path": ["bin", "fatpath", "perl.elf"]
+        },
+        {
+            "name": "python.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/python.elf",
+            "make_path": ["out", "zapps", "fatpath", "python.elf"],
+            "profan_path": ["bin", "fatpath", "python.elf"]
+        },
+        {
+            "name": "python_libs",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/python-lib.tar.gz",
+            "make_path": ["out", "zlibs", "python3.11"],
+            "profan_path": ["lib", "python3.11"]
         }
     ]
 }
