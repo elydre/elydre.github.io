@@ -93,14 +93,14 @@
                 "files": ["libz.so", "zlib.h", "gzip.elf"]
             },
             {
+                "name": "libSDL2",
+                "description": "Simple DirectMedia Layer",
+                "files": ["libSDL2.so", "SDLheaders", "libm.so"]
+            },
+            {
                 "name": "libupng",
                 "description": "Small PNG decoding library",
                 "files": ["libupng.so", "upng.h"]
-            },
-            {
-                "name": "libSDL2",
-                "description": "Simple DirectMedia Layer",
-                "files": ["libSDL2.so", "SDLheaders"]
             },
             {
                 "name": "libschrift",
