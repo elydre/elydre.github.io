@@ -18,6 +18,11 @@
                 "name": "dash",
                 "description": "POSIX compliant shell",
                 "files": ["dash.elf"]
+            },
+            {
+                "name": "make",
+                "description": "GNU make utility",
+                "files": ["make.elf"]
             }
         ],
         "graphics": [
@@ -400,6 +405,12 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/python-lib.tar.gz",
             "make_path": ["out", "zlibs", "python3.11"],
             "profan_path": ["lib", "python3.11"]
+        },
+        {
+            "name": "make.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/make.elf",
+            "make_path": ["out", "zapps", "fatpath", "make.elf"],
+            "profan_path": ["bin", "fatpath", "make.elf"]
         }
     ]
 }
