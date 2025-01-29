@@ -4,6 +4,7 @@
         "doom",
         "libm",
         "lua",
+        "make",
         "tcc"
     ],
 
