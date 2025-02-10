@@ -33,6 +33,11 @@
                 "files": ["doom.elf", "doom1.wad", "libm.so"]
             },
             {
+                "name": "lite",
+                "description": "Lightweight text editor",
+                "files": ["lite.elf", "lite_data"]
+            },
+            {
                 "name": "halfix",
                 "description": "x86 emulator with provided linux image",
                 "files": ["halfix", "bios.bin", "vgabios.bin", "halfix.cfg", "linux.iso", "libm.so"]
@@ -91,7 +96,7 @@
             {
                 "name": "libm",
                 "description": "Standard math library",
-                "files": ["libm.so", "libm.h", "math.h", "complex.h", "fenv.h"]
+                "files": ["libm.so", "libm_headers"]
             },
             {
                 "name": "zlib",
@@ -101,7 +106,7 @@
             {
                 "name": "libSDL2",
                 "description": "Simple DirectMedia Layer",
-                "files": ["libSDL2.so", "SDLheaders", "libm.so"]
+                "files": ["libSDL2.so", "sdl_headers", "libm.so"]
             },
             {
                 "name": "libupng",
@@ -176,28 +181,11 @@
             "profan_path": ["lib", "libm.so"]
         },
         {
-            "name": "math.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libm/math.h",
-            "make_path": ["include", "addons", "math.h"],
-            "profan_path": ["sys", "include", "math.h"]
-        },
-        {
-            "name": "complex.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libm/complex.h",
-            "make_path": ["include", "addons", "complex.h"],
-            "profan_path": ["sys", "include", "complex.h"]
-        },
-        {
-            "name": "fenv.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libm/fenv.h",
-            "make_path": ["include", "addons", "fenv.h"],
-            "profan_path": ["sys", "include", "fenv.h"]
-        },
-        {
-            "name": "libm.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libm/libm.h",
-            "make_path": ["include", "addons", "libm.h"],
-            "profan_path": ["sys", "include", "libm.h"]
+            "name": "libm_headers",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/raw/refs/heads/main/rsc/libm.tar.gz",
+            "make_path": ["include", "addons"],
+            "profan_path": ["sys", "include"]
         },
         {
             "name": "libz.so",
@@ -248,7 +236,7 @@
             "profan_path": ["lib", "libSDL2.so"]
         },
         {
-            "name": "SDLheaders",
+            "name": "sdl_headers",
             "is_targz": true,
             "url": "https://github.com/elydre/libatron/raw/main/rsc/SDL2.tar.gz",
             "make_path": ["include", "addons", "SDL2"],
@@ -412,6 +400,19 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/make.elf",
             "make_path": ["out", "zapps", "fatpath", "make.elf"],
             "profan_path": ["bin", "fatpath", "make.elf"]
+        },
+        {
+            "name": "lite.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/lite.elf",
+            "make_path": ["out", "zapps", "fatpath", "lite.elf"],
+            "profan_path": ["bin", "fatpath", "lite.elf"]
+        },
+        {
+            "name": "lite_data",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/blob/main/rsc/lite.tar.gz",
+            "make_path": ["out", "zada", "lite"],
+            "profan_path": ["zada", "lite"]
         }
     ]
 }
