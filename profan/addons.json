@@ -35,7 +35,7 @@
             {
                 "name": "lite",
                 "description": "Lightweight text editor",
-                "files": ["lite.elf", "lite_data"]
+                "files": ["lite.elf", "lite_data", "libm.so", "libSDL2.so"]
             },
             {
                 "name": "halfix",
