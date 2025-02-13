@@ -101,7 +101,7 @@
             {
                 "name": "zlib",
                 "description": "Compression library + gzip command",
-                "files": ["libz.so", "zlib.h", "gzip.elf"]
+                "files": ["libz.so", "zlib_headers", "gzip.elf"]
             },
             {
                 "name": "libSDL2",
@@ -194,10 +194,11 @@
             "profan_path": ["lib", "libz.so"]
         },
         {
-            "name": "zlib.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libz/zlib.h",
-            "make_path": ["include", "addons", "zlib.h"],
-            "profan_path": ["sys", "include", "zlib.h"]
+            "name": "zlib_headers",
+            "is_targz": true,
+            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/zlib.tar.gz",
+            "make_path": ["include", "addons"],
+            "profan_path": ["sys", "include"]
         },
         {
             "name": "gzip.elf",
