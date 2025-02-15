@@ -100,8 +100,8 @@
             },
             {
                 "name": "zlib",
-                "description": "Compression library + gzip command",
-                "files": ["libz.so", "zlib_headers", "gzip.elf"]
+                "description": "Deflate compression library",
+                "files": ["libz.so", "zlib_headers"]
             },
             {
                 "name": "libSDL2",
@@ -199,12 +199,6 @@
             "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/zlib.tar.gz",
             "make_path": ["include", "addons"],
             "profan_path": ["sys", "include"]
-        },
-        {
-            "name": "gzip.elf",
-            "url": "https://github.com/elydre/libatron/releases/download/latest/gzip.elf",
-            "make_path": ["out", "zapps", "cmd", "gzip.elf"],
-            "profan_path": ["bin", "cmd", "gzip.elf"]
         },
         {
             "name": "libupng.so",
