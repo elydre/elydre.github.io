@@ -140,8 +140,8 @@
         {
             "name": "tcc.elf",
             "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/tcc.elf",
-            "make_path": ["out", "zapps", "fatpath", "tcc.elf"],
-            "profan_path": ["bin", "fatpath", "tcc.elf"]
+            "make_path": ["out", "zapps", "h", "tcc.elf"],
+            "profan_path": ["bin", "h", "tcc.elf"]
         },
         {
             "name": "libtcc1.a",
@@ -264,14 +264,14 @@
         {
             "name": "dash.elf",
             "url": "https://github.com/elydre/dash-profan/releases/download/latest/dash.elf",
-            "make_path": ["out", "zapps", "fatpath", "dash.elf"],
-            "profan_path": ["bin", "fatpath", "dash.elf"]
+            "make_path": ["out", "zapps", "h", "dash.elf"],
+            "profan_path": ["bin", "h", "dash.elf"]
         },
         {
             "name": "doom.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/doom.elf",
-            "make_path": ["out", "zapps", "fatpath", "doom.elf"],
-            "profan_path": ["bin", "fatpath", "doom.elf"]
+            "make_path": ["out", "zapps", "h", "doom.elf"],
+            "profan_path": ["bin", "h", "doom.elf"]
         },
         {
             "name": "doom1.wad",
@@ -282,8 +282,8 @@
         {
             "name": "halfix",
             "url": "https://github.com/elydre/libatron/releases/download/latest/halfix.elf",
-            "make_path": ["out", "zapps", "fatpath", "halfix.elf"],
-            "profan_path": ["bin", "fatpath", "halfix.elf"]
+            "make_path": ["out", "zapps", "h", "halfix.elf"],
+            "profan_path": ["bin", "h", "halfix.elf"]
         },
         {
             "name": "bios.bin",
@@ -312,8 +312,8 @@
         {
             "name": "lua.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/lua.elf",
-            "make_path": ["out", "zapps", "fatpath", "lua.elf"],
-            "profan_path": ["bin", "fatpath", "lua.elf"]
+            "make_path": ["out", "zapps", "h", "lua.elf"],
+            "profan_path": ["bin", "h", "lua.elf"]
         },
         {
             "name": "lua_files",
@@ -325,44 +325,44 @@
         {
             "name": "sulfur.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/sulfur.elf",
-            "make_path": ["out", "zapps", "fatpath", "sulfur.elf"],
-            "profan_path": ["bin", "fatpath", "sulfur.elf"]
+            "make_path": ["out", "zapps", "h", "sulfur.elf"],
+            "profan_path": ["bin", "h", "sulfur.elf"]
         },
         {
             "name": "aledlang.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/aledlang.elf",
-            "make_path": ["out", "zapps", "fatpath", "aledlang.elf"],
-            "profan_path": ["bin", "fatpath", "aledlang.elf"]
+            "make_path": ["out", "zapps", "h", "aledlang.elf"],
+            "profan_path": ["bin", "h", "aledlang.elf"]
         },
         {
             "name": "nasm.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/nasm.elf",
-            "make_path": ["out", "zapps", "fatpath", "nasm.elf"],
-            "profan_path": ["bin", "fatpath", "nasm.elf"]
+            "make_path": ["out", "zapps", "h", "nasm.elf"],
+            "profan_path": ["bin", "h", "nasm.elf"]
         },
         {
             "name": "ndisasm.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/ndisasm.elf",
-            "make_path": ["out", "zapps", "fatpath", "ndisasm.elf"],
-            "profan_path": ["bin", "fatpath", "ndisasm.elf"]
+            "make_path": ["out", "zapps", "h", "ndisasm.elf"],
+            "profan_path": ["bin", "h", "ndisasm.elf"]
         },
         {
             "name": "vlink.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/vlink.elf",
-            "make_path": ["out", "zapps", "fatpath", "vlink.elf"],
-            "profan_path": ["bin", "fatpath", "vlink.elf"]
+            "make_path": ["out", "zapps", "h", "vlink.elf"],
+            "profan_path": ["bin", "h", "vlink.elf"]
         },
         {
             "name": "mkisofs.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/mkisofs.elf",
-            "make_path": ["out", "zapps", "fatpath", "mkisofs.elf"],
-            "profan_path": ["bin", "fatpath", "mkisofs.elf"]
+            "make_path": ["out", "zapps", "h", "mkisofs.elf"],
+            "profan_path": ["bin", "h", "mkisofs.elf"]
         },
         {
             "name": "limine.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/limine.elf",
-            "make_path": ["out", "zapps", "fatpath", "limine.elf"],
-            "profan_path": ["bin", "fatpath", "limine.elf"]
+            "make_path": ["out", "zapps", "h", "limine.elf"],
+            "profan_path": ["bin", "h", "limine.elf"]
         },
         {
             "name": "limine_files",
@@ -374,14 +374,14 @@
         {
             "name": "perl.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/perl.elf",
-            "make_path": ["out", "zapps", "fatpath", "perl.elf"],
-            "profan_path": ["bin", "fatpath", "perl.elf"]
+            "make_path": ["out", "zapps", "h", "perl.elf"],
+            "profan_path": ["bin", "h", "perl.elf"]
         },
         {
             "name": "python.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/python.elf",
-            "make_path": ["out", "zapps", "fatpath", "python.elf"],
-            "profan_path": ["bin", "fatpath", "python.elf"]
+            "make_path": ["out", "zapps", "h", "python.elf"],
+            "profan_path": ["bin", "h", "python.elf"]
         },
         {
             "name": "python_libs",
@@ -393,14 +393,14 @@
         {
             "name": "make.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/make.elf",
-            "make_path": ["out", "zapps", "fatpath", "make.elf"],
-            "profan_path": ["bin", "fatpath", "make.elf"]
+            "make_path": ["out", "zapps", "h", "make.elf"],
+            "profan_path": ["bin", "h", "make.elf"]
         },
         {
             "name": "lite.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/lite.elf",
-            "make_path": ["out", "zapps", "fatpath", "lite.elf"],
-            "profan_path": ["bin", "fatpath", "lite.elf"]
+            "make_path": ["out", "zapps", "h", "lite.elf"],
+            "profan_path": ["bin", "h", "lite.elf"]
         },
         {
             "name": "lite_data",
