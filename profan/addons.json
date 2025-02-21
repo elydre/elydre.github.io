@@ -99,14 +99,19 @@
                 "files": ["libm.so", "libm_headers"]
             },
             {
-                "name": "zlib",
-                "description": "Deflate compression library",
-                "files": ["libz.so", "zlib_headers"]
+                "name": "libarchive",
+                "description": "multi-format archive + command-line utilities",
+                "files": ["libarchive.so", "libarchive_fe.a", "archive.h", "libz.so", "bsdcat.elf", "bsdtar.elf", "bsdcpio.elf", "bsdunzip.elf"]
             },
             {
                 "name": "libSDL2",
                 "description": "Simple DirectMedia Layer",
                 "files": ["libSDL2.so", "sdl_headers", "libm.so"]
+            },
+            {
+                "name": "zlib",
+                "description": "Deflate compression library",
+                "files": ["libz.so", "zlib_headers"]
             },
             {
                 "name": "libupng",
@@ -408,6 +413,48 @@
             "url": "https://github.com/elydre/libatron/raw/refs/heads/main/rsc/lite.tar.gz",
             "make_path": ["out", "zada", "lite"],
             "profan_path": ["zada", "lite"]
+        },
+        {
+            "name": "libarchive.so",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libarchive.so",
+            "make_path": ["out", "zlibs", "libarchive.so"],
+            "profan_path": ["lib", "libarchive.so"]
+        },
+        {
+            "name": "libarchive_fe.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libarchive_fe.a",
+            "make_path": ["out", "zlibs", "libarchive_fe.a"],
+            "profan_path": ["lib", "libarchive_fe.a"]
+        },
+        {
+            "name": "archive.h",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libarchive/archive.h",
+            "make_path": ["include", "addons", "archive.h"],
+            "profan_path": ["sys", "include", "archive.h"]
+        },
+        {
+            "name": "bsdcat.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/bsdcat.elf",
+            "make_path": ["out", "zapps", "h", "bsdcat.elf"],
+            "profan_path": ["bin", "h", "bsdcat.elf"]
+        },
+        {
+            "name": "bsdtar.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/bsdtar.elf",
+            "make_path": ["out", "zapps", "h", "bsdtar.elf"],
+            "profan_path": ["bin", "h", "bsdtar.elf"]
+        },
+        {
+            "name": "bsdcpio.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/bsdcpio.elf",
+            "make_path": ["out", "zapps", "h", "bsdcpio.elf"],
+            "profan_path": ["bin", "h", "bsdcpio.elf"]
+        },
+        {
+            "name": "bsdunzip.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/bsdunzip.elf",
+            "make_path": ["out", "zapps", "h", "bsdunzip.elf"],
+            "profan_path": ["bin", "h", "bsdunzip.elf"]
         }
     ]
 }
