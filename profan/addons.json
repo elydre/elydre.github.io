@@ -100,7 +100,7 @@
             },
             {
                 "name": "libarchive",
-                "description": "multi-format archive + command-line utilities",
+                "description": "libarchive + command-line utilities",
                 "files": ["libarchive.so", "libarchive_fe.a", "archive.h", "libz.so", "bsdcat.elf", "bsdtar.elf", "bsdcpio.elf", "bsdunzip.elf"]
             },
             {
