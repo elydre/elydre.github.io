@@ -114,9 +114,9 @@
                 "files": ["libz.so", "zlib_headers"]
             },
             {
-                "name": "libupng",
-                "description": "Small PNG decoding library",
-                "files": ["libupng.so", "upng.h"]
+                "name": "libpng",
+                "description": "PNG image format library",
+                "files": ["libpng16.so", "libz.so", "libm.so", "libpng_headers"]
             },
             {
                 "name": "libschrift",
@@ -206,16 +206,17 @@
             "profan_path": ["sys", "include"]
         },
         {
-            "name": "libupng.so",
-            "url": "https://github.com/elydre/libatron/releases/download/latest/libupng.so",
-            "make_path": ["out", "zlibs", "libupng.so"],
-            "profan_path": ["lib", "libupng.so"]
+            "name": "libpng16.so",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libpng16.so",
+            "make_path": ["out", "zlibs", "libpng16.so"],
+            "profan_path": ["lib", "libpng16.so"]
         },
         {
-            "name": "upng.h",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/libupng/upng.h",
-            "make_path": ["include", "addons", "upng.h"],
-            "profan_path": ["sys", "include", "upng.h"]
+            "name": "libpng_headers",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libpng_headers.tar.gz",
+            "make_path": ["include", "addons"],
+            "profan_path": ["sys", "include"]
         },
         {
             "name": "libschrift.so",
