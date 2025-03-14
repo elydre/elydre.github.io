@@ -57,7 +57,7 @@
             {
                 "name": "perl",
                 "description": "Extensive scripting language",
-                "files": ["perl.elf", "libm.so"]
+                "files": ["perl.elf", "libm.so", "perl_files"]
             },
             {
                 "name": "sulfur",
@@ -382,6 +382,13 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/perl.elf",
             "make_path": ["out", "zapps", "h", "perl.elf"],
             "profan_path": ["bin", "h", "perl.elf"]
+        },
+        {
+            "name": "perl_files",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/raw/main/rsc/perl.tar.gz",
+            "make_path": ["out", "zada", "perl"],
+            "profan_path": ["zada", "perl"]
         },
         {
             "name": "python.elf",
