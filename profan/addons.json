@@ -145,8 +145,8 @@
         {
             "name": "tcc.elf",
             "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/tcc.elf",
-            "make_path": ["out", "zapps", "h", "tcc.elf"],
-            "profan_path": ["bin", "h", "tcc.elf"]
+            "make_path": ["out", "zapps", "f", "tcc.elf"],
+            "profan_path": ["bin", "f", "tcc.elf"]
         },
         {
             "name": "libtcc1.a",
@@ -270,14 +270,14 @@
         {
             "name": "dash.elf",
             "url": "https://github.com/elydre/dash-profan/releases/download/latest/dash.elf",
-            "make_path": ["out", "zapps", "h", "dash.elf"],
-            "profan_path": ["bin", "h", "dash.elf"]
+            "make_path": ["out", "zapps", "f", "dash.elf"],
+            "profan_path": ["bin", "f", "dash.elf"]
         },
         {
             "name": "doom.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/doom.elf",
-            "make_path": ["out", "zapps", "h", "doom.elf"],
-            "profan_path": ["bin", "h", "doom.elf"]
+            "make_path": ["out", "zapps", "f", "doom.elf"],
+            "profan_path": ["bin", "f", "doom.elf"]
         },
         {
             "name": "doom1.wad",
@@ -288,8 +288,8 @@
         {
             "name": "halfix",
             "url": "https://github.com/elydre/libatron/releases/download/latest/halfix.elf",
-            "make_path": ["out", "zapps", "h", "halfix.elf"],
-            "profan_path": ["bin", "h", "halfix.elf"]
+            "make_path": ["out", "zapps", "f", "halfix.elf"],
+            "profan_path": ["bin", "f", "halfix.elf"]
         },
         {
             "name": "bios.bin",
@@ -318,8 +318,8 @@
         {
             "name": "lua.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/lua.elf",
-            "make_path": ["out", "zapps", "h", "lua.elf"],
-            "profan_path": ["bin", "h", "lua.elf"]
+            "make_path": ["out", "zapps", "f", "lua.elf"],
+            "profan_path": ["bin", "f", "lua.elf"]
         },
         {
             "name": "lua_files",
@@ -331,44 +331,44 @@
         {
             "name": "sulfur.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/sulfur.elf",
-            "make_path": ["out", "zapps", "h", "sulfur.elf"],
-            "profan_path": ["bin", "h", "sulfur.elf"]
+            "make_path": ["out", "zapps", "f", "sulfur.elf"],
+            "profan_path": ["bin", "f", "sulfur.elf"]
         },
         {
             "name": "aledlang.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/aledlang.elf",
-            "make_path": ["out", "zapps", "h", "aledlang.elf"],
-            "profan_path": ["bin", "h", "aledlang.elf"]
+            "make_path": ["out", "zapps", "f", "aledlang.elf"],
+            "profan_path": ["bin", "f", "aledlang.elf"]
         },
         {
             "name": "nasm.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/nasm.elf",
-            "make_path": ["out", "zapps", "h", "nasm.elf"],
-            "profan_path": ["bin", "h", "nasm.elf"]
+            "make_path": ["out", "zapps", "f", "nasm.elf"],
+            "profan_path": ["bin", "f", "nasm.elf"]
         },
         {
             "name": "ndisasm.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/ndisasm.elf",
-            "make_path": ["out", "zapps", "h", "ndisasm.elf"],
-            "profan_path": ["bin", "h", "ndisasm.elf"]
+            "make_path": ["out", "zapps", "f", "ndisasm.elf"],
+            "profan_path": ["bin", "f", "ndisasm.elf"]
         },
         {
             "name": "vlink.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/vlink.elf",
-            "make_path": ["out", "zapps", "h", "vlink.elf"],
-            "profan_path": ["bin", "h", "vlink.elf"]
+            "make_path": ["out", "zapps", "f", "vlink.elf"],
+            "profan_path": ["bin", "f", "vlink.elf"]
         },
         {
             "name": "mkisofs.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/mkisofs.elf",
-            "make_path": ["out", "zapps", "h", "mkisofs.elf"],
-            "profan_path": ["bin", "h", "mkisofs.elf"]
+            "make_path": ["out", "zapps", "f", "mkisofs.elf"],
+            "profan_path": ["bin", "f", "mkisofs.elf"]
         },
         {
             "name": "limine.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/limine.elf",
-            "make_path": ["out", "zapps", "h", "limine.elf"],
-            "profan_path": ["bin", "h", "limine.elf"]
+            "make_path": ["out", "zapps", "f", "limine.elf"],
+            "profan_path": ["bin", "f", "limine.elf"]
         },
         {
             "name": "limine_files",
@@ -380,8 +380,8 @@
         {
             "name": "perl.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/perl.elf",
-            "make_path": ["out", "zapps", "h", "perl.elf"],
-            "profan_path": ["bin", "h", "perl.elf"]
+            "make_path": ["out", "zapps", "f", "perl.elf"],
+            "profan_path": ["bin", "f", "perl.elf"]
         },
         {
             "name": "perl_files",
@@ -393,8 +393,8 @@
         {
             "name": "python.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/python.elf",
-            "make_path": ["out", "zapps", "h", "python.elf"],
-            "profan_path": ["bin", "h", "python.elf"]
+            "make_path": ["out", "zapps", "f", "python.elf"],
+            "profan_path": ["bin", "f", "python.elf"]
         },
         {
             "name": "python_libs",
@@ -406,14 +406,14 @@
         {
             "name": "make.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/make.elf",
-            "make_path": ["out", "zapps", "h", "make.elf"],
-            "profan_path": ["bin", "h", "make.elf"]
+            "make_path": ["out", "zapps", "f", "make.elf"],
+            "profan_path": ["bin", "f", "make.elf"]
         },
         {
             "name": "lite.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/lite.elf",
-            "make_path": ["out", "zapps", "h", "lite.elf"],
-            "profan_path": ["bin", "h", "lite.elf"]
+            "make_path": ["out", "zapps", "f", "lite.elf"],
+            "profan_path": ["bin", "f", "lite.elf"]
         },
         {
             "name": "lite_data",
@@ -443,26 +443,26 @@
         {
             "name": "bsdcat.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/bsdcat.elf",
-            "make_path": ["out", "zapps", "h", "bsdcat.elf"],
-            "profan_path": ["bin", "h", "bsdcat.elf"]
+            "make_path": ["out", "zapps", "f", "bsdcat.elf"],
+            "profan_path": ["bin", "f", "bsdcat.elf"]
         },
         {
             "name": "bsdtar.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/bsdtar.elf",
-            "make_path": ["out", "zapps", "h", "bsdtar.elf"],
-            "profan_path": ["bin", "h", "bsdtar.elf"]
+            "make_path": ["out", "zapps", "f", "bsdtar.elf"],
+            "profan_path": ["bin", "f", "bsdtar.elf"]
         },
         {
             "name": "bsdcpio.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/bsdcpio.elf",
-            "make_path": ["out", "zapps", "h", "bsdcpio.elf"],
-            "profan_path": ["bin", "h", "bsdcpio.elf"]
+            "make_path": ["out", "zapps", "f", "bsdcpio.elf"],
+            "profan_path": ["bin", "f", "bsdcpio.elf"]
         },
         {
             "name": "bsdunzip.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/bsdunzip.elf",
-            "make_path": ["out", "zapps", "h", "bsdunzip.elf"],
-            "profan_path": ["bin", "h", "bsdunzip.elf"]
+            "make_path": ["out", "zapps", "f", "bsdunzip.elf"],
+            "profan_path": ["bin", "f", "bsdunzip.elf"]
         }
     ]
 }
