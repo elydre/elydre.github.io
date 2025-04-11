@@ -77,9 +77,9 @@
                 "files": ["nasm.elf", "ndisasm.elf"]
             },
             {
-                "name": "vlink",
-                "description": "Portable mutli-format linker",
-                "files": ["vlink.elf"]
+                "name": "binutils",
+                "description": "GNU collection of binary tools",
+                "files": ["binutils_files", "libm.so", "libz.so"]
             },
             {
                 "name": "mkisofs",
@@ -353,10 +353,11 @@
             "profan_path": ["bin", "f", "ndisasm.elf"]
         },
         {
-            "name": "vlink.elf",
-            "url": "https://github.com/elydre/libatron/releases/download/latest/vlink.elf",
-            "make_path": ["out", "zapps", "f", "vlink.elf"],
-            "profan_path": ["bin", "f", "vlink.elf"]
+            "name": "binutils_files",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/binutils.tar.gz",
+            "make_path": ["out", "zapps", "f"],
+            "profan_path": ["bin", "f"]
         },
         {
             "name": "mkisofs.elf",
