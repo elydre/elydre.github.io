@@ -1,117 +1,80 @@
 <!doctype html>
-<title>profanOS</title>
+<title>profanOS web emulator</title>
 
-<link rel="stylesheet" href="/pwp/venu.css">
+<script src="/profan/pwp/build/libv86.js"></script>
+<link rel="stylesheet" href="/profan/pwp/style.css">
+
 <script>
-    "use strict";
-    
-    // it is known that OS devs like js x)
-    window.onload = function() {
+"use strict";
+
+function getLatestRelease() {
+    return new Promise((resolve, reject) => {
         var api_url = "https://api.github.com/repos/esolangs/profanOS-build/contents/post55-iso";
-        var release_url = "https://esolangs.github.io/profanOS-build/main-releases.json";
-        var request1 = new XMLHttpRequest();
-        var request2 = new XMLHttpRequest();
-        var liste = document.getElementById("release");
-        request2.open("GET", release_url, true);
-        request2.onload = function() {
-            if (request2.status >= 200 && request2.status < 400) {
-                var data = JSON.parse(request2.responseText);
-                var link = document.createElement("div");
-                var a = document.createElement("a");
-                a.href = "/profan/release.html?" + data[0].release;
-                a.innerHTML = data[0].name;
-                link.appendChild(a);
-                liste.insertBefore(link, liste.childNodes[0]);
+        var request = new XMLHttpRequest();
+
+        request.open("GET", api_url, true);
+        request.onload = function() {
+            if (request.status < 200 || request.status >= 300) {
+                reject("HTTP Error: " + request.status);
+                return;
             }
-            request1.send();
-        }
-        request1.open("GET", api_url, true);
-        request1.onload = function() {
-            if (request1.status >= 200 && request1.status < 400) {
-                var data = JSON.parse(request1.responseText);
-                let elements = data.map((x, idx) => [x.name.substr(9, x.name.length - 13), idx]);
 
-                elements.sort(
-                    function(a, b) {
-                        a = a[0];
-                        b = b[0];
+            var data = JSON.parse(request.responseText);
+            let elements = data.map((x, idx) => [x.name.substr(9, x.name.length - 13), idx]);
 
-                        if (a.startsWith(b + "-")) return -1
-                        if (b.startsWith(a + "-")) return  1
-                        return a.localeCompare(b, undefined, { numeric: true, sensitivity: "case", caseFirst: "upper" })
-                    }
-                )
+            elements.sort(
+                function(a, b) {
+                    a = a[0];
+                    b = b[0];
 
-                elements = elements.map(x => x[1]);
-
-                for (let i = elements.length - 7; i < elements.length; i++) {
-                    if (i < 0) continue;
-                    const link = document.createElement("div");
-                    const a = document.createElement("a");
-                    a.href = "/profan/release.html?i" + data[elements[i]].name.substr(9, data[elements[i]].name.length - 13);
-                    a.innerHTML = data[elements[i]].name.replace(".iso", "").replace("-", " ");
-                    link.appendChild(a);
-                    liste.insertBefore(link, liste.childNodes[0]);
+                    if (a.startsWith(b + "-")) return -1
+                    if (b.startsWith(a + "-")) return  1
+                    return a.localeCompare(b, undefined, { numeric: true, sensitivity: "case", caseFirst: "upper" })
                 }
-            }
+            )
+
+            elements = elements.map(x => x[1]);
+    
+            resolve(data[elements[elements.length - 1]].name);
         }
-        request2.send();
-    }
+
+        request.onerror = function() {
+            reject("Network Error");
+        }
+
+        request.send();
+    });
+}
+
+window.onload = function() {
+    getLatestRelease()
+    .then(latest => {
+        var emulator = window.emulator = new V86Starter({
+            wasm_path: "/profan/pwp/build/v86.wasm",
+            memory_size: 128 * 1024 * 1024,
+            vga_memory_size: 8 * 1024 * 1024,
+            screen_container: document.getElementById("screen_container"),
+            bios: {
+                url: "/profan/pwp/bios/seabios.bin",
+            },
+            vga_bios: {
+                url: "/profan/pwp/bios/vgabios.bin",
+            },
+            cdrom: {
+                url: "https://esolangs.github.io/profanOS-build/post55-iso/" + latest,
+            },
+            boot_order: 0x123,
+            autostart: true,
+        });
+    })
+    .catch(err => {
+        console.error("Erreur:", err);
+    });
+}
 </script>
 
-<body>
-    <div class="div_center">
-        <h1>all features for all releases</h1>
-        <p class = "sat">A pre-compiled iso library to test profanOS with the power of your browser</p>
-        <br>
-        <section>
-            <a href="https://github.com/elydre/profanOS" class="btn"><b>Github</b><div class="arrow"></div></a>
-        </section>
-        <br><br>
-        <table>
-            <tr>
-                <td>
-                    <ul id="release" class="menu">
-                        <div>
-                            <a href="/pwp/all.html">more releases</a>
-                        </div>
-                    </ul>
-                </td>
-                <td class="max_large">
-                    <ul class="info">
-                        <li>
-                            Virtual memory
-                            <h2>
-                                128Mo
-                            </h2>
-                        </li>
-                        <li>
-                            Hard drive
-                            <h2>
-                                1024Ko
-                            </h2>
-                        </li>
-                    </ul>
-                    <ul class="info">
-                        <li>
-                            No sooner said than done!<br>
-                            <h2>Build ~2min</h2>
-                        </li>
-                    </ul>
-                    <h2>Browser power</h2>
-                    <p>
-                        Whether you used an old intel pc, the latest mac or
-                        even a raspberry pi a simple web browser gives you
-                        access to profanOS without downloading anything.
-                    </p>
-                    <h2>Fully supported</h2>
-                    <p>
-                        Enjoy all the features of profanOS with a compatible
-                        bios, a blank disk drive and a large amount of ram.
-                        All features work from disk access to multitasking!
-                    </p>
-                </td>
-            </tr>
-        </table>
-    </div>
-</body>
+<!-- A minimal structure for the ScreenAdapter defined in browser/screen.js -->
+<div id="screen_container">
+    <div class = "shell"></div>
+    <canvas class = "shell" style="display: none"></canvas>
+</div>

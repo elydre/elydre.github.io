@@ -18,7 +18,7 @@
 
 ## maybe you are looking for it?
 - [main github](https://github.com/elydre)
-- [profanOS pwp](https://elydre.github.io/profan)
+- [profanOS emulator](https://elydre.github.io/profan)
 - [profan convs](https://elydre.github.io/md/profan-conv)
 - [KEA doc](https://elydre.github.io/kea)
 - [profanOS wiki](https://github.com/elydre/profanOS/wiki)
