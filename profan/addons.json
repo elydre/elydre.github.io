@@ -27,7 +27,7 @@
             },
             {
                 "name": "make",
-                "description": "GNU make utility",
+                "description": "GNU-make build utility",
                 "files": ["make.elf"]
             }
         ],
