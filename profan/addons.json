@@ -471,7 +471,7 @@
             "profan_path": ["bin", "f", "bsdunzip.elf"]
         },
         {
-            "name": "elvis",
+            "name": "elvis.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/elvis.elf",
             "make_path": ["out", "zapps", "f", "elvis.elf"],
             "profan_path": ["bin", "f", "elvis.elf"]
