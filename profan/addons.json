@@ -21,6 +21,11 @@
                 "files": ["dash.elf"]
             },
             {
+                "name": "elvis",
+                "description": "Vi-like text editor",
+                "files": ["elvis.elf", "elvis_data", "vi.fb"]
+            },
+            {
                 "name": "make",
                 "description": "GNU make utility",
                 "files": ["make.elf"]
@@ -464,6 +469,25 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/bsdunzip.elf",
             "make_path": ["out", "zapps", "f", "bsdunzip.elf"],
             "profan_path": ["bin", "f", "bsdunzip.elf"]
+        },
+        {
+            "name": "elvis",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/elvis.elf",
+            "make_path": ["out", "zapps", "f", "elvis.elf"],
+            "profan_path": ["bin", "f", "elvis.elf"]
+        },
+        {
+            "name": "elvis_data",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/raw/refs/heads/main/rsc/elvis.tar.gz",
+            "make_path": ["out", "zada", "elvis"],
+            "profan_path": ["zada", "elvis"]
+        },
+        {
+            "name": "vi.fb",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/refs/heads/main/rsc/_files/vi.fb",
+            "make_path": ["out", "zaps", "l", "vi.fb"],
+            "profan_path": ["bin", "l", "vi.fb"]
         }
     ]
 }
