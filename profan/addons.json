@@ -23,7 +23,7 @@
             {
                 "name": "elvis",
                 "description": "Vi-like text editor",
-                "files": ["elvis.elf", "elvis_data", "vi.fb"]
+                "files": ["elvis.elf", "elvis_data"]
             },
             {
                 "name": "make",
