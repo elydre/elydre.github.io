@@ -486,7 +486,7 @@
         {
             "name": "vi.fb",
             "url": "https://raw.githubusercontent.com/elydre/libatron/refs/heads/main/rsc/_files/vi.fb",
-            "make_path": ["out", "zaps", "l", "vi.fb"],
+            "make_path": ["out", "zapps", "l", "vi.fb"],
             "profan_path": ["bin", "l", "vi.fb"]
         }
     ]
