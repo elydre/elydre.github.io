@@ -473,8 +473,8 @@
         {
             "name": "elvis.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/elvis.elf",
-            "make_path": ["out", "zapps", "f", "elvis.elf"],
-            "profan_path": ["bin", "f", "elvis.elf"]
+            "make_path": ["out", "zapps", "f", "vi.elf"],
+            "profan_path": ["bin", "f", "vi.elf"]
         },
         {
             "name": "elvis_data",
@@ -482,12 +482,6 @@
             "url": "https://github.com/elydre/libatron/raw/refs/heads/main/rsc/elvis.tar.gz",
             "make_path": ["out", "zada", "elvis"],
             "profan_path": ["zada", "elvis"]
-        },
-        {
-            "name": "vi.fb",
-            "url": "https://raw.githubusercontent.com/elydre/libatron/refs/heads/main/rsc/_files/vi.fb",
-            "make_path": ["out", "zapps", "l", "vi.fb"],
-            "profan_path": ["bin", "l", "vi.fb"]
         }
     ]
 }
