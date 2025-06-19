@@ -46,6 +46,11 @@
                 "name": "halfix",
                 "description": "x86 emulator with provided linux image",
                 "files": ["halfix", "bios.bin", "vgabios.bin", "halfix.cfg", "linux.iso", "libm.so"]
+            },
+            {
+                "name": "chip8",
+                "description": "Chip8 emulator in rust",
+                "files": ["chip8.elf", "chip8_files"]
             }
         ],
         "interpreters": [
@@ -482,6 +487,19 @@
             "url": "https://github.com/elydre/libatron/raw/refs/heads/main/rsc/elvis.tar.gz",
             "make_path": ["out", "zada", "elvis"],
             "profan_path": ["zada", "elvis"]
+        },
+        {
+            "name": "chip8.elf",
+            "url": "https://github.com/Sarenard/Chip8-ProfanOS/releases/download/latest/chip8.elf",
+            "make_path": ["out", "zapps", "f", "chip8.elf"],
+            "profan_path": ["bin", "f", "chip8.elf"]
+        },
+        {
+            "name": "chip8_files",
+            "is_targz": true,
+            "url": "https://github.com/Sarenard/Chip8-ProfanOS/releases/download/latest/ROMS.tar.gz",
+            "make_path": ["out", "zada", "chip8"],
+            "profan_path": ["zada", "chip8"]
         }
     ]
 }
