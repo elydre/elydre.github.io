@@ -18,7 +18,7 @@
             {
                 "name": "dash",
                 "description": "POSIX compliant shell",
-                "files": ["dash.elf"]
+                "files": ["dash.elf", "sh.fb"]
             },
             {
                 "name": "elvis",
@@ -282,6 +282,12 @@
             "url": "https://github.com/elydre/dash-profan/releases/download/latest/dash.elf",
             "make_path": ["out", "zapps", "f", "dash.elf"],
             "profan_path": ["bin", "f", "dash.elf"]
+        },
+        {
+            "name": "sh.fb",
+            "url": "https://raw.githubusercontent.com/elydre/libatron/refs/heads/main/rsc/_files/sh.fb",
+            "make_path": ["out", "zapps", "l", "sh.fb"],
+            "profan_path": ["bin", "l", "sh.fb"]
         },
         {
             "name": "doom.elf",
