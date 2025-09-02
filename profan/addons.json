@@ -21,14 +21,14 @@
                 "files": ["dash.elf", "sh.fb"]
             },
             {
+                "name": "make",
+                "description": "GNU-make build utility",
+                "files": ["make.elf", "dash.elf", "sh.fb"]
+            },
+            {
                 "name": "elvis",
                 "description": "Vi-like text editor",
                 "files": ["elvis.elf", "elvis_data"]
-            },
-            {
-                "name": "make",
-                "description": "GNU-make build utility",
-                "files": ["make.elf"]
             }
         ],
         "graphics": [
