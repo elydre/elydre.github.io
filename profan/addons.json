@@ -70,11 +70,6 @@
                 "files": ["perl.elf", "libm.so", "perl_files"]
             },
             {
-                "name": "sulfur",
-                "description": "Bytecode high-performance language",
-                "files": ["sulfur.elf", "libm.so"]
-            },
-            {
                 "name": "aledlang",
                 "description": "Stack-based programming language",
                 "files": ["aledlang.elf"]
@@ -326,12 +321,6 @@
             "url": "https://github.com/elydre/libatron/raw/main/rsc/lua.tar.gz",
             "make_path": ["out", "zada", "lua"],
             "profan_path": ["zada", "lua"]
-        },
-        {
-            "name": "sulfur.elf",
-            "url": "https://github.com/elydre/libatron/releases/download/latest/sulfur.elf",
-            "make_path": ["out", "zapps", "f", "sulfur.elf"],
-            "profan_path": ["bin", "f", "sulfur.elf"]
         },
         {
             "name": "aledlang.elf",
