@@ -12,7 +12,6 @@ le chemins de profan dans les sources est a changer, c'est generalement
 | [libX11](libX11.zip)      | nope   | linux    | demande `xcb` et probablement un serveur X11 pour build |
 | [mksh](mksh.zip)          | OK ~   | profanOS | build mais vieux et peu utile |
 | [toybox](toybox.zip)      | nope   | linux    | INFERNAL ALLEZ BRULER EN ENFER |
-
 | [asqel/PDCurses](https://github.com/asqel/PDCurses)   | OK ? | linux | je crois qu'elle marche |
 | [asqel/gameboy-c](https://github.com/asqel/gameboy-c) | OK ~ | linux | il y a 2 ans ça marchait :) |
 
