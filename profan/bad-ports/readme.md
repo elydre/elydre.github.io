@@ -14,7 +14,7 @@ le chemins de profan dans les sources est a changer, c'est generalement
 | [mksh](mksh.zip)          | OK ~   | profanOS | build mais vieux et peu utile |
 | [toybox](toybox.zip)      | nope   | linux    | INFERNAL ALLEZ BRULER EN ENFER |
 | [asqel/PDCurses](https://github.com/asqel/PDCurses)   | OK   | linux | fonctionnel |
-| [asqel/gameboy-c](https://github.com/asqel/gameboy-c) | OK ~ | profanOS | il y a 2 ans ça marchait :) |
+| [asqel/gameboy-c](https://github.com/asqel/gameboy-c) | nope | profanOS | ajustements requis pour les nouvelles versions de profan |
 
 
 bon courage
