@@ -13,7 +13,8 @@
             {
                 "name": "tcc",
                 "description": "Small and fast C compiler",
-                "files": ["tcc.elf", "libtcc1.a", "tccobjs", "libm.so", "tccdefs.h"]
+                "files": ["tcc.elf", "libtcc1.a", "tccobjs", "tccdefs.h"],
+                "dependencies": ["libm"]
             },
             {
                 "name": "dash",
@@ -23,7 +24,8 @@
             {
                 "name": "make",
                 "description": "GNU-make build utility",
-                "files": ["make.elf", "dash.elf", "sh.fb"]
+                "files": ["make.elf", "sh.fb"],
+                "dependencies": ["dash"]
             },
             {
                 "name": "elvis",
@@ -35,17 +37,20 @@
             {
                 "name": "doom",
                 "description": "Raycasting first person shooter",
-                "files": ["doom.elf", "doom1.wad", "libm.so"]
+                "files": ["doom.elf", "doom1.wad"],
+                "dependencies": ["libm"]
             },
             {
                 "name": "lite",
                 "description": "Lightweight text editor",
-                "files": ["lite.elf", "lite_data", "libm.so", "libSDL2.so"]
+                "files": ["lite.elf", "lite_data"],
+                "dependencies": ["libm", "libSDL2"]
             },
             {
                 "name": "halfix",
                 "description": "x86 emulator with provided linux image",
-                "files": ["halfix", "bios.bin", "vgabios.bin", "halfix.cfg", "linux.iso", "libm.so"]
+                "files": ["halfix", "bios.bin", "vgabios.bin", "halfix.cfg", "linux.iso"],
+                "dependencies": ["libm"]
             },
             {
                 "name": "chip8",
@@ -57,17 +62,20 @@
             {
                 "name": "python",
                 "description": "Python 3.11 interpreter and modules",
-                "files": ["python.elf", "libm.so", "python_libs"]
+                "files": ["python.elf", "python_libs"],
+                "dependencies": ["libm"]
             },
             {
                 "name": "lua",
                 "description": "Lightweight scripting language",
-                "files": ["lua.elf", "libm.so", "lua_files"]
+                "files": ["lua.elf", "lua_files"],
+                "dependencies": ["libm"]
             },
             {
                 "name": "perl",
                 "description": "Extensive scripting language",
-                "files": ["perl.elf", "libm.so", "perl_files"]
+                "files": ["perl.elf", "perl_files"],
+                "dependencies": ["libm"]
             },
             {
                 "name": "aledlang",
@@ -84,7 +92,8 @@
             {
                 "name": "binutils",
                 "description": "GNU collection of binary tools",
-                "files": ["binutils_files", "libm.so", "libz.so"]
+                "files": ["binutils_files"],
+                "dependencies": ["libm", "zlib"]
             },
             {
                 "name": "mkisofs",
@@ -106,12 +115,14 @@
             {
                 "name": "libarchive",
                 "description": "libarchive + command-line utilities",
-                "files": ["libarchive.so", "libarchive_fe.a", "archive.h", "libz.so", "bsdcat.elf", "bsdtar.elf", "bsdcpio.elf", "bsdunzip.elf"]
+                "files": ["libarchive.so", "libarchive_fe.a", "archive.h", "bsdcat.elf", "bsdtar.elf", "bsdcpio.elf", "bsdunzip.elf"],
+                "dependencies": ["libz"]
             },
             {
                 "name": "libSDL2",
                 "description": "Simple DirectMedia Layer",
-                "files": ["libSDL2.so", "sdl_headers", "libm.so"]
+                "files": ["libSDL2.so", "sdl_headers"],
+                "dependencies": ["libm"]
             },
             {
                 "name": "zlib",
@@ -121,22 +132,26 @@
             {
                 "name": "libpng",
                 "description": "PNG image format library",
-                "files": ["libpng16.so", "libz.so", "libm.so", "libpng_headers"]
+                "files": ["libpng16.so", "libpng_headers"],
+                "dependencies": ["zlib", "libm"]
             },
             {
                 "name": "libschrift",
                 "description": "Font rendering library",
-                "files": ["libschrift.so", "schrift.h", "libm.so"]
+                "files": ["libschrift.so", "schrift.h"],
+                "dependencies": ["libm"]
             },
             {
                 "name": "libtcc",
                 "description": "Integrate TCC compiler everywhere",
-                "files": ["libtcc.so", "libtcc.h"]
+                "files": ["libtcc.so", "libtcc.h"],
+                "dependencies": ["libm", "tcc"]
             },
             {
                 "name": "libcjson",
                 "description": "JSON parsing library",
-                "files": ["libcjson.so", "cJSON.h", "libm.so"]
+                "files": ["libcjson.so", "cJSON.h"],
+                "dependencies": ["libm"]
             }
         ]
     },
