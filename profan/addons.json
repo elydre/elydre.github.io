@@ -116,7 +116,7 @@
                 "name": "libarchive",
                 "description": "libarchive + command-line utilities",
                 "files": ["libarchive.so", "libarchive_fe.a", "archive.h", "bsdcat.elf", "bsdtar.elf", "bsdcpio.elf", "bsdunzip.elf"],
-                "dependencies": ["libz"]
+                "dependencies": ["zlib"]
             },
             {
                 "name": "libSDL2",
