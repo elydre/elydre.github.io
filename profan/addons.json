@@ -24,7 +24,7 @@
             {
                 "name": "make",
                 "description": "GNU-make build utility",
-                "files": ["make.elf", "sh.fb"],
+                "files": ["make.elf"],
                 "dependencies": ["dash"]
             },
             {
