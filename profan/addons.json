@@ -76,7 +76,7 @@
         "utilities": [
             {
                 "name": "bsdtar",
-                "description": "BSD archive utilities (tar, cpio, cat, unzip)",
+                "description": "Archive utilities (tar, cpio, unzip)",
                 "files": ["bsdtar.elf", "bsdcpio.elf", "bsdcat.elf", "bsdunzip.elf"],
                 "dependencies": ["libarchive"]
             },
@@ -117,7 +117,7 @@
             },
             {
                 "name": "libarchive",
-                "description": "Multi-format archive and compression library",
+                "description": "Archive and compression library",
                 "files": ["libarchive.so", "libarchive_fe.a", "archive.h"],
                 "dependencies": ["zlib"]
             },
