@@ -51,11 +51,6 @@
                 "description": "x86 emulator with provided linux image",
                 "files": ["halfix", "bios.bin", "vgabios.bin", "halfix.cfg", "linux.iso"],
                 "dependencies": ["libm"]
-            },
-            {
-                "name": "chip8",
-                "description": "Chip8 emulator in rust",
-                "files": ["chip8.elf", "chip8_files"]
             }
         ],
         "interpreters": [
@@ -76,11 +71,25 @@
                 "description": "Extensive scripting language",
                 "files": ["perl.elf", "perl_files"],
                 "dependencies": ["libm"]
+            }
+        ],
+        "utilities": [
+            {
+                "name": "bsdtar",
+                "description": "BSD archive utilities (tar, cpio, cat, unzip)",
+                "files": ["bsdtar.elf", "bsdcpio.elf", "bsdcat.elf", "bsdunzip.elf"],
+                "dependencies": ["libarchive"]
             },
             {
-                "name": "aledlang",
-                "description": "Stack-based programming language",
-                "files": ["aledlang.elf"]
+                "name": "binutils",
+                "description": "GNU collection of binary tools",
+                "files": ["binutils_files"],
+                "dependencies": ["libm", "zlib"]
+            },
+            {
+                "name": "sed",
+                "description": "Standard stream editor",
+                "files": ["sed.elf"]
             }
         ],
         "osdev": [
@@ -88,12 +97,6 @@
                 "name": "nasm",
                 "description": "Netwide Assembler with Intel syntax",
                 "files": ["nasm.elf", "ndisasm.elf"]
-            },
-            {
-                "name": "binutils",
-                "description": "GNU collection of binary tools",
-                "files": ["binutils_files"],
-                "dependencies": ["libm", "zlib"]
             },
             {
                 "name": "mkisofs",
@@ -115,7 +118,7 @@
             {
                 "name": "libarchive",
                 "description": "libarchive + command-line utilities",
-                "files": ["libarchive.so", "libarchive_fe.a", "archive.h", "bsdcat.elf", "bsdtar.elf", "bsdcpio.elf", "bsdunzip.elf"],
+                "files": ["libarchive.so", "libarchive_fe.a", "archive.h"],
                 "dependencies": ["zlib"]
             },
             {
@@ -152,6 +155,29 @@
                 "description": "JSON parsing library",
                 "files": ["libcjson.so", "cJSON.h"],
                 "dependencies": ["libm"]
+            }
+        ],
+        "_misc": [
+            {
+                "name": "chip8",
+                "description": "Chip8 emulator in rust",
+                "files": ["chip8.elf", "chip8_files"]
+            },
+            {
+                "name": "vlink",
+                "description": "Multi file-formats linker",
+                "files": ["vlink.elf"],
+                "dependencies": ["libm"]
+            },
+            {
+                "name": "aledlang",
+                "description": "Stack-based programming language",
+                "files": ["aledlang.elf"]
+            },
+            {
+                "name": "es",
+                "description": "Extensible Unix shell",
+                "files": ["es.elf"]
             }
         ]
     },
@@ -493,6 +519,24 @@
             "url": "https://github.com/Sarenard/Chip8-ProfanOS/releases/download/latest/ROMS.tar.gz",
             "make_path": ["out", "zada", "chip8"],
             "profan_path": ["zada", "chip8"]
+        },
+        {
+            "name": "sed.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/sed.elf",
+            "make_path": ["out", "zapps", "f", "sed.elf"],
+            "profan_path": ["bin", "f", "sed.elf"]
+        },
+        {
+            "name": "vlink.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/vlink.elf",
+            "make_path": ["out", "zapps", "f", "vlink.elf"],
+            "profan_path": ["bin", "f", "vlink.elf"]
+        },
+        {
+            "name": "es.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/es.elf",
+            "make_path": ["out", "zapps", "f", "es.elf"],
+            "profan_path": ["bin", "f", "es.elf"]
         }
     ]
 }
