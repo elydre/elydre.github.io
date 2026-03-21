@@ -117,7 +117,7 @@
             },
             {
                 "name": "libarchive",
-                "description": "libarchive + command-line utilities",
+                "description": "Multi-format archive and compression library",
                 "files": ["libarchive.so", "libarchive_fe.a", "archive.h"],
                 "dependencies": ["zlib"]
             },
