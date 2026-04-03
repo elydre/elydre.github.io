@@ -16,5 +16,9 @@ le chemins de profan dans les sources est a changer, c'est generalement
 | [asqel/PDCurses](https://github.com/asqel/PDCurses)   | OK   | linux | fonctionnel |
 | [asqel/gameboy-c](https://github.com/asqel/gameboy-c) | nope | profanOS | ajustements requis pour les nouvelles versions de profan |
 
+| Drivers                   | Issues |
+| ------------------------- | ------ |
+| [rtl8139](https://github.com/elydre/elydre/blob/main/projet/profan/drivers/rtl8139.c) | fonctionne mal, crash et problemes aleatoires |
+| [rtl8168](https://github.com/elydre/elydre/blob/main/projet/profan/drivers/rtl8169.c) | necessite le msi pour fonctionner sur le pc region |
 
 bon courage
