@@ -19,6 +19,6 @@ le chemins de profan dans les sources est a changer, c'est generalement
 | Drivers                   | Issues |
 | ------------------------- | ------ |
 | [rtl8139](https://github.com/elydre/elydre/blob/main/projet/profan/drivers/rtl8139.c) | fonctionne mal, crash et problemes aleatoires |
-| [rtl8168](https://github.com/elydre/elydre/blob/main/projet/profan/drivers/rtl8169.c) | necessite le msi pour fonctionner sur le pc region |
+| [rtl8168](https://github.com/elydre/elydre/blob/main/projet/profan/drivers/rtl8168.c) | necessite le msi pour fonctionner sur le pc region |
 
 bon courage
