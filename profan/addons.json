@@ -298,7 +298,7 @@
         },
         {
             "name": "dash.elf",
-            "url": "https://github.com/elydre/dash-profan/releases/download/latest/dash.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/dash.elf",
             "make_path": ["out", "zapps", "f", "dash.elf"],
             "profan_path": ["bin", "f", "dash.elf"]
         },
