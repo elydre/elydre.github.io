@@ -139,6 +139,11 @@
                 "dependencies": ["zlib", "libm"]
             },
             {
+                "name": "libjpeg",
+                "description": "JPEG image format library",
+                "files": ["libjpeg.so", "libjpeg_headers"]
+            },
+            {
                 "name": "libschrift",
                 "description": "Font rendering library",
                 "files": ["libschrift.so", "schrift.h"],
@@ -149,6 +154,12 @@
                 "description": "Integrate TCC compiler everywhere",
                 "files": ["libtcc.so", "libtcc.h"],
                 "dependencies": ["libm", "tcc"]
+            },
+            {
+                "name": "libxml2",
+                "description": "XML parsing library",
+                "files": ["libxml2.so", "libxml2_headers"],
+                "dependencies": ["libm"]
             },
             {
                 "name": "libcjson",
@@ -537,6 +548,32 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/es.elf",
             "make_path": ["out", "zapps", "f", "es.elf"],
             "profan_path": ["bin", "f", "es.elf"]
+        },
+        {
+            "name": "libjpeg.so",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libjpeg.so",
+            "make_path": ["out", "zlibs", "libjpeg.so"],
+            "profan_path": ["lib", "libjpeg.so"]
+        },
+        {
+            "name": "libjpeg_headers",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libjpeg_headers.tar.gz",
+            "make_path": ["include", "addons", "libjpeg"],
+            "profan_path": ["sys", "include", "libjpeg"]
+        },
+        {
+            "name": "libxml2.so",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libxml2.so",
+            "make_path": ["out", "zlibs", "libxml2.so"],
+            "profan_path": ["lib", "libxml2.so"]
+        },
+        {
+            "name": "libxml2_headers",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libxml_headers.tar.gz",
+            "make_path": ["include", "addons", "libxml"],
+            "profan_path": ["sys", "include", "libxml"]
         }
     ]
 }
