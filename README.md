@@ -10,7 +10,6 @@
 - [![Publish](https://github.com/elydre/profanOS/actions/workflows/publish.yml/badge.svg)](https://github.com/elydre/profanOS)
 - [![Checks](https://github.com/elydre/profanOS/actions/workflows/checks.yml/badge.svg)](https://github.com/elydre/profanOS)
 
-- [![Dash](https://github.com/elydre/dash-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/dash-profan)
 - [![Tcc](https://github.com/elydre/tinycc-profan/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/tinycc-profan)
 - [![Libatron](https://github.com/elydre/libatron/actions/workflows/makefile.yml/badge.svg)](https://github.com/elydre/libatron)
 
