@@ -193,7 +193,7 @@
             {
                 "name": "headers",
                 "description": "profanOS libc headers for development",
-                "files": ["profanOS_headers.tar.gz"]
+                "files": ["profanOS_headers"]
             }
         ]
     },
@@ -581,7 +581,7 @@
             "profan_path": ["sys", "include", "libxml"]
         },
         {
-            "name": "profanOS_headers.tar.gz",
+            "name": "profanOS_headers",
             "is_targz": true,
             "url": "https://github.com/elydre/libatron/releases/download/latest/profanOS_headers.tar.gz",
             "make_path": ["sys_dir", "user", "include"],
