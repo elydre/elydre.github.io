@@ -189,6 +189,11 @@
                 "name": "es",
                 "description": "Extensible Unix shell",
                 "files": ["es.elf"]
+            },
+            {
+                "name": "headers",
+                "description": "profanOS libc headers for development",
+                "files": ["profanOS_headers.tar.gz"]
             }
         ]
     },
@@ -440,7 +445,7 @@
         {
             "name": "python_libs",
             "is_targz": true,
-            "url": "https://github.com/elydre/libatron/releases/download/latest/python-lib.tar.gz",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/python_lib.tar.gz",
             "make_path": ["out", "zlibs", "python3.11"],
             "profan_path": ["lib", "python3.11"]
         },
@@ -574,6 +579,13 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/libxml_headers.tar.gz",
             "make_path": ["include", "addons", "libxml"],
             "profan_path": ["sys", "include", "libxml"]
+        },
+        {
+            "name": "profanOS_headers.tar.gz",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/profanOS_headers.tar.gz",
+            "make_path": ["sys_dir", "user", "include"],
+            "profan_path": ["sys", "include"]
         }
     ]
 }
