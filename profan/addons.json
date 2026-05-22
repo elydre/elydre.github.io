@@ -133,6 +133,11 @@
                 "files": ["libz.so", "zlib_headers"]
             },
             {
+                "name": "openssl",
+                "description": "TLS/SSL cryptography library",
+                "files": ["libssl.so", "libcrypto.so", "openssl_headers"]
+            },
+            {
                 "name": "libpng",
                 "description": "PNG image format library",
                 "files": ["libpng16.so", "libpng_headers"],
@@ -586,6 +591,25 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/profanOS_headers.tar.gz",
             "make_path": ["sys_dir", "user", "include"],
             "profan_path": ["sys", "include"]
+        },
+        {
+            "name": "openssl_headers",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/openssl_headers.tar.gz",
+            "make_path": ["include", "addons", "openssl"],
+            "profan_path": ["sys", "include", "openssl"]
+        },
+        {
+            "name": "libssl.so",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libssl.so",
+            "make_path": ["out", "zlibs", "libssl.so"],
+            "profan_path": ["lib", "libssl.so"]
+        },
+        {
+            "name": "libcrypto.so",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libcrypto.so",
+            "make_path": ["out", "zlibs", "libcrypto.so"],
+            "profan_path": ["lib", "libcrypto.so"]
         }
     ]
 }
