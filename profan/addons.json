@@ -113,7 +113,8 @@
             {
                 "name": "libm",
                 "description": "Standard math library",
-                "files": ["libm.so", "libm_headers"]
+                "files": ["libm.so", "libm_headers"],
+                "extra": ["libm.a"]
             },
             {
                 "name": "libarchive",
@@ -130,34 +131,40 @@
             {
                 "name": "zlib",
                 "description": "Deflate compression library",
-                "files": ["libz.so", "zlib_headers"]
+                "files": ["libz.so", "zlib_headers"],
+                "extra": ["libz.a"]
             },
             {
                 "name": "openssl",
                 "description": "TLS/SSL cryptography library",
-                "files": ["libssl.so", "libcrypto.so", "openssl_headers"]
+                "files": ["libssl.so", "libcrypto.so", "openssl_headers"],
+                "extra": ["libssl.a", "libcrypto.a"]
             },
             {
                 "name": "libpng",
                 "description": "PNG image format library",
                 "files": ["libpng16.so", "libpng_headers"],
+                "extra": ["libpng16.a"],
                 "dependencies": ["zlib", "libm"]
             },
             {
                 "name": "libjpeg",
                 "description": "JPEG image format library",
-                "files": ["libjpeg.so", "libjpeg_headers"]
+                "files": ["libjpeg.so", "libjpeg_headers"],
+                "extra": ["libjpeg.a"]
             },
             {
                 "name": "libschrift",
                 "description": "Font rendering library",
                 "files": ["libschrift.so", "schrift.h"],
+                "extra": ["libschrift.a"],
                 "dependencies": ["libm"]
             },
             {
                 "name": "libtcc",
                 "description": "Integrate TCC compiler everywhere",
                 "files": ["libtcc.so", "libtcc.h"],
+                "extra": ["libtcc.a"],
                 "dependencies": ["libm", "tcc"]
             },
             {
@@ -170,6 +177,7 @@
                 "name": "libcjson",
                 "description": "JSON parsing library",
                 "files": ["libcjson.so", "cJSON.h"],
+                "extra": ["libcjson.a"],
                 "dependencies": ["libm"]
             }
         ],
@@ -236,6 +244,12 @@
             "profan_path": ["lib", "libtcc.so"]
         },
         {
+            "name": "libtcc.a",
+            "url": "https://github.com/elydre/tinycc-profan/releases/download/latest/libtcc.a",
+            "make_path": ["out", "zlibs", "libtcc.a"],
+            "profan_path": ["lib", "libtcc.a"]
+        },
+        {
             "name": "libtcc.h",
             "url": "https://raw.githubusercontent.com/elydre/tinycc-profan/refs/heads/mob/src/libtcc.h",
             "make_path": ["include", "addons", "libtcc.h"],
@@ -246,6 +260,12 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/libm.so",
             "make_path": ["out", "zlibs", "libm.so"],
             "profan_path": ["lib", "libm.so"]
+        },
+        {
+            "name": "libm.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libm.a",
+            "make_path": ["out", "zlibs", "libm.a"],
+            "profan_path": ["lib", "libm.a"]
         },
         {
             "name": "libm_headers",
@@ -261,6 +281,12 @@
             "profan_path": ["lib", "libz.so"]
         },
         {
+            "name": "libz.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libz.a",
+            "make_path": ["out", "zlibs", "libz.a"],
+            "profan_path": ["lib", "libz.a"]
+        },
+        {
             "name": "zlib_headers",
             "is_targz": true,
             "url": "https://raw.githubusercontent.com/elydre/libatron/main/rsc/zlib.tar.gz",
@@ -274,6 +300,12 @@
             "profan_path": ["lib", "libpng16.so"]
         },
         {
+            "name": "libpng16.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libpng16.a",
+            "make_path": ["out", "zlibs", "libpng16.a"],
+            "profan_path": ["lib", "libpng16.a"]
+        },
+        {
             "name": "libpng_headers",
             "is_targz": true,
             "url": "https://github.com/elydre/libatron/releases/download/latest/libpng_headers.tar.gz",
@@ -285,6 +317,12 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/libschrift.so",
             "make_path": ["out", "zlibs", "libschrift.so"],
             "profan_path": ["lib", "libschrift.so"]
+        },
+        {
+            "name": "libschrift.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libschrift.a",
+            "make_path": ["out", "zlibs", "libschrift.a"],
+            "profan_path": ["lib", "libschrift.a"]
         },
         {
             "name": "schrift.h",
@@ -310,6 +348,12 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/libcjson.so",
             "make_path": ["out", "zlibs", "libcjson.so"],
             "profan_path": ["lib", "libcjson.so"]
+        },
+        {
+            "name": "libcjson.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libcjson.a",
+            "make_path": ["out", "zlibs", "libcjson.a"],
+            "profan_path": ["lib", "libcjson.a"]
         },
         {
             "name": "cJSON.h",
@@ -566,6 +610,12 @@
             "profan_path": ["lib", "libjpeg.so"]
         },
         {
+            "name": "libjpeg.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libjpeg.a",
+            "make_path": ["out", "zlibs", "libjpeg.a"],
+            "profan_path": ["lib", "libjpeg.a"]
+        },
+        {
             "name": "libjpeg_headers",
             "is_targz": true,
             "url": "https://github.com/elydre/libatron/releases/download/latest/libjpeg_headers.tar.gz",
@@ -606,10 +656,22 @@
             "profan_path": ["lib", "libssl.so"]
         },
         {
+            "name": "libssl.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libssl.a",
+            "make_path": ["out", "zlibs", "libssl.a"],
+            "profan_path": ["lib", "libssl.a"]
+        },
+        {
             "name": "libcrypto.so",
             "url": "https://github.com/elydre/libatron/releases/download/latest/libcrypto.so",
             "make_path": ["out", "zlibs", "libcrypto.so"],
             "profan_path": ["lib", "libcrypto.so"]
+        },
+        {
+            "name": "libcrypto.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libcrypto.a",
+            "make_path": ["out", "zlibs", "libcrypto.a"],
+            "profan_path": ["lib", "libcrypto.a"]
         }
     ]
 }
