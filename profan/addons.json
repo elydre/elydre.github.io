@@ -58,6 +58,7 @@
                 "name": "python",
                 "description": "Python 3.11 interpreter and modules",
                 "files": ["python.elf", "python_libs"],
+                "extra": ["python_headers"],
                 "dependencies": ["libm"]
             },
             {
@@ -74,6 +75,13 @@
             }
         ],
         "utilities": [
+            {
+                "name": "gcc",
+                "description": "GNU Compiler Collection",
+                "files": ["gcc.elf", "libgcc_dir"],
+                "extra": ["libgcc.a"],
+                "dependencies": ["binutils", "libm"]
+            },
             {
                 "name": "bsdtar",
                 "description": "Archive utilities (tar, cpio, unzip)",
@@ -119,7 +127,8 @@
             {
                 "name": "libarchive",
                 "description": "Archive and compression library",
-                "files": ["libarchive.so", "libarchive_fe.a", "archive.h"],
+                "files": ["libarchive.so", "archive.h"],
+                "extra": ["libarchive_fe.a"],
                 "dependencies": ["zlib"]
             },
             {
@@ -139,6 +148,12 @@
                 "description": "TLS/SSL cryptography library",
                 "files": ["libssl.so", "libcrypto.so", "openssl_headers"],
                 "extra": ["libssl.a", "libcrypto.a"]
+            },
+            {
+                "name": "libstdc++",
+                "description": "Standard C++ library",
+                "files": ["libstdc++.a", "libstdc++_headers"],
+                "extra": ["libsupc++.a"]
             },
             {
                 "name": "libpng",
@@ -499,6 +514,13 @@
             "profan_path": ["lib", "python3.11"]
         },
         {
+            "name": "python_headers",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/python_headers.tar.gz",
+            "make_path": ["include", "addons", "python3.11"],
+            "profan_path": ["sys", "include", "python3.11"]
+        },
+        {
             "name": "make.elf",
             "url": "https://github.com/elydre/libatron/releases/download/latest/make.elf",
             "make_path": ["out", "zapps", "f", "make.elf"],
@@ -672,6 +694,44 @@
             "url": "https://github.com/elydre/libatron/releases/download/latest/libcrypto.a",
             "make_path": ["out", "zlibs", "libcrypto.a"],
             "profan_path": ["lib", "libcrypto.a"]
+        },
+        {
+            "name": "libstdc++.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libstdc++.a",
+            "make_path": ["out", "zlibs", "libstdc++.a"],
+            "profan_path": ["lib", "libstdc++.a"]
+        },
+        {
+            "name": "libstdc++_headers",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libstdc_headers.tar.gz",
+            "make_path": ["include", "addons", "c++"],
+            "profan_path": ["sys", "include", "c++"]
+        },
+        {
+            "name": "libsupc++.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libsupc++.a",
+            "make_path": ["out", "zlibs", "libsupc++.a"],
+            "profan_path": ["lib", "libsupc++.a"]
+        },
+        {
+            "name": "gcc.elf",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/gcc.elf",
+            "make_path": ["out", "zapps", "f", "gcc.elf"],
+            "profan_path": ["bin", "f", "gcc.elf"]
+        },
+        {
+            "name": "libgcc_dir",
+            "is_targz": true,
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libgcc_dir.tar.gz",
+            "make_path": ["out", "zlibs", "gcc"],
+            "profan_path": ["lib", "gcc"]
+        },
+        {
+            "name": "libgcc.a",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libgcc.a",
+            "make_path": ["out", "zlibs", "libgcc.a"],
+            "profan_path": ["lib", "libgcc.a"]
         }
     ]
 }
