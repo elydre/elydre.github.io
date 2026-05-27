@@ -80,7 +80,7 @@
                 "description": "GNU Compiler Collection",
                 "files": ["gcc.elf", "libgcc_dir"],
                 "extra": ["libgcc.a"],
-                "dependencies": ["binutils", "libm"]
+                "dependencies": ["binutils", "libm", "zlib"]
             },
             {
                 "name": "bsdtar",
