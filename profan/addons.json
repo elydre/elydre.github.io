@@ -704,7 +704,7 @@
         {
             "name": "libstdc++_headers",
             "is_targz": true,
-            "url": "https://github.com/elydre/libatron/releases/download/latest/libstdc_headers.tar.gz",
+            "url": "https://github.com/elydre/libatron/releases/download/latest/libstdc++_headers.tar.gz",
             "make_path": ["include", "addons", "c++"],
             "profan_path": ["sys", "include", "c++"]
         },
